@@ -1,0 +1,40 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The two primary sources of error in this study, excluding errors originating from the sensors used: a) Wheat canopy's anisotropic BRDF, making the sun-sensor-field geometry relevant to the calculated GRVI value and b) The effect of shadows. These factors introduce noise to the perceived material reflectances, and therefore GRVI. Machine learning will be used for approximating the GRVI value under ideal illumination conditions, given the values measured under non-ideal conditions.}}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The proposed pipeline for mitigating related to both atmospheric noise and overall environmental and technological factors.}}{5}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces BRDF anisotropy examined from various viewing angles with the help of unmanned aerial vehicles (UAV) \cite {uav-bdrf}}}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Images captured within the digital twin featuring the same scene under solar zenith angles (SZA) with opposite signs. In the left image (Figure~\ref {leftgreen}), the left part of the field appears more occluded than the right, despite the fact that illuminance is proven to be the same across it. The exact opposite is observed in the right image (Figure~\ref {rightgreen}).}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Complete optimized model compilation using the TensorRT SDK}}{14}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Figure included in \cite {atmospheric-correction-refl}. Depicts an overview of the deep learning framework for retrieving vegetation spectral reflectance from hyperspectral measurements.}}{16}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The materials used for the digital twin's terrain, both isolated and combined.}}{21}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Using landmass to simulate terrain displacement. The "Displacement Height" parameter arranges the intensity of the terrain displacement, with the new highest point of the terrain being half of the "Displacement Height" units above 0 and the lowest being half of the "Displacement Height" below 0.}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Images of wheat generated using the Procedural Content Generation tool.}}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Process of creating a GRVI map for the materials assigned to the simulated field, using a real-world GRVI map as a baseline.}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Digital twin after different values of inherent GRVI have been assigned to each part of the field, with each discreet segment being a 1900 by 1900 unit square.}}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Trees added to the digital twin, introducing shadows to parts of the field's canopy. The shaded parts change as the SZA changes, ensuring diversity in the training examples.}}{27}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Images captured using the same SZA and different Mie Scattering Scale values. As the latter increases, simulating cloudy weather, the effects of the wheat canopy's anisotropic BRDF are mitigated, making the field appear evenly illuminated.}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Unreal Engine's color rendering pipeline.}}{31}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Spline points automatically generated based on the dimensions of the field.}}{37}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Custom event triggering for every programmed frame of the Sequencer. It detects the Frame Capture Manager and calls the function responsible for rendering frames, CaptureNonBlocking. }}{38}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Diagram illustrating how the camera's pitch was calculated. The viewing angle calculated using the distance from the ground is represented by the red dashed line, while the green dashed line represents the angle calculated from the canopy. The first distance captures more comprehensive field data, making the model more robust, and thus was selected.}}{39}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The materials used for the digital twin's terrain, both isolated and combined.}}{42}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces areas-of-interest in an image.}}{43}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Images captured under various SZAs. The red squares indicate the bounds of the areas-of-interest. The corresponding graphs present the mean GRVI calculated for the same indexed areas-of-interest across all captured frames. The material used for the illustrated plants has an inherent GRVI of 0.38.}}{45}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Images captured under various SZAs. The red squares indicate the bounds of the areas-of-interest. The corresponding graphs present the mean GRVI calculated for the same indexed areas-of-interest across all captured frames. The material used for the illustrated plants has an inherent GRVI of 0.08.}}{46}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Average Percentage difference between the rightmost and leftmost areas-of-interest of the captured images. Since the SZA was set to $104^\circ $, the first belongs to the bright-appearing region of the field, while the latter belongs to the occluded region of the frames.}}{47}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Average percentage difference between frames captured with SZA set to $104^\circ $ and $-104^\circ $. Comparisons are performed between corresponding areas-of-interest with the same frame index and the same within-frame index across different render sequences}}{48}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Images captured under overcast lighting conditions, with SZA fixed at $20^\circ $. The red squares indicate the bounds of the areas-of-interest. The corresponding graphs present the mean calculated GRVI within the individual area-of-interest. The material used for the illustrated plants has an inherent GRVI of 0.08, 0.24 and 0.38, respectively.}}{50}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Both assigned and measured GRVI maps of the field. The arrows indicate the path the camera follows during data collection.}}{53}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces K-Means clustering performed with the average GRVI per frame as inputs, for different amounts of clusters. Random vertical offset was applied to the different points for clearer demonstration.}}{54}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Average perceived GRVI calculated for different SZA values and different materials. Vertical lines represent standard deviation.}}{57}{figure.caption.42}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Κλιμάκωση χρόνου εκτέλεσης για διάφορες υποδιαιρέσεις του καννάβου}}{88}{figure.caption.49}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Quadtree partitioning.}}{89}{figure.caption.50}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Παράδειγμα σχήματος με εντολές του πακέτου Ti\textit {k}Z}}{90}{figure.caption.51}%
+\addvspace {10\p@ }

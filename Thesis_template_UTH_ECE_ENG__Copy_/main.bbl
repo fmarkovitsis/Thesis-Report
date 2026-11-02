@@ -1,0 +1,490 @@
+\begin{thebibliography}{10}
+
+\bibitem{edges_under_illumvar}
+Ali Abosinnee, Gergely Bencsik, and Firas Abedi.
+\newblock Edges in image with illumination variations scenarios: a review.
+\newblock {\em The Visual Computer}, 41:12277--12305, 09 2025.
+
+\bibitem{dl_low_light}
+Qian Zhao, Gang Li, Bin He, and Runjie Shen.
+\newblock Deep learning for low-light vision: A comprehensive survey.
+\newblock {\em IEEE Transactions on Neural Networks and Learning Systems},
+  36(9):15685--15705, 2025.
+
+\bibitem{impact_of_sunlight_conditions}
+Mitsunori Ishihara, Yoshio Inoue, Keisuke Ono, Mariko Shimizu, and Shoji
+  Matsuura.
+\newblock The impact of sunlight conditions on the consistency of vegetation
+  indices in croplands—effective usage of vegetation indices from continuous
+  ground-based spectral measurements.
+\newblock {\em Remote Sensing}, 7(10):14079--14098, 2015.
+
+\bibitem{fruit_detection_illvar}
+A.~Gongal, S.~Amatya, M.~Karkee, Q.~Zhang, and K.~Lewis.
+\newblock Sensors and systems for fruit detection and localization: A review.
+\newblock {\em Computers and Electronics in Agriculture}, 116:8--19, 2015.
+
+\bibitem{effect-time-day}
+Romina de~Souza, Claudia Buchhart, Kurt Heil, Jürgen Plass, Francisco~M.
+  Padilla, and Urs Schmidhalter.
+\newblock Effect of time of day and sky conditions on different vegetation
+  indices calculated from active and passive sensors and images taken from uav.
+\newblock {\em Remote Sensing}, 13(9), 2021.
+
+\bibitem{color_consistency}
+Mahmoud Afifi, Jonathan~T. Barron, Chloe LeGendre, Yun-Ta Tsai, and Francois
+  Bleibel.
+\newblock Cross-camera convolutional color constancy.
+\newblock In {\em Proceedings of the IEEE/CVF International Conference on
+  Computer Vision (ICCV)}, pages 1981--1990, October 2021.
+
+\bibitem{ps_cloudy}
+Yannick Hold-Geoffroy, Paulo Gotardo, and Jean-François Lalonde.
+\newblock Single day outdoor photometric stereo.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  43(6):2062--2074, 2021.
+
+\bibitem{autonomous_agriculture}
+Mustafa~Cem Aldağ and Bülent Eker.
+\newblock Development and field evaluation of an autonomous four-wheel-drive
+  agricultural vehicle tracking crop rows using computer vision technology.
+\newblock {\em Journal of Agricultural Production}, 7(1):13–19, 2026.
+
+\bibitem{safetyhaz-cv}
+Apostol Vassilev, Munawar Hasan, Thoshitha Gamage, Pavel Piliptchak, Mahima
+  Arora, Edward Griffor, and Honglan Jin.
+\newblock On the assessment of sensitivity of autonomous vehicle perception.
+\newblock {\em ACM Journal on Autonomous Transportation Systems}, 2026.
+
+\bibitem{bridges}
+Shuai Zhang and Qi~Chen.
+\newblock Br-detr: a lightweight real-time detector for multi-scale concrete
+  bridge defect inspection from uav imagery.
+\newblock {\em Measurement}, 283:122549, 2026.
+
+\bibitem{construction-site}
+Yuhong Wu, Changyoon Kim, and Hyoungkwan Kim.
+\newblock Error-correction methods for construction site image processing under
+  changing illumination conditions.
+\newblock {\em Journal of Computing in Civil Engineering}, 27(1):99--109, 2013.
+
+\bibitem{variable-illum-vi}
+Yuxiang Wang, Zengling Yang, Gert Kootstra, and Haris Ahmad~Khan.
+\newblock Correction: The impact of variable illumination on vegetation indices
+  and evaluation of illumination correction methods on chlorophyll content
+  estimation using uav imagery.
+\newblock {\em Plant Methods}, 19, 06 2023.
+
+\bibitem{dl-img-rest}
+Lujun Zhai, Yonghui Wang, Suxia Cui, and Yu~Zhou.
+\newblock A comprehensive review of deep learning-based real-world image
+  restoration.
+\newblock {\em IEEE Access}, 11:21049--21067, 2023.
+
+\bibitem{macgan}
+Maria Siddiqua, Samir Brahim~Belhaouari, Naeem Akhter, Aneela Zameer, and
+  Javaid Khurshid.
+\newblock Macgan: An all-in-one image restoration under adverse conditions
+  using multidomain attention-based conditional gan.
+\newblock {\em IEEE Access}, 11:70482--70502, 2023.
+
+\bibitem{illum-correction}
+Olli Ihalainen, Theresa Sandmann, Uwe Rascher, and Matti Mõttus.
+\newblock Illumination correction for close-range hyperspectral images using
+  spectral invariants and random forest regression.
+\newblock {\em Remote Sensing of Environment}, 315:114467, 2024.
+
+\bibitem{rfg-change-detect}
+Dae~Kyo Seo, Yong~Hyun Kim, Yang~Dam Eo, Wan~Yong Park, and Hyun~Chun Park.
+\newblock Generation of radiometric, phenological normalized image based on
+  random forest regression for change detection.
+\newblock {\em Remote Sensing}, 9(11), 2017.
+
+\bibitem{luminance-cal-camera}
+Dariusz Czyżewski and Irena Fryc.
+\newblock Luminance calibration and linearity correction method of imaging
+  luminance measurement devices.
+\newblock {\em Photonics Letters of Poland}, 13:25, 06 2021.
+
+\bibitem{rp-luminance-cmaera}
+Daniel Bishop and J.~Geoffrey Chase.
+\newblock Development of a low-cost luminance imaging device with minimal
+  equipment calibration procedures for absolute and relative luminance.
+\newblock {\em Buildings}, 13(5), 2023.
+
+\bibitem{drones-reflectance}
+Teemu Hakala, Lauri Markelin, Eija Honkavaara, Barry Scott, Theo Theocharous,
+  Olli Nevalainen, Roope Näsi, Juha Suomalainen, Niko Viljanen, Claire
+  Greenwell, and Nigel Fox.
+\newblock Direct reflectance measurements from drones: Sensor absolute
+  radiometric calibration and system tests for forest reflectance
+  characterization.
+\newblock {\em Sensors}, 18(5), 2018.
+
+\bibitem{brdf}
+Manoj Lunagaria and Haridas Patel.
+\newblock Changes in reflectance anisotropy of wheat crop during different
+  phenophases.
+\newblock {\em International Agrophysics}, 31:203--218, 04 2017.
+
+\bibitem{cons-grade-cams}
+Jesper Rasmussen, Georgios Ntakos, Jon Nielsen, Jesper Svensgaard, Robert
+  Poulsen, and S.~Christensen.
+\newblock Are vegetation indices derived from consumer-grade cameras mounted on
+  uavs sufficiently reliable for assessing experimental plots?
+\newblock {\em European Journal of Agronomy}, 74:75--92, 03 2016.
+
+\bibitem{ml-trends-persp}
+Michael Jordan and T.~Mitchell.
+\newblock Machine learning: Trends, perspectives, and prospects.
+\newblock {\em Science}, 349:255--260, 07 2015.
+
+\bibitem{useful-things-ml}
+Pedro Domingos.
+\newblock A few useful things to know about machine learning.
+\newblock {\em Commun. ACM}, 55(10):78–87, October 2012.
+
+\bibitem{MacQueen1967SomeMF}
+J.~MacQueen.
+\newblock Some methods for classification and analysis of multivariate
+  observations.
+\newblock 1967.
+
+\bibitem{decision-trees}
+J.~R. Quinlan.
+\newblock Induction of decision trees.
+\newblock {\em Mach. Learn.}, 1(1):81–106, March 1986.
+
+\bibitem{handwritten}
+Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, and
+  L.~D. Jackel.
+\newblock Backpropagation applied to handwritten zip code recognition.
+\newblock {\em Neural Computation}, 1(4):541--551, 1989.
+
+\bibitem{lenet}
+Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
+
+\bibitem{large-scale-ml}
+L{\'e}on Bottou, Frank~E. Curtis, and Jorge Nocedal.
+\newblock Optimization methods for large-scale machine learning.
+\newblock {\em SIAM Review}, 60(2):223--311, 2018.
+
+\bibitem{efficient-DNN}
+Vivienne Sze, Yu-Hsin Chen, Tien-Ju Yang, and Joel~S. Emer.
+\newblock Efficient processing of deep neural networks: A tutorial and survey.
+\newblock {\em Proceedings of the IEEE}, 105(12):2295--2329, 2017.
+
+\bibitem{splitting-stump}
+Fouad Alkhoury and Pascal Welke.
+\newblock Splitting stump forests: Tree ensemble compression fornbsp;edge
+  devices.
+\newblock In {\em Discovery Science: 27th International Conference, DS 2024,
+  Pisa, Italy, October 14–16, 2024, Proceedings, Part II}, page 3–18,
+  Berlin, Heidelberg, 2024. Springer-Verlag.
+
+\bibitem{review-veg-index}
+Bannari Abderrazak, D.~Morin, F.~Bonn, and Alfredo Huete.
+\newblock A review of vegetation indices.
+\newblock {\em Remote Sensing Reviews}, 13:95--120, 01 1996.
+
+\bibitem{vi-in-precision-agr}
+Dorijan Radočaj, Ante Šiljeg, Rajko Marinović, and Mladen Jurišić.
+\newblock State of major vegetation indices in precision agriculture studies
+  indexed in web of science: A review.
+\newblock {\em Agriculture}, 13(3), 2023.
+
+\bibitem{gpp-grvi-phenology}
+Gaofei Yin, A.~Verger, Adrià Descals, Iolanda Filella, and Josep Penuelas.
+\newblock A broadband green-red vegetation index for monitoring gross primary
+  production phenology.
+\newblock {\em Journal of Remote Sensing}, 2022:1--10, 03 2022.
+
+\bibitem{rs-grvi-phenology}
+Takeshi Motohka, Kenlo~Nishida Nasahara, Hiroyuki Oguma, and Satoshi Tsuchida.
+\newblock Applicability of green-red vegetation index for remote sensing of
+  vegetation phenology.
+\newblock {\em Remote Sensing}, 2(10):2369--2387, 2010.
+
+\bibitem{uav-bdrf}
+Zhiwen Mi, Jinya Su, Qifan Chen, Bingyou Ding, Tengfei Han, Qifan Wang, Yiyan
+  Fan, Dejun Han, Jianhui Wu, Fahu Xu, and Baofeng Su.
+\newblock Synchronized uav multi-angle inversion of canopy structure parameters
+  in wheat breeding materials.
+\newblock {\em Plant Phenomics}, 8(2):100183, 2026.
+
+\bibitem{wiki:unreal_engine}
+{Wikipedia contributors}.
+\newblock {Unreal Engine --- {Wikipedia}{,} The Free Encyclopedia}.
+\newblock \url{https://en.wikipedia.org/wiki/Unreal_Engine}, 2026.
+
+\bibitem{quixel_megascans}
+{Quixel}.
+\newblock Quixel megascans library.
+\newblock \url{https://quixel.com/}, 2026.
+
+\bibitem{torch-intro}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban
+  Desmaison, Andreas K{\"{o}}pf, Edward~Z. Yang, Zach DeVito, Martin Raison,
+  Alykhan Tejani, Sasank Chilamkurthy, Benoit Steiner, Lu~Fang, Junjie Bai, and
+  Soumith Chintala.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock {\em CoRR}, abs/1912.01703, 2019.
+
+\bibitem{scikit}
+Fabian Pedregosa, Ga{\"{e}}l Varoquaux, Alexandre Gramfort, Vincent Michel,
+  Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron
+  Weiss, Vincent Dubourg, Jake VanderPlas, Alexandre Passos, David Cournapeau,
+  Matthieu Brucher, Matthieu Perrot, and Edouard Duchesnay.
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em CoRR}, abs/1201.0490, 2012.
+
+\bibitem{nvidia_cuml_docs}
+{NVIDIA Corporation}.
+\newblock {\em {NVIDIA cuML Documentation}}.
+\newblock NVIDIA Corporation, 2026.
+
+\bibitem{nvidia_fil_2025}
+Dante Gama~Dessavre and William Hicks.
+\newblock {Supercharge Tree-Based Model Inference with Forest Inference Library
+  in NVIDIA cuML}.
+\newblock
+  \url{https://developer.nvidia.com/blog/supercharge-tree-based-model-inference-with-forest-inference-library-in-nvidia-cuml/},
+  2025.
+
+\bibitem{tensor-rt}
+Eunjin Jeong, Jangryul Kim, and Soonhoi Ha.
+\newblock Tensorrt-based framework and optimization methodology for deep
+  learning inference on jetson boards.
+\newblock {\em ACM Trans. Embed. Comput. Syst.}, 21(5), October 2022.
+
+\bibitem{atmospheric-correction-refl}
+Farid Qamar and Gregory Dobler.
+\newblock Atmospheric correction of vegetation reflectance with
+  simulation-trained deep learning for ground-based hyperspectral remote
+  sensing.
+\newblock {\em Plant Methods}, 19, 07 2023.
+
+\bibitem{dl-based-emul}
+Arturo~Enrique Jasso-Gardu{\~n}o, Ignacio Mu{\~n}oz-M{\'a}ximo, David Pinto,
+  and Juan~Manuel Ram{\'i}rez-Cort{\'e}s.
+\newblock Deep learning based emulation of radiative transfer code for
+  atmospheric correction of satellite images.
+\newblock {\em Computaci{\'o}n y Sistemas (CyS)}, 28, 2024.
+
+\bibitem{noise-reduct-solar-ind}
+Joiner Joanna, Yasuko Yoshida, Luis Guanter, Nirajan Lamsal, Can Li, Zachary
+  Fasnacht, Philipp Köhler, Christian Frankenberg, Ying Sun, and Nicholas
+  Parazoo.
+\newblock Noise reduction for solar-induced fluorescence retrievals using
+  machine learning and principal component analysis: Simulations and
+  applications to gome-2 satellite retrievals.
+\newblock {\em Artificial Intelligence for the Earth Systems}, 3, 09 2024.
+
+\bibitem{quixel_soil_mud_fab}
+{Quixel Megascans}.
+\newblock {Soil Mud}.
+\newblock
+  \url{https://www.fab.com/listings/c33cb641-e9bd-4966-adc3-c0b5a937ab12},
+  2026.
+
+\bibitem{quixel_lawn_grass_fab}
+{Quixel Megascans}.
+\newblock {Lawn Grass}.
+\newblock
+  \url{https://www.fab.com/listings/f50d1f4a-d91a-41c2-86ad-10c4ffe7f658},
+  2026.
+
+\bibitem{epic_landmass_building_worlds}
+{Epic Games}.
+\newblock {Building Worlds with Landmass | Unreal Engine}.
+\newblock
+  \url{https://dev.epicgames.com/community/learning/talks-and-demos/qy7/building-worlds-with-landmass-unreal-engine},
+  2026.
+
+\bibitem{quixel_wheat_grass_fab}
+{Quixel Megascans}.
+\newblock {Wheat Grass}.
+\newblock
+  \url{https://www.fab.com/listings/9070350f-dea8-40ec-ba57-0777a2c1fb24},
+  2026.
+
+\bibitem{epic_pcg_overview}
+{Epic Games}.
+\newblock {Procedural Content Generation Overview}.
+\newblock
+  \url{https://dev.epicgames.com/documentation/unreal-engine/procedural-content-generation-overview},
+  2026.
+
+\bibitem{european_hornbeam}
+{Quixel}.
+\newblock {Megaplants: European Hornbeam}.
+\newblock
+  \url{https://www.fab.com/listings/43679e75-6ed0-4b03-9288-9e2bc49376d2},
+  2026.
+\newblock Accessed: 2026-10-21.
+
+\bibitem{epicgames_foliagetool}
+{Epic Games}.
+\newblock {Foliage Tool}.
+\newblock
+  \url{https://dev.epicgames.com/documentation/unreal-engine/foliage-tool?application_version=4.27},
+  2021.
+\newblock Accessed: 2026-10-20.
+
+\bibitem{weiss_2025_lightmeter}
+Mike Weiss.
+\newblock {Blueprint Tutorial: Virtual Incident Light Meter in Unreal Engine}.
+\newblock
+  \url{https://dev.epicgames.com/community/learning/tutorials/Z2a2/blueprint-tutorial-virtual-incident-light-meter-in-unreal-engine},
+  2025.
+
+\bibitem{oztalay_2021_colorpipeline}
+Matt Oztalay.
+\newblock {Color Pipeline Basics}.
+\newblock
+  \url{https://dev.epicgames.com/community/learning/knowledge-base/BLEJ/unreal-engine-color-pipeline-basics},
+  2021.
+
+\bibitem{hess_unrealimagecapture}
+Timm Hess.
+\newblock {UnrealImageCapture}.
+\newblock \url{https://github.com/TimmHess/UnrealImageCapture}, 2026.
+\newblock Accessed: 2026-09-17.
+
+\bibitem{tabdata-gen}
+Jonindo Pasaribu, Novanto Yudistira, and Wayan Firdaus~Mahmudy.
+\newblock Tabular data classification and regression: Xgboost or deep learning
+  with retrieval-augmented generation.
+\newblock {\em IEEE Access}, 12:191719--191732, 2024.
+
+\bibitem{tabnet}
+Sercan~O. Arik and Tomas Pfister.
+\newblock Tabnet: Attentive interpretable tabular learning, 2020.
+
+\bibitem{tabdata-nn}
+Arlind Kadra, Marius Lindauer, Frank Hutter, and Josif Grabocka.
+\newblock Well-tuned simple nets excel on tabular datasets, 2021.
+
+\bibitem{captum}
+{Captum Team}.
+\newblock Captum: Model interpretability for pytorch.
+\newblock \url{https://captum.ai/}.
+\newblock Accessed: 2026-11-01.
+
+\bibitem{shlens2005pca}
+Jonathon Shlens.
+\newblock A tutorial on principal component analysis, December 2005.
+\newblock Version 2, December 10, 2005.
+
+\bibitem{rot-mat}
+Elissa Ledoux.
+\newblock Rigid body transforms.
+\newblock In {\em Robotics and Controls Engineering}. Middle Tennessee State
+  University, jan 2025.
+\newblock Pressbooks open textbook.
+
+\bibitem{wikipedia2025dot}
+{Wikipedia contributors}.
+\newblock Dot product.
+\newblock Wikipedia, The Free Encyclopedia, 2025.
+\newblock Accessed: 2026-11-02.
+
+\bibitem{wikipedia2025atan2}
+{Wikipedia contributors}.
+\newblock atan2.
+\newblock Wikipedia, The Free Encyclopedia, 2025.
+\newblock Accessed: 2026-11-02.
+
+\bibitem{google_normalization}
+{Google}.
+\newblock Machine learning crash course: Numerical data -- normalization.
+\newblock
+  \url{https://developers.google.com/machine-learning/crash-course/numerical-data/normalization}.
+\newblock Google for Developers. Accessed: 2026-11-02.
+
+\bibitem{sklearn_feature_scaling}
+{The scikit-learn developers}.
+\newblock Importance of feature scaling.
+\newblock
+  \url{https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html}.
+\newblock scikit-learn documentation. Accessed: 2026-11-02.
+
+\bibitem{goossens93}
+M.~Goossens, F.~Mittelbach, and A.~Samarin.
+\newblock {\em The LaTeX Companion}.
+\newblock Addison-Wesley, Reading, Massachusetts, 9 edition, 1993.
+
+\bibitem{greekbook}
+Ι. Κάβουρας.
+\newblock {\em Συστήματα Υπολογιστών}.
+\newblock Κλειδάριθμος, Αθήνα, 3 edition, 1991.
+
+\bibitem{LiArTs13}
+J.~Liaperdos, A.~Arapoyanni, and Y.~Tsiatouhas.
+\newblock Adjustable {RF} mixers' alternate test efficiency optimization by the
+  reduction of test observables.
+\newblock {\em {IEEE} Transactions on Computer-Aided Design of Integrated
+  Circuits and Systems}, 32(9):1383--1394, Sept. 2013.
+
+\bibitem{dcis2011}
+I.~Liaperdos, L.~Dermentzoglou, A.~Arapoyanni, and Y.~Tsiatouhas.
+\newblock Fault detection in {RF} mixers combining defect-oriented and
+  alternate test strategies.
+\newblock In {\em 26th Conference on Design of Circuits and Integrated Systems
+  (DCIS)}, San Sebastian, Spain, Nov. 2011.
+
+\bibitem{LaTeXProject}
+Latex project.
+\newblock \url{http://www.latex-project.org}.
+\newblock Ημερομηνία πρόσβασης: 13-11-2014.
+
+\bibitem{elli05}
+Ε. Ανδρουλάκη.
+\newblock Υλοποίηση Ενεργού Μηχανισμού σε
+  Σύστημα Ομότιμων Βάσεων.
+\newblock Πτυχιακή εργασία, KDBS Lab, Εθνικό
+  Μετσόβιο Πολυτεχνείο, Ιουλ. 2005.
+
+\bibitem{zoi04}
+Ζ. Καούδη.
+\newblock Πρότυπο Σύστημα Αποθήκευσης και
+  Διαχείρισης Σχημάτων rdfs.
+\newblock Διπλωματική εργασία, Εθνικό Μετσόβιο
+  Πολυτεχνείο, Ιουλ. 2004.
+
+\bibitem{master04}
+Ζ. Λάσκαρη.
+\newblock Κοινωνική Ανάλυση των Ταινιών της finos
+  films.
+\newblock Master's thesis, Εθνικό Μετσόβιο
+  Πολυτεχνείο, Aug. 2012.
+
+\bibitem{phd045}
+Ζ. Κουρούκλη.
+\newblock {\em Κατανεμημένα Συστήματα}.
+\newblock PhD thesis, ΤΕΙ Πελοποννήσου, Dec. 2013.
+
+\bibitem{MSU-CSE-05-29}
+H.~Cheng J.~Gao and P.-N. Tan.
+\newblock A framework for incorporating labeled examples into anomaly
+  detection.
+\newblock Technical Report MSU-CSE-05-29, Department of Computer Science,
+  Michigan State University, East Lansing, Michigan, 2005.
+
+\bibitem{viswanathan2014convenient}
+P.~Viswanathan, G.~Winner, and P.~Vyas.
+\newblock Convenient provisioning of embedded devices with wifi capability.
+\newblock US Patent 8,665,744, 2014.
+
+\bibitem{[PS11]}
+K.~Patroumpas and T.~Sellis.
+\newblock Subsuming multiple sliding windows for shared stream computation.
+\newblock In Johann Eder, Maria Bielikova, and A~Min Tjoa, editors, {\em
+  Advances in Databases and Information Systems}, volume 6909 of {\em Lecture
+  Notes in Computer Science}, pages 56--69. Springer, 2011.
+\newblock doi:10.1007/978-3-642-23737-9\_5.
+
+\end{thebibliography}

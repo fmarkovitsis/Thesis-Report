@@ -1,40 +1,46 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.11.2)  2 NOV 2026 21:46
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.9.17)  3 NOV 2026 11:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/sol77/Desktop/Thesis_template_UTH_ECE_ENG__Copy_/main.tex
-(c:/Users/sol77/Desktop/Thesis_template_UTH_ECE_ENG__Copy_/main.tex
+**c:/Users/sol77/Desktop/Thesis-Report/Thesis_template_UTH_ECE_ENG__Copy_/main.
+tex
+
+(c:/Users/sol77/Desktop/Thesis-Report/Thesis_template_UTH_ECE_ENG__Copy_/main.t
+ex
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
+L3 programming layer <2026-03-20>
 (uthece-thesis.cls
 Document Class: uthece-thesis 2022/07/26 2.0 LaTeX document class.
-(D:\tex\tex/latex/base\ifthen.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (D:\tex\tex/latex/graphics\graphicx.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(D:\tex\tex/latex/graphics\keyval.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (D:\tex\tex/latex/graphics\graphics.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(D:\tex\tex/latex/graphics\trig.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(D:\tex\tex/latex/graphics-cfg\graphics.cfg
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 106.
 
-(D:\tex\tex/latex/graphics-def\xetex.def
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
 File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen148
-\Gin@req@width=\dimen149
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
 )
-(D:\tex\tex/latex/fancyhdr\fancyhdr.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip49
@@ -52,9 +58,10 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip61
 \f@nch@widthR=\skip62
 \@temptokenb=\toks18
-) (D:\tex\tex/latex/base\book.cls
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
 Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
-(D:\tex\tex/latex/base\bk12.clo
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
 File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count271
@@ -68,15 +75,17 @@ File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count279
 \abovecaptionskip=\skip63
 \belowcaptionskip=\skip64
-\bibindent=\dimen150
+\bibindent=\dimen152
 )
-(D:\tex\tex/xelatex/ucharclasses\ucharclasses.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/xelatex/ucharclasses\ucharcla
+sses.sty
 Package: ucharclasses 2022/10/20 v2.6.0 Unicode block character classes for XeL
 aTeX
 
-(D:\tex\tex/generic/iftex\ifxetex.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
- (D:\tex\tex/generic/iftex\iftex.sty
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \AlphabeticPresentationFormsClass=\XeTeXcharclass1
@@ -95,19 +104,21 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \LatinExtendedFClass=\XeTeXcharclass14
 \LatinExtendedGClass=\XeTeXcharclass15
 )
-(D:\tex\tex/xelatex/xgreek\xgreek.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/xelatex/xgreek\xgreek.sty
 File: xgreek.sty 2026/07/06 v3.5.1 Package `xgreek.sty'
 
 Package 'xgreek' version 3.5.1 by Apostolos Syropoulos
 \@attic@num=\count280
 )
-(D:\tex\tex/latex/fontspec\fontspec.sty
-(D:\tex\tex/latex/l3packages/xparse\xparse.sty
-(D:\tex\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-12-24 L3 programming layer (loader) 
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2026-03-20 L3 programming layer (loader) 
 
-(D:\tex\tex/latex/l3backend\l3backend-xetex.def
-File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2026-02-18 L3 backend support: XeTeX
 \g__graphics_track_int=\count281
 \g__pdfannot_backend_int=\count282
 \g__pdfannot_backend_link_int=\count283
@@ -116,7 +127,8 @@ Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 
-(D:\tex\tex/latex/fontspec\fontspec-xetex.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
+.sty
 Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
 \l__fontspec_script_int=\count284
@@ -130,16 +142,17 @@ X
 \l__fontspec_emdef_int=\count292
 \l__fontspec_strong_int=\count293
 \l__fontspec_strongdef_int=\count294
-\l__fontspec_tmpa_dim=\dimen151
-\l__fontspec_tmpb_dim=\dimen152
-\l__fontspec_tmpc_dim=\dimen153
-
-(D:\tex\tex/latex/base\fontenc.sty
+\l__fontspec_tmpa_dim=\dimen153
+\l__fontspec_tmpb_dim=\dimen154
+\l__fontspec_tmpc_dim=\dimen155
+ (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (D:\tex\tex/latex/fontspec\fontspec.cfg)))
-(D:\tex\tex/latex/amsfonts\amssymb.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (D:\tex\tex/latex/amsfonts\amsfonts.sty
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks19
 \symAMSa=\mathgroup4
@@ -147,22 +160,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (D:\tex\tex/latex/amsmath\amsmath.sty
+)) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
-(D:\tex\tex/latex/amsmath\amstext.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (D:\tex\tex/latex/amsmath\amsgen.sty
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
-\ex@=\dimen154
+\ex@=\dimen156
 ))
-(D:\tex\tex/latex/amsmath\amsbsy.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen155
-) (D:\tex\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen157
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count295
@@ -182,7 +197,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen156
+\big@size=\dimen158
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count300
@@ -200,12 +215,12 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \column@=\count305
 \maxfields@=\count306
 \andhelp@=\toks22
-\eqnshift@=\dimen157
-\alignsep@=\dimen158
-\tagshift@=\dimen159
-\tagwidth@=\dimen160
-\totwidth@=\dimen161
-\lineht@=\dimen162
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
 \@envbody=\toks23
 \multlinegap=\skip66
 \multlinetaggap=\skip67
@@ -213,7 +228,7 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
-(D:\tex\tex/latex/amscls\amsthm.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks25
 \thm@bodyfont=\toks26
@@ -224,18 +239,19 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip69
 \thm@headsep=\skip70
 \dth@everypar=\toks30
-) (D:\tex\tex/xelatex/mathspec\mathspec.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/xelatex/mathspec\mathspec.sty
 Package: mathspec 2016/12/22 v0.2b LaTeX Package (Mathematics font selection fo
 r XeLaTeX)
-
-(D:\tex\tex/latex/etoolbox\etoolbox.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count307
-) (D:\tex\tex/latex/xkeyval\xkeyval.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
-(D:\tex\tex/generic/xkeyval\xkeyval.tex
-(D:\tex\tex/generic/xkeyval\xkvutils.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
 \XKV@toks=\toks31
 \XKV@tempa@toks=\toks32
 )
@@ -333,27 +349,26 @@ xt;"
 tex-text;"
 
 
-(D:\tex\tex/latex/emptypage\emptypage.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/emptypage\emptypage.sty
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
 pages
-)
-(D:\tex\tex/latex/tools\indentfirst.sty
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (D:\tex\tex/latex/tools\verbatim.sty
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks33
 \verbatim@line=\toks34
 \verbatim@in@stream=\read2
 )
-(D:\tex\tex/latex/base\latexsym.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (D:\tex\tex/latex/tocbibind\tocbibind.sty
-Package: tocbibind 2026/10/01 v1.5m extra ToC listings
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.sty
+Package: tocbibind 2026/06/01 v1.5l extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
-
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
@@ -367,11 +382,13 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 \c@remark=\count318
 \c@notation=\count319
 \c@law=\count320
-) (D:\tex\tex/latex/algorithms\algorithm.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
+y
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
- (D:\tex\tex/latex/float\float.sty
+ (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count321
 \float@exts=\toks35
@@ -381,7 +398,9 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@algorithm=\toks37
 \c@algorithm=\count322
-) (D:\tex\tex/latex/algorithms\algorithmic.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithmic.
+sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@unique=\count323
@@ -390,29 +409,30 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count326
 \ALC@tlm=\skip71
 \algorithmicindent=\skip72
-) (D:\tex\tex/latex/url\url.sty
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (D:\tex\tex/latex/tools\multicol.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count327
 \mult@box=\box57
-\multicol@leftmargin=\dimen163
+\multicol@leftmargin=\dimen165
 \c@unbalance=\count328
 \c@collectmore=\count329
 \doublecol@number=\count330
 \multicoltolerance=\count331
 \multicolpretolerance=\count332
-\full@width=\dimen164
-\page@free=\dimen165
-\premulticols=\dimen166
-\postmulticols=\dimen167
+\full@width=\dimen166
+\page@free=\dimen167
+\premulticols=\dimen168
+\postmulticols=\dimen169
 \multicolsep=\skip73
 \multicolbaselineskip=\skip74
 \partial@page=\box58
 \last@line=\box59
 \mc@boxedresult=\box60
-\maxbalancingoverflow=\dimen168
+\maxbalancingoverflow=\dimen170
 \mult@rightbox=\box61
 \mult@grightbox=\box62
 \mult@firstbox=\box63
@@ -456,27 +476,29 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@minrows=\count333
 \c@columnbadness=\count334
 \c@finalcolumnbadness=\count335
-\last@try=\dimen169
-\multicolovershoot=\dimen170
-\multicolundershoot=\dimen171
+\last@try=\dimen171
+\multicolovershoot=\dimen172
+\multicolundershoot=\dimen173
 \mult@nat@firstbox=\box101
 \colbreak@box=\box102
 \mc@col@check@num=\count336
 \g__mc_curr_col_int=\count337
-) (D:\tex\tex/latex/multirow\multirow.sty
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip75
 \multirow@cntb=\count338
 \multirow@dima=\skip76
-\bigstrutjot=\dimen172
-) (D:\tex\tex/latex/xcolor\xcolor.sty
+\bigstrutjot=\dimen174
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (D:\tex\tex/latex/graphics-cfg\color.cfg
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 274.
-
-(D:\tex\tex/latex/graphics\mathcolor.ltx)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
@@ -485,14 +507,13 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(D:\tex\tex/latex/colortbl\colortbl.sty
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
- (D:\tex\tex/latex/tools\array.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen173
+\col@sep=\dimen175
 \ar@mcellbox=\box103
-\extrarowheight=\dimen174
+\extrarowheight=\dimen176
 \NC@list=\toks38
 \extratabsurround=\skip77
 \backup@length=\skip78
@@ -502,63 +523,74 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \minrowclearance=\skip79
 \rownum=\count339
 )
-(D:\tex\tex/latex/caption\caption.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (D:\tex\tex/latex/caption\caption3.sty
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen175
-\captionmargin=\dimen176
-\caption@leftmargin=\dimen177
-\caption@rightmargin=\dimen178
-\caption@width=\dimen179
-\caption@indent=\dimen180
-\caption@parindent=\dimen181
-\caption@hangindent=\dimen182
+\caption@tempdima=\dimen177
+\captionmargin=\dimen178
+\caption@leftmargin=\dimen179
+\caption@rightmargin=\dimen180
+\caption@width=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count340
 \c@continuedfloat=\count341
 Package caption Info: float package is loaded.
 )
-(D:\tex\tex/latex/pgf/frontendlayer\tikz.sty
-(D:\tex\tex/latex/pgf/basiclayer\pgf.sty
-(D:\tex\tex/latex/pgf/utilities\pgfrcs.sty
-(D:\tex\tex/generic/pgf/utilities\pgfutil-common.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
 \pgfutil@everybye=\toks40
-\pgfutil@tempdima=\dimen183
-\pgfutil@tempdimb=\dimen184
+\pgfutil@tempdima=\dimen185
+\pgfutil@tempdimb=\dimen186
 )
-(D:\tex\tex/generic/pgf/utilities\pgfutil-latex.def
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
 \pgfutil@abb=\box105
 )
-(D:\tex\tex/generic/pgf/utilities\pgfrcs.code.tex
-(D:\tex\tex/generic/pgf\pgf.revision.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 
-(D:\tex\tex/latex/pgf/basiclayer\pgfcore.sty
-(D:\tex\tex/latex/pgf/systemlayer\pgfsys.sty
-(D:\tex\tex/generic/pgf/systemlayer\pgfsys.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
-(D:\tex\tex/generic/pgf/utilities\pgfkeys.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
 \pgfkeys@pathtoks=\toks41
 \pgfkeys@temptoks=\toks42
 
-(D:\tex\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks43
 ))
-\pgf@x=\dimen185
-\pgf@y=\dimen186
-\pgf@xa=\dimen187
-\pgf@ya=\dimen188
-\pgf@xb=\dimen189
-\pgf@yb=\dimen190
-\pgf@xc=\dimen191
-\pgf@yc=\dimen192
-\pgf@xd=\dimen193
-\pgf@yd=\dimen194
+\pgf@x=\dimen187
+\pgf@y=\dimen188
+\pgf@xa=\dimen189
+\pgf@ya=\dimen190
+\pgf@xb=\dimen191
+\pgf@yb=\dimen192
+\pgf@xc=\dimen193
+\pgf@yc=\dimen194
+\pgf@xd=\dimen195
+\pgf@yd=\dimen196
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
 \c@pgf@counta=\count342
@@ -570,182 +602,232 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \t@pgf@tokc=\toks46
 \pgf@sys@id@count=\count346
 
-(D:\tex\tex/generic/pgf/systemlayer\pgf.cfg
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-xetex.def
 
-(D:\tex\tex/generic/pgf/systemlayer\pgfsys-xetex.def
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-xetex.def
 File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
 
-(D:\tex\tex/generic/pgf/systemlayer\pgfsys-dvipdfmx.def
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-dvipdfmx.def
 File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 
-(D:\tex\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
 \pgfsys@objnum=\count347
 )))
-(D:\tex\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count348
 \pgfsyssoftpath@bigbuffer@items=\count349
 )
-(D:\tex\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(D:\tex\tex/generic/pgf/basiclayer\pgfcore.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 
-(D:\tex\tex/generic/pgf/math\pgfmath.code.tex
-(D:\tex\tex/generic/pgf/math\pgfmathutil.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen195
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen197
 \pgfmath@count=\count350
 \pgfmath@box=\box106
 \pgfmath@toks=\toks47
 \pgfmath@stack@operand=\toks48
 \pgfmath@stack@operation=\toks49
 )
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathcalc.code.tex)
-(D:\tex\tex/generic/pgf/math\pgfmathfloat.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
 \c@pgfmathroundto@lastzeros=\count351
 ))
-(D:\tex\tex/generic/pgf/math\pgfint.code.tex)
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen196
-\pgf@picmaxx=\dimen197
-\pgf@picminy=\dimen198
-\pgf@picmaxy=\dimen199
-\pgf@pathminx=\dimen256
-\pgf@pathmaxx=\dimen257
-\pgf@pathminy=\dimen258
-\pgf@pathmaxy=\dimen259
-\pgf@xx=\dimen260
-\pgf@xy=\dimen261
-\pgf@yx=\dimen262
-\pgf@yy=\dimen263
-\pgf@zx=\dimen264
-\pgf@zy=\dimen265
+\pgf@picminx=\dimen198
+\pgf@picmaxx=\dimen199
+\pgf@picminy=\dimen256
+\pgf@picmaxy=\dimen257
+\pgf@pathminx=\dimen258
+\pgf@pathmaxx=\dimen259
+\pgf@pathminy=\dimen260
+\pgf@pathmaxy=\dimen261
+\pgf@xx=\dimen262
+\pgf@xy=\dimen263
+\pgf@yx=\dimen264
+\pgf@yy=\dimen265
+\pgf@zx=\dimen266
+\pgf@zy=\dimen267
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen266
-\pgf@path@lasty=\dimen267
+\pgf@path@lastx=\dimen268
+\pgf@path@lasty=\dimen269
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen268
-\pgf@shorten@start@additional=\dimen269
+\pgf@shorten@end@additional=\dimen270
+\pgf@shorten@start@additional=\dimen271
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box107
 \pgf@hbox=\box108
 \pgf@layerbox@main=\box109
 \pgf@picture@serial@count=\count352
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen270
+\pgflinewidth=\dimen272
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen271
-\pgf@pt@y=\dimen272
-\pgf@pt@temp=\dimen273
+\pgf@pt@x=\dimen273
+\pgf@pt@y=\dimen274
+\pgf@pt@temp=\dimen275
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen274
+\pgfarrowsep=\dimen276
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen275
+\pgf@max=\dimen277
 \pgf@sys@shading@range@num=\count353
 \pgf@shadingcount=\count354
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box110
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-(D:\tex\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box111
 )
-(D:\tex\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(D:\tex\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen276
-\pgf@nodesepend=\dimen277
+\pgf@nodesepstart=\dimen278
+\pgf@nodesepend=\dimen279
 )
-(D:\tex\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 ))
-(D:\tex\tex/latex/pgf/utilities\pgffor.sty
-(D:\tex\tex/latex/pgf/utilities\pgfkeys.sty
-(D:\tex\tex/generic/pgf/utilities\pgfkeys.code.tex))
-(D:\tex\tex/latex/pgf/math\pgfmath.sty
-(D:\tex\tex/generic/pgf/math\pgfmath.code.tex))
-(D:\tex\tex/generic/pgf/utilities\pgffor.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen278
-\pgffor@skip=\dimen279
+\pgffor@iter=\dimen280
+\pgffor@skip=\dimen281
 \pgffor@stack=\toks50
 \pgffor@toks=\toks51
 ))
-(D:\tex\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 
-(D:\tex\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count355
-\pgfplotmarksize=\dimen280
+\pgfplotmarksize=\dimen282
 )
-\tikz@lastx=\dimen281
-\tikz@lasty=\dimen282
-\tikz@lastxsaved=\dimen283
-\tikz@lastysaved=\dimen284
-\tikz@lastmovetox=\dimen285
-\tikz@lastmovetoy=\dimen286
-\tikzleveldistance=\dimen287
-\tikzsiblingdistance=\dimen288
+\tikz@lastx=\dimen283
+\tikz@lasty=\dimen284
+\tikz@lastxsaved=\dimen285
+\tikz@lastysaved=\dimen286
+\tikz@lastmovetox=\dimen287
+\tikz@lastmovetoy=\dimen288
+\tikzleveldistance=\dimen289
+\tikzsiblingdistance=\dimen290
 \tikz@figbox=\box112
 \tikz@figbox@bg=\box113
 \tikz@tempbox=\box114
@@ -755,7 +837,8 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofcurrentchild=\count358
 \tikz@fig@count=\count359
 
-(D:\tex\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count360
 \pgfmatrixcurrentcolumn=\count361
@@ -763,18 +846,22 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 \tikz@expandcount=\count363
 
-(D:\tex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.te
-x
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (D:\tex\tex/latex/datetime\datetime.sty
+)))
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
-(D:\tex\tex/latex/fmtcount\fmtcount.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fmtcount.sty
 Package: fmtcount 2025/12/02 v3.12 Displaying the values of LaTeX counters (NT,
 VB,NE)
- (D:\tex\tex/latex/fmtcount\fcprefix.sty
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcprefix.sty
 Package: fcprefix 2012/09/28
-(D:\tex\tex/latex/fmtcount\fcnumparser.sty
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcnumparser.st
+y
 Package: fcnumparser 2017/06/15
 \fc@digit@counter=\count364
 ))
@@ -788,7 +875,8 @@ Package: fcnumparser 2017/06/15
 \@DT@loopN=\count372
 \@DT@X=\count373
 )
-(D:\tex\tex/latex/datetime\datetime-defaults.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime-defau
+lts.sty
 Package: datetime-defaults 2013/09/10
 )
 \@day=\count374
@@ -812,110 +900,120 @@ LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks52
 \dt@b=\toks53
 )
-(D:\tex\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
-(D:\tex\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(D:\tex\tex/generic/kvdefinekeys\kvdefinekeys.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(D:\tex\tex/generic/pdfescape\pdfescape.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(D:\tex\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(D:\tex\tex/generic/pdftexcmds\pdftexcmds.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(D:\tex\tex/generic/infwarerr\infwarerr.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
 ))
-(D:\tex\tex/latex/hycolor\hycolor.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (D:\tex\tex/latex/hyperref\nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+)
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 
-(D:\tex\tex/latex/refcount\refcount.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(D:\tex\tex/generic/gettitlestring\gettitlestring.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(D:\tex\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count389
 )
-(D:\tex\tex/generic/stringenc\stringenc.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen289
+\@linkdim=\dimen291
 \Hy@linkcounter=\count390
 \Hy@pagecounter=\count391
-
-(D:\tex\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
-) (D:\tex\tex/generic/intcalc\intcalc.sty
+ (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count392
-(D:\tex\tex/latex/hyperref\puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+ (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
+Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count393
-LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen290
- (D:\tex\tex/generic/bitset\bitset.sty
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen292
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(D:\tex\tex/generic/bigintcalc\bigintcalc.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count394
-\Field@Width=\dimen291
-\Fld@charsize=\dimen292
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Field@Width=\dimen293
+\Fld@charsize=\dimen294
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
 \Hy@abspage=\count395
 \c@Item=\count396
 \c@Hfootnote=\count397
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
-(D:\tex\tex/latex/hyperref\hxetex.def
-File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2026-01-29 v7.01p Hyperref driver for XeTeX
 \pdfm@box=\box116
 \c@Hy@AnnotLevel=\count398
 \HyField@AnnotCount=\count399
 \Fld@listcount=\count400
 \c@bookmark@seq@number=\count401
 
-(D:\tex\tex/latex/rerunfilecheck\rerunfilecheck.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(D:\tex\tex/generic/uniquecounter\uniquecounter.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -923,23 +1021,18 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-(D:\tex\tex/latex/caption\subcaption.sty
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count402
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count403
-)
-(D:\tex\tex/latex/makecell\makecell.sty
+) (C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen293
+\rotheadsize=\dimen295
 \c@nlinenum=\count404
 \TeXr@lab=\toks54
-) (main.aux (acknowledgements.aux)
-(declaration_eng.aux) (abstract_eng.aux) (abstract.aux) (abbreviations.aux)
-(chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux)
-(chapter6.aux) (chapter7.aux) (chapter_last.aux) (appendices.aux) (appA.aux)
-(appB.aux))
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -965,7 +1058,8 @@ LaTeX Font Info:    ... okay on input line 82.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (D:\tex\tex/latex/fmtcount\fc-english.def
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-english.def
 File: fc-english.def 2016/01/12
 )
 Package hyperref Info: Link coloring OFF on input line 82.
@@ -973,29 +1067,34 @@ Package hyperref Info: Link coloring OFF on input line 82.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 File: logos/UTH-logo-english.png Graphic file (type bmp)
 <logos/UTH-logo-english.png>
 LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
 
-
-(D:\tex\tex/latex/amsfonts\umsa.fd
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
 
- (D:\tex\tex/latex/amsfonts\umsb.fd
+
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
 .
 
-(D:\tex\tex/latex/base\ulasy.fd
+(C:\Users\sol77\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
 
 
-] [2
+]
+[2
 
 ]
 File: logos/UTH-logo-english.png Graphic file (type bmp)
@@ -1010,8 +1109,7 @@ File: logos/UTH-logo-greek.png Graphic file (type bmp)
 ] [7]
 \openout2 = `acknowledgements.aux'.
 
-
-(acknowledgements.tex [8
+ (acknowledgements.tex [8
 
 
 ]) [9] [10
@@ -1021,13 +1119,13 @@ File: logos/UTH-logo-greek.png Graphic file (type bmp)
 ]
 \openout2 = `declaration_eng.aux'.
 
- (declaration_eng.tex) [11
+
+(declaration_eng.tex) [11
 
 ]
 \openout2 = `abstract_eng.aux'.
 
-
-(abstract_eng.tex
+ (abstract_eng.tex
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <12> not avai
 lable
 (Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on inpu
@@ -1047,47 +1145,33 @@ t line 11.
 
 
 
-] (main.toc [15
-
-] [16]
-Overfull \hbox (0.73271pt too wide) in paragraph at lines 64--64
- [][] [][]\TU/TimesNewRoman(0)/m/n/12 Substituting Sun’s and SCC’s Roll, Pitch 
-and Yaw with a Single Num- 
- []
-
-)
+]
+(main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [17] [18
+ [15
 
-] (main.lof
-LaTeX Info: Redefining \anw@print on input line 6.
-LaTeX Info: Redefining \anw@print on input line 6.
+] [16
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20])
+] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
-
-[21] [22
+ [17] [18
 
 ] (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [23]
+ [19]
 \openout2 = `abbreviations.aux'.
 
- (abbreviations.tex [24
+ (abbreviations.tex
+[20
 
 
-]) [25] [26
+]) [21] [22
 
 
 
@@ -1097,13 +1181,138 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  (chapter1.tex
 Chapter 1.
 
+LaTeX Warning: Citation `edges_under_illumvar' on page 1 undefined on input lin
+e 6.
+
+
+LaTeX Warning: Citation `dl_low_light' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Citation `impact_of_sunlight_conditions' on page 1 undefined on 
+input line 6.
+
+
+LaTeX Warning: Citation `fruit_detection_illvar' on page 1 undefined on input l
+ine 6.
+
+
+LaTeX Warning: Citation `effect-time-day' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Citation `color_consistency' on page 1 undefined on input line 6
+.
+
+
+LaTeX Warning: Citation `edges_under_illumvar' on page 1 undefined on input lin
+e 6.
+
+
+LaTeX Warning: Citation `dl_low_light' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Citation `impact_of_sunlight_conditions' on page 1 undefined on 
+input line 6.
+
+
+LaTeX Warning: Citation `impact_of_sunlight_conditions' on page 1 undefined on 
+input line 8.
+
+
+LaTeX Warning: Citation `ps_cloudy' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `autonomous_agriculture' on page 1 undefined on input l
+ine 8.
+
+
+LaTeX Warning: Citation `safetyhaz-cv' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `bridges' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `construction-site' on page 1 undefined on input line 8
+.
+
+
+LaTeX Warning: Citation `impact_of_sunlight_conditions' on page 1 undefined on 
+input line 8.
+
+
+LaTeX Warning: Citation `effect-time-day' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `variable-illum-vi' on page 1 undefined on input line 8
+.
+
+
 Underfull \vbox (badness 1478) has occurred while \output is active []
 
  [1
 
 
 ]
+
+LaTeX Warning: Citation `dl_low_light' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `dl-img-rest' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `macgan' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `illum-correction' on page 2 undefined on input line 10
+.
+
+
+LaTeX Warning: Citation `rfg-change-detect' on page 2 undefined on input line 1
+0.
+
+
+LaTeX Warning: Citation `dl-img-rest' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `rfg-change-detect' on page 2 undefined on input line 1
+0.
+
+
+LaTeX Warning: Citation `dl-img-rest' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `macgan' on page 2 undefined on input line 10.
+
+
+LaTeX Warning: Citation `luminance-cal-camera' on page 2 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Citation `rp-luminance-cmaera' on page 2 undefined on input line
+ 14.
+
+
+LaTeX Warning: Citation `drones-reflectance' on page 2 undefined on input line 
+14.
+
+
+LaTeX Warning: Citation `impact_of_sunlight_conditions' on page 2 undefined on 
+input line 16.
+
+
+LaTeX Warning: Citation `brdf' on page 2 undefined on input line 16.
+
+
+LaTeX Warning: Citation `impact_of_sunlight_conditions' on page 2 undefined on 
+input line 18.
+
+
+LaTeX Warning: Citation `cons-grade-cams' on page 2 undefined on input line 18.
+
+
 [2]
+
+LaTeX Warning: Reference `ml-pipeline-1' on page 3 undefined on input line 20.
+
 File: images/brdf-to-gt.png Graphic file (type bmp)
 <images/brdf-to-gt.png>
 LaTeX Info: Redefining \anw@print on input line 28.
@@ -1117,690 +1326,21 @@ LaTeX Info: Redefining \anw@print on input line 37.
 LaTeX Info: Redefining \anw@print on input line 37.
 LaTeX Info: Redefining \anw@print on input line 37.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `ml-pipeline-2' on page 3 undefined on input line 50.
+
+
+Underfull \vbox (badness 7047) has occurred while \output is active []
 
  [3]
 File: images/truegt-pipeline.png Graphic file (type bmp)
 <images/truegt-pipeline.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[4] [5]
 
- [4]
-[5]) [6]
-\openout2 = `chapter2.aux'.
+LaTeX Warning: Reference `chap1' on page 6 undefined on input line 75.
 
- (chapter2.tex
-Chapter 2.
-[7
 
+LaTeX Warning: Reference `chap2' on page 6 undefined on input line 75.
 
 
-
-] [8] [9]
-Overfull \hbox (5.50604pt too wide) in paragraph at lines 45--45
-[]\TU/TimesNewRoman(0)/b/n/17.28 Bidirectional Reflectance Distribution Functio
-n (BRDF) 
- []
-
-[10]
-File: images/uav-multiangle.png Graphic file (type bmp)
-<images/uav-multiangle.png>
-File: images/left.png Graphic file (type bmp)
-<images/left.png>
-LaTeX Info: Redefining \anw@print on input line 71.
-LaTeX Info: Redefining \anw@print on input line 71.
-LaTeX Info: Redefining \anw@print on input line 71.
-LaTeX Info: Redefining \anw@print on input line 71.
-File: images/right.png Graphic file (type bmp)
-<images/right.png>
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 80.
-LaTeX Info: Redefining \anw@print on input line 80.
-LaTeX Info: Redefining \anw@print on input line 80.
-LaTeX Info: Redefining \anw@print on input line 80.
- [11] [12] [13]
-File: images/Screenshot from 2026-09-16 22-44-53.png Graphic file (type bmp)
-<images/Screenshot from 2026-09-16 22-44-53.png>
-) [14]
-\openout2 = `chapter3.aux'.
-
- (chapter3.tex
-Chapter 3.
-[15
-
-
-
-
-]
-File: images/related-work-1.png Graphic file (type bmp)
-<images/related-work-1.png>
-) [16] [17]
-\openout2 = `chapter4.aux'.
-
- (chapter4.tex [18
-
-
-
-
-]
-Chapter 4.
-
-Underfull \vbox (badness 1242) has occurred while \output is active []
-
- [19]
-File: images/soilmud.jpg Graphic file (type bmp)
-<images/soilmud.jpg>
-LaTeX Info: Redefining \anw@print on input line 28.
-LaTeX Info: Redefining \anw@print on input line 28.
-LaTeX Info: Redefining \anw@print on input line 28.
-LaTeX Info: Redefining \anw@print on input line 28.
-File: images/grass.jpg Graphic file (type bmp)
-<images/grass.jpg>
-LaTeX Info: Redefining \anw@print on input line 33.
-LaTeX Info: Redefining \anw@print on input line 33.
-LaTeX Info: Redefining \anw@print on input line 33.
-LaTeX Info: Redefining \anw@print on input line 33.
-File: images/blendedground.png Graphic file (type bmp)
-<images/blendedground.png>
-LaTeX Info: Redefining \anw@print on input line 40.
-LaTeX Info: Redefining \anw@print on input line 40.
-LaTeX Info: Redefining \anw@print on input line 40.
-LaTeX Info: Redefining \anw@print on input line 40.
-
-[20]
-File: images/noise600.png Graphic file (type bmp)
-<images/noise600.png>
-LaTeX Info: Redefining \anw@print on input line 68.
-LaTeX Info: Redefining \anw@print on input line 68.
-LaTeX Info: Redefining \anw@print on input line 68.
-LaTeX Info: Redefining \anw@print on input line 68.
-File: images/noise1200.png Graphic file (type bmp)
-<images/noise1200.png>
-LaTeX Info: Redefining \anw@print on input line 72.
-LaTeX Info: Redefining \anw@print on input line 72.
-LaTeX Info: Redefining \anw@print on input line 72.
-LaTeX Info: Redefining \anw@print on input line 72.
-File: images/noise1800.png Graphic file (type bmp)
-<images/noise1800.png>
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 76.
-File: images/HighresScreenshot00002_4MB.png Graphic file (type bmp)
-<images/HighresScreenshot00002_4MB.png>
-LaTeX Info: Redefining \anw@print on input line 83.
-LaTeX Info: Redefining \anw@print on input line 83.
-LaTeX Info: Redefining \anw@print on input line 83.
-LaTeX Info: Redefining \anw@print on input line 83.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-File: images/wheat-field.png Graphic file (type bmp)
-<images/wheat-field.png>
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 112.
-File: images/wheat-above.png Graphic file (type bmp)
-<images/wheat-above.png>
-LaTeX Info: Redefining \anw@print on input line 116.
-LaTeX Info: Redefining \anw@print on input line 116.
-LaTeX Info: Redefining \anw@print on input line 116.
-LaTeX Info: Redefining \anw@print on input line 116.
-
-[23]
-File: images/grvimap.png Graphic file (type bmp)
-<images/grvimap.png>
- [24]
-File: images/HighresScreenshot00007.png Graphic file (type bmp)
-<images/HighresScreenshot00007.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-LaTeX Info: Redefining \anw@print on input line 180.
-LaTeX Info: Redefining \anw@print on input line 180.
-File: images/trees-generic.png Graphic file (type bmp)
-<images/trees-generic.png>
-LaTeX Info: Redefining \anw@print on input line 189.
-LaTeX Info: Redefining \anw@print on input line 189.
-LaTeX Info: Redefining \anw@print on input line 189.
-LaTeX Info: Redefining \anw@print on input line 189.
-File: images/trees-6am.png Graphic file (type bmp)
-<images/trees-6am.png>
-LaTeX Info: Redefining \anw@print on input line 196.
-LaTeX Info: Redefining \anw@print on input line 196.
-LaTeX Info: Redefining \anw@print on input line 196.
-LaTeX Info: Redefining \anw@print on input line 196.
-File: images/trees-1715.png Graphic file (type bmp)
-<images/trees-1715.png>
-LaTeX Info: Redefining \anw@print on input line 202.
-LaTeX Info: Redefining \anw@print on input line 202.
-LaTeX Info: Redefining \anw@print on input line 202.
-LaTeX Info: Redefining \anw@print on input line 202.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-[27] [28]
-LaTeX Info: Redefining \anw@print on input line 239.
-LaTeX Info: Redefining \anw@print on input line 239.
-File: images/nonfoggy10.png Graphic file (type bmp)
-<images/nonfoggy10.png>
-LaTeX Info: Redefining \anw@print on input line 246.
-LaTeX Info: Redefining \anw@print on input line 246.
-LaTeX Info: Redefining \anw@print on input line 246.
-LaTeX Info: Redefining \anw@print on input line 246.
-File: images/foggy10.png Graphic file (type bmp)
-<images/foggy10.png>
-LaTeX Info: Redefining \anw@print on input line 251.
-LaTeX Info: Redefining \anw@print on input line 251.
-LaTeX Info: Redefining \anw@print on input line 251.
-LaTeX Info: Redefining \anw@print on input line 251.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
-[30]
-File: images/color_pipe.png Graphic file (type bmp)
-<images/color_pipe.png>
- [31]
-File: images/viewport_img.png Graphic file (type bmp)
-<images/viewport_img.png>
-LaTeX Info: Redefining \anw@print on input line 303.
-LaTeX Info: Redefining \anw@print on input line 303.
-LaTeX Info: Redefining \anw@print on input line 303.
-LaTeX Info: Redefining \anw@print on input line 303.
-File: images/scc_img.png Graphic file (type bmp)
-<images/scc_img.png>
-LaTeX Info: Redefining \anw@print on input line 308.
-LaTeX Info: Redefining \anw@print on input line 308.
-LaTeX Info: Redefining \anw@print on input line 308.
-LaTeX Info: Redefining \anw@print on input line 308.
-) [32]
-\openout2 = `chapter5.aux'.
-
- (chapter5.tex
-Chapter 5.
-
-LaTeX Warning: Reference `feature-engineering' on page 33 undefined on input li
-ne 10.
-
-[33
-
-
-
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-[35]
-Overfull \vbox (50.71635pt too high) has occurred while \output is active []
-
-
-[36]
-File: images/spline_polyline.png Graphic file (type bmp)
-<images/spline_polyline.png>
-LaTeX Info: Redefining \anw@print on input line 113.
-LaTeX Info: Redefining \anw@print on input line 113.
-LaTeX Info: Redefining \anw@print on input line 113.
-LaTeX Info: Redefining \anw@print on input line 113.
-File: images/spline_uneven.png Graphic file (type bmp)
-<images/spline_uneven.png>
-LaTeX Info: Redefining \anw@print on input line 118.
-LaTeX Info: Redefining \anw@print on input line 118.
-LaTeX Info: Redefining \anw@print on input line 118.
-LaTeX Info: Redefining \anw@print on input line 118.
- [37]
-File: images/image.png Graphic file (type bmp)
-<images/image.png>
- [38]
-File: images/cameraangle_diag.png Graphic file (type bmp)
-<images/cameraangle_diag.png>
-
-
-LaTeX Warning: Hyper reference `feature-engineering' on page 39 undefined on in
-put line 163.
-
-[39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
-[41]
-File: images/cd-pipe.png Graphic file (type bmp)
-<images/cd-pipe.png>
-LaTeX Info: Redefining \anw@print on input line 201.
-LaTeX Info: Redefining \anw@print on input line 201.
-LaTeX Info: Redefining \anw@print on input line 201.
-LaTeX Info: Redefining \anw@print on input line 201.
-File: images/sequencer.png Graphic file (type bmp)
-<images/sequencer.png>
-LaTeX Info: Redefining \anw@print on input line 208.
-LaTeX Info: Redefining \anw@print on input line 208.
-LaTeX Info: Redefining \anw@print on input line 208.
-LaTeX Info: Redefining \anw@print on input line 208.
-File: images/6_img_lowGRVI.png Graphic file (type bmp)
-<images/6_img_lowGRVI.png>
- [42]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
-LaTeX Info: Redefining \anw@print on input line 246.
-LaTeX Info: Redefining \anw@print on input line 246.
-
-[44]
-File: images/6_img_highGRVI.png Graphic file (type bmp)
-<images/6_img_highGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 254.
-LaTeX Info: Redefining \anw@print on input line 254.
-LaTeX Info: Redefining \anw@print on input line 254.
-LaTeX Info: Redefining \anw@print on input line 254.
-File: images/12_img_highGRVInc.png Graphic file (type bmp)
-<images/12_img_highGRVInc.png>
-LaTeX Info: Redefining \anw@print on input line 261.
-LaTeX Info: Redefining \anw@print on input line 261.
-LaTeX Info: Redefining \anw@print on input line 261.
-LaTeX Info: Redefining \anw@print on input line 261.
-File: images/1715_img_highGRVI.png Graphic file (type bmp)
-<images/1715_img_highGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 268.
-LaTeX Info: Redefining \anw@print on input line 268.
-LaTeX Info: Redefining \anw@print on input line 268.
-LaTeX Info: Redefining \anw@print on input line 268.
-File: images/6_graph_highGRVI.png Graphic file (type bmp)
-<images/6_graph_highGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 277.
-LaTeX Info: Redefining \anw@print on input line 277.
-LaTeX Info: Redefining \anw@print on input line 277.
-LaTeX Info: Redefining \anw@print on input line 277.
-File: images/12_graph_highGRVInc.png Graphic file (type bmp)
-<images/12_graph_highGRVInc.png>
-LaTeX Info: Redefining \anw@print on input line 284.
-LaTeX Info: Redefining \anw@print on input line 284.
-LaTeX Info: Redefining \anw@print on input line 284.
-LaTeX Info: Redefining \anw@print on input line 284.
-File: images/1715_graph_highGRVI.png Graphic file (type bmp)
-<images/1715_graph_highGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 291.
-LaTeX Info: Redefining \anw@print on input line 291.
-LaTeX Info: Redefining \anw@print on input line 291.
-LaTeX Info: Redefining \anw@print on input line 291.
-LaTeX Info: Redefining \anw@print on input line 299.
-LaTeX Info: Redefining \anw@print on input line 301.
-File: images/6_img_lowGRVI.png Graphic file (type bmp)
-<images/6_img_lowGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 309.
-LaTeX Info: Redefining \anw@print on input line 309.
-LaTeX Info: Redefining \anw@print on input line 309.
-LaTeX Info: Redefining \anw@print on input line 309.
-File: images/12_img_lowGRVInc.png Graphic file (type bmp)
-<images/12_img_lowGRVInc.png>
-LaTeX Info: Redefining \anw@print on input line 316.
-LaTeX Info: Redefining \anw@print on input line 316.
-LaTeX Info: Redefining \anw@print on input line 316.
-LaTeX Info: Redefining \anw@print on input line 316.
-File: images/1715_img_lowGRVI.png Graphic file (type bmp)
-<images/1715_img_lowGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 323.
-LaTeX Info: Redefining \anw@print on input line 323.
-LaTeX Info: Redefining \anw@print on input line 323.
-LaTeX Info: Redefining \anw@print on input line 323.
-File: images/6_graph_lowGRVI.png Graphic file (type bmp)
-<images/6_graph_lowGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 332.
-LaTeX Info: Redefining \anw@print on input line 332.
-LaTeX Info: Redefining \anw@print on input line 332.
-LaTeX Info: Redefining \anw@print on input line 332.
-File: images/12_graph_lowGRVInc.png Graphic file (type bmp)
-<images/12_graph_lowGRVInc.png>
-LaTeX Info: Redefining \anw@print on input line 339.
-LaTeX Info: Redefining \anw@print on input line 339.
-LaTeX Info: Redefining \anw@print on input line 339.
-LaTeX Info: Redefining \anw@print on input line 339.
-File: images/1715_graph_lowGRVI.png Graphic file (type bmp)
-<images/1715_graph_lowGRVI.png>
-LaTeX Info: Redefining \anw@print on input line 346.
-LaTeX Info: Redefining \anw@print on input line 346.
-LaTeX Info: Redefining \anw@print on input line 346.
-LaTeX Info: Redefining \anw@print on input line 346.
- [45]
-File: images/grvi_percentage_difference_sza_104.png Graphic file (type bmp)
-<images/grvi_percentage_difference_sza_104.png>
- [46]
-File: images/104-104grviDiff.png Graphic file (type bmp)
-<images/104-104grviDiff.png>
- [47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
-File: images/12_img_08GRVI.png Graphic file (type bmp)
-<images/12_img_08GRVI.png>
-LaTeX Info: Redefining \anw@print on input line 405.
-LaTeX Info: Redefining \anw@print on input line 405.
-LaTeX Info: Redefining \anw@print on input line 405.
-LaTeX Info: Redefining \anw@print on input line 405.
-File: images/12_img_24GRVI.png Graphic file (type bmp)
-<images/12_img_24GRVI.png>
-LaTeX Info: Redefining \anw@print on input line 412.
-LaTeX Info: Redefining \anw@print on input line 412.
-LaTeX Info: Redefining \anw@print on input line 412.
-LaTeX Info: Redefining \anw@print on input line 412.
-File: images/12_img_38GRVI.png Graphic file (type bmp)
-<images/12_img_38GRVI.png>
-LaTeX Info: Redefining \anw@print on input line 419.
-LaTeX Info: Redefining \anw@print on input line 419.
-LaTeX Info: Redefining \anw@print on input line 419.
-LaTeX Info: Redefining \anw@print on input line 419.
-File: images/12_graph_08GRVI.png Graphic file (type bmp)
-<images/12_graph_08GRVI.png>
-LaTeX Info: Redefining \anw@print on input line 428.
-LaTeX Info: Redefining \anw@print on input line 428.
-LaTeX Info: Redefining \anw@print on input line 428.
-LaTeX Info: Redefining \anw@print on input line 428.
-File: images/12_graph_24GRVI.png Graphic file (type bmp)
-<images/12_graph_24GRVI.png>
-LaTeX Info: Redefining \anw@print on input line 435.
-LaTeX Info: Redefining \anw@print on input line 435.
-LaTeX Info: Redefining \anw@print on input line 435.
-LaTeX Info: Redefining \anw@print on input line 435.
-File: images/12_graph_38GRVI.png Graphic file (type bmp)
-<images/12_graph_38GRVI.png>
-LaTeX Info: Redefining \anw@print on input line 442.
-LaTeX Info: Redefining \anw@print on input line 442.
-LaTeX Info: Redefining \anw@print on input line 442.
-LaTeX Info: Redefining \anw@print on input line 442.
-
-[49]
-Underfull \vbox (badness 1173) has occurred while \output is active []
-
- [50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51]
-[52]
-File: images/assigned_grvi_map.png Graphic file (type bmp)
-<images/assigned_grvi_map.png>
-LaTeX Info: Redefining \anw@print on input line 526.
-LaTeX Info: Redefining \anw@print on input line 526.
-LaTeX Info: Redefining \anw@print on input line 526.
-LaTeX Info: Redefining \anw@print on input line 526.
-File: images/measured_grvi_map.png Graphic file (type bmp)
-<images/measured_grvi_map.png>
-LaTeX Info: Redefining \anw@print on input line 531.
-LaTeX Info: Redefining \anw@print on input line 531.
-LaTeX Info: Redefining \anw@print on input line 531.
-LaTeX Info: Redefining \anw@print on input line 531.
-LaTeX Info: Redefining \anw@print on input line 541.
- [53]
-File: images/cloudy-clusters.png Graphic file (type bmp)
-<images/cloudy-clusters.png>
- [54] [55]
-File: images/grvi_vs_sza.png Graphic file (type bmp)
-<images/grvi_vs_sza.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56])
-[57]
-\openout2 = `chapter6.aux'.
-
- (chapter6.tex [58
-
-
-
-
-]
-Chapter 6.
-[59] [60] [61]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-
-LaTeX Warning: Reference `PLaceHolder!!!!' on page 63 undefined on input line 6
-5.
-
-[63]
-
-LaTeX Warning: Reference `PlaceHolder!!!' on page 64 undefined on input line 75
-.
-
-[64] [65] [66] [67]
-
-LaTeX Warning: Reference `placeholder!!!' on page 68 undefined on input line 14
-7.
-
-[68] [69] [70]
-
-LaTeX Warning: Reference `placeholder!!!' on page 71 undefined on input line 30
-3.
-
-[71]) [72]
-\openout2 = `chapter7.aux'.
-
- (chapter7.tex
-Chapter 7.
-) [73
-
-
-
-
-]
-\openout2 = `chapter_last.aux'.
-
- (chapter_last.tex [74
-
-
-
-
-]
-Chapter 8.
-) [75] (main.bbl [76
-
-
-
-] [77] [78] [79] [80]
-Underfull \hbox (badness 4144) in paragraph at lines 250--256
-[]\TU/TimesNewRoman(0)/m/n/12 Dante Gama Dessavre and William Hicks.  Superchar
-ge Tree-Based Model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--256
-\TU/TimesNewRoman(0)/m/n/12 Inference with Forest Inference Library in NVIDIA c
-uML.  []$[][][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--256
-[] [] [][][][][][][][][] [] [][][][][][] [] [][][] [] [][][][] [] [][][][][][][
-][][][][] [][] [][][][] [][] [][][][][] [][] [][][][][] [][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--256
-[][][][][][][][][] [][] [][][][] [][] [][][][][][] [][] [][][][][][][][][] [][]
- [][][][][][][] [][] [][] [][] [][][][][][] [][] [][][][][]$[]\TU/TimesNewRoman
-(0)/m/n/12 ,
- []
-
-[81]
-Underfull \hbox (badness 7064) in paragraph at lines 287--292
-[]\TU/TimesNewRoman(0)/m/n/12 Quixel Megascans.  Soil Mud.  []$[][][][][] [] []
- [] [][][] [] [][][] [] [][][] [] [][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 3354) in paragraph at lines 294--299
-[]\TU/TimesNewRoman(0)/m/n/12 Quixel Megascans.  Lawn Grass.  []$[][][][][] [] 
-[] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 2846) in paragraph at lines 301--306
-[]\TU/TimesNewRoman(0)/m/n/12 Epic Games.  Building Worlds with Landmass | Unre
-al Engine.  []$[][][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--306
-[] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][
-][][][] [] [][][][][] [][] [][][] [][] [][][][][] []
- []
-
-
-Underfull \hbox (badness 2538) in paragraph at lines 308--313
-[]\TU/TimesNewRoman(0)/m/n/12 Quixel Megascans.  Wheat Grass.  []$[][][][][] []
- [] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 3780) in paragraph at lines 315--320
-[]\TU/TimesNewRoman(0)/m/n/12 Epic Games.  Procedural Content Generation Overvi
-ew.  []$[][][][][] [] [] [] [][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--320
-[][][][][][][][][] [] [][][] [] [][][][][][][][][][][][][] [] [][][][][][] [][]
- [][][][][][] [] [][][][][][][][][][] [][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--336
-[]\TU/TimesNewRoman(0)/m/n/12 Epic Games.  Foliage Tool.  []$[][][][][] [] [] [
-] [][][] [] [][][][][][][][][] [] [][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--336
-[][][][][][][][][][][][][] [] [][][][][][] [][] [][][][][][] [] [][][][][][][] 
-[][] [][][][] [] [][][][][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--343
-[]$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][][][]
-[][] [] [][][][][][][][] [] [][][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--343
-[][][][] [] [][][][][][][][][] [][] [][][][][][][][] [][] [][][][][][][] [][] [
-][][][][][][][] [][] [][][][][] [][] [][][][][] [][] [][] [][]
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 345--350
-[]\TU/TimesNewRoman(0)/m/n/12 Matt Oztalay.  Color Pipeline Basics.  []$[][][][
-][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--350
-[][][][][][][][][] [] [][][][][][][][] [] [][][][][][][][][] [][] [][][][] [] [
-][][][] [] [][][][][][] [][] [][][][][][] [][]
- []
-
-
-Underfull \hbox (badness 4108) in paragraph at lines 352--356
-[]\TU/TimesNewRoman(0)/m/n/12 Timm Hess.  UnrealImageCapture.  []$[][][][][] []
- [] [] [][][][][][] [] [][][] [] [][][][][][][][] []
- []
-
-[82]
-Underfull \hbox (badness 6380) in paragraph at lines 402--407
-[]\TU/TimesNewRoman(0)/m/n/12 Google.  Machine learning crash course: Numerical
- data – normalization.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--407
-[]$[][][][][] [] [] [] [][][][][][][][][][] [] [][][][][][] [] [][][] [] [][][]
-[][][][] [][] [][][][][][][][] [] [][][][][] [][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 409--414
-[][][][][] [] [][][] [] [][][][][][] [] [][][][] [] [][][][][][][][] [] [][][][
-][][][][][][][][][] [] [][][][] []
- []
-
-
-Underfull \hbox (badness 2253) in paragraph at lines 409--414
-[][][][][][][] [] [][][][][][][][][][] [] [][][][]$[]\TU/TimesNewRoman(0)/m/n/1
-2 .  scikit-learn documentation. Accessed: 2026-
- []
-
-[83]) [84]
-\openout2 = `appendices.aux'.
-
- (appendices.tex) [85
-
-
-]
-\openout2 = `appA.aux'.
-
- (appA.tex [86
-
-
-
-
-]
-Appendix A.
-LaTeX Info: Redefining \anw@print on input line 33.
-File: figures/grid_granularity.eps Graphic file (type eps)
-<figures/grid_granularity.eps>
-[87]
-
-LaTeX Warning: Reference `dataconnection' on page 88 undefined on input line 41
-.
-
-File: figures/quadtree.pdf Graphic file (type pdf)
-<use figures/quadtree.pdf>
-LaTeX Info: Redefining \anw@print on input line 50.
-[88]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 83.
- [89] [90]) [91]
-\openout2 = `appB.aux'.
-
- (appB.tex [92
-
-
-
-
-]
-Appendix B.
-) [93] (main.aux (acknowledgements.aux) (declaration_eng.aux) (abstract_eng.aux
-) (abstract.aux) (abbreviations.aux) (chapter1.aux) (chapter2.aux)
-(chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux) (chapter7.aux)
-(chapter_last.aux) (appendices.aux) (appA.aux) (appB.aux))
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9ED80EB861508ED6E9884E57B7706A9F;13162.
- ) 
-Here is how much of TeX's memory you used:
- 28552 strings out of 402987
- 562264 string characters out of 5456390
- 1061278 words of memory out of 5000000
- 56615 multiletter control sequences out of 15000+600000
- 638023 words of font info for 134 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 88i,13n,117p,1595b,705s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on main.pdf (119 pages).
+LaTeX W

@@ -1,2 +1,7 @@
 \chapter{Machine Learning Models Development}
 \label{chap7}
+
+With enough instances of the examined phenomena captured and organized in datasets, the final step of this work was to develop a machine learning model that, given the selected set of features as an input, would be able to output the ground truth GRVI value of an examined area. Essentially, the objective was to examine whether an ML solution could address the different sources of error, without us needing to identify and model them mathematically.
+
+During this process, I tested various algorithms, most of which belong in the same model family. Comparing them in terms of accuracy and efficiency lead to a single model proposed for embedded deployment. A total of five different model types were testd. Four of them belong to the tree-based ensemble learning methods family, one is a Multilayer Perceptron (MLP) and one is a mixture of experts, that combines multiple architectures.
+

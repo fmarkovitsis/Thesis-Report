@@ -58,9 +58,9 @@
 \contentsline {subsection}{\numberline {6.1.4}Alternative Datasets}{66}{subsection.6.1.4}%
 \contentsline {subsubsection}{Dataset for Shadow Detection Model Training}{66}{section*.43}%
 \contentsline {section}{\numberline {6.2}Feature Engineering}{67}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Dimensionality Reduction}{67}{subsection.6.2.1}%
-\contentsline {subsubsection}{Feature Selection}{67}{section*.44}%
-\contentsline {subsubsection}{Principal Component Analysis (PCA)}{68}{section*.46}%
+\contentsline {subsection}{\numberline {6.2.1}Dimensionality Reduction}{68}{subsection.6.2.1}%
+\contentsline {subsubsection}{Feature Selection}{68}{section*.44}%
+\contentsline {subsubsection}{Principal Component Analysis (PCA)}{69}{section*.46}%
 \contentsline {subsection}{\numberline {6.2.2}Substituting Sun's and SCC's Roll, Pitch and Yaw with a Single Number}{70}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Standard Scaling}{72}{subsection.6.2.3}%
 \contentsline {chapter}{\numberline {7}Machine Learning Models Development}{75}{chapter.7}%

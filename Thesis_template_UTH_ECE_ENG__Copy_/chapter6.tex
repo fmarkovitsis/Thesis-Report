@@ -22,13 +22,13 @@ Considering the nature of the ML models that were elected as ideal for this appl
 In this study, each row corresponds to an area-of-interest extracted from the frames captured during the render sequences, while each column provides the information necessary for each area-of-interest. As a reminder, the areas-of-interest for which the GRVI values were calculated are twenty adjacent square regions arranged horizontally across the image, with their common vertical position being the vertical center of the frame (Figure~\ref{aoi}). Before any kind of feature engineering was performed, the data I decided to include as inputs for the trained algorithms were (along with their column names when stored in .csv files):
 
 \begin{itemize}
-    \item the average perceived GRVI value of the area-of-interest (grviIn),
-    \item the average red and green reflectance of the area-of-interest (meanRefR \& meanRefG),
-    \item measured illuminance for the red and green bands, either unique to the sample or the render sequence (more on that later) (illumR \& illumG),
+    \item the average perceived GRVI value of the area-of-interest ($grviIn$),
+    \item the average red and green reflectance of the area-of-interest ($meanRefR$ \& $meanRefG$),
+    \item measured illuminance for the red and green bands, either unique to the sample or the render sequence (more on that later) ($illumR$ \& $illumG$),
     \item index of the area-of-interest within the frame it was extracted from (bolckIdx),
-    \item roll, pitch and yaw of the sun (sunRoll, sunPitch \& sunYaw),
-    \item roll, pitch and yaw of the SCC (camRoll, camPitch, \& camYaw), and
-    \item the target value (grviOut)
+    \item roll, pitch and yaw of the sun ($sunRoll$, $sunPitch$ \& $sunYaw$),
+    \item roll, pitch and yaw of the SCC ($camRoll$, $camPitch$, \& $camYaw$), and
+    \item the target value ($grviOut$)
 \end{itemize}
 
 Other information that could be included in the inputs was the average red and green luminance of the area-of-interest, but I avoided it since, considering that the final objective is deployment on an edge device, redundancy would noticeably increase computational overhead. For the same reason, several of these features were removed later on. From the information mentioned in the introduction of this chapter, the SCC's location data were not included in order to avoid spoonfeeding the model, considering that it should perform while being agnostic to location. The light meters' location data were also not used as features since they did not provide meaningful information. However, both SCC's and light meters' coordinates were used during data preprocessing
@@ -60,20 +60,15 @@ Finally, the script calculates GRVI for every frame's areas-of-interest. Again, 
     -1, & 1
 \end{bmatrix}$ space. 
 
-\noindent
-\begin{minipage}{0.48\textwidth}
-    \begin{equation}
-        GRVI = \frac{avg(\begin{bmatrix}RefG)\end{bmatrix} - avg(\begin{bmatrix}RefR\end{bmatrix})}{avg(\begin{bmatrix}RefG)\end{bmatrix} + avg(\begin{bmatrix}RefR\end{bmatrix})}
-        \label{avgRefGrvi}
-    \end{equation}
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\textwidth}
-    \begin{equation}
-        GRVI = avg(\begin{bmatrix}GRVImat\end{bmatrix}) = avg(\frac{\begin{bmatrix}RefG\end{bmatrix} - \begin{bmatrix}RefR\end{bmatrix}}{\begin{bmatrix}RefG\end{bmatrix} + \begin{bmatrix}RefR\end{bmatrix}})
-        \label{avgGRVI}
-    \end{equation}
-\end{minipage}
+\begin{equation}
+    GRVI = \frac{avg(\begin{bmatrix}RefG\end{bmatrix}) - avg(\begin{bmatrix}RefR\end{bmatrix})}{avg(\begin{bmatrix}RefG\end{bmatrix}) + avg(\begin{bmatrix}RefR\end{bmatrix})}
+    \label{avgRefGrvi}
+\end{equation}
+
+\begin{equation}
+    GRVI = avg(\begin{bmatrix}GRVImat\end{bmatrix}) = avg(\frac{\begin{bmatrix}RefG\end{bmatrix} - \begin{bmatrix}RefR\end{bmatrix}}{\begin{bmatrix}RefG\end{bmatrix} + \begin{bmatrix}RefR\end{bmatrix}})
+    \label{avgGRVI}
+\end{equation}
 
 Both GRVI calculation methods display advantages and disadvantages when their output is used as input feature. The first provides stable values, but since the mean reflectance values in the two bands are already provided to the models, GRVI calculated using them is expected to provide limited additional information. The second method on the other hand, despite producing inaccurate values, could complement the context provided by the rest of the features. When it comes to the output GRVI, only the first method was used. As for the inputs, I created datasets using both methods, exploring the impact of each of them to the models' performance. 
 
@@ -312,9 +307,9 @@ I later coded this sequence of operations into a Python script that, given a dat
 \subsection{Standard Scaling}
 
 
-As demonstrated in Section~\ref{diffuse-aff-grvi}, the perceived GRVI values calculated using luminance and illuminance information under diffuse lighting conditions tend to be concentrated within a particularly narrow range, even after removing the removal of soil, discussed in Section~\ref{placeholder!!!}. While this characteristic is not inherently problematic, differences in the numerical scales of input features can disproportionately influence certain scale-sensitive ML algorithms, regardless of the features' actual predictive importance \cite{google_normalization}. In our case, while the perceived GRVI values are within the range $\begin{bmatrix}0.059267, 0.184111\end{bmatrix}$, while the illuminance values range between $0.253$ and $1467.124$. Tree-based methods, which were the primary architecture I experimented with in this work, are insensitive to feature scaling \cite{sklearn_feature_scaling}. However, other algorithms, particularly those relying on distance calculations, regularization, or gradient-based optimization, such as ridge regression, lasso regression, support vector regression and neural networks, can be significantly affected by such differences.
+As demonstrated in Section~\ref{diffuse-aff-grvi}, the perceived GRVI values calculated using luminance and illuminance information under diffuse lighting conditions tend to be concentrated within a particularly narrow range, even after removing the removal of soil. While this characteristic is not inherently problematic, differences in the numerical scales of input features can disproportionately influence certain scale-sensitive ML algorithms, regardless of the features' actual predictive importance \cite{google_normalization}. In our case, while the average perceived GRVI values are within the range $\begin{bmatrix}0.059267, 0.184111\end{bmatrix}$, the illuminance values range between $0.253$ and $1467.124$. Tree-based methods, which were the primary architecture I experimented with in this work, are insensitive to feature scaling \cite{sklearn_feature_scaling}. However, other algorithms, particularly those relying on distance calculations, regularization, or gradient-based optimization, such as Ridge Regression, Lasso Regression, Support Vector Regression and Neural Networks, can be significantly affected by such differences.
 
-A solution to the problems introduced by having features on different scales is bringing all features to a common scale. This eliminates disproportionate influence on the ouput, caused solely by a feature's magnitude. In this study, I used Scikit-learn's implementation of Z-score scaling, called Standard Scaling, to scale the data. Z-score scaling transforms each numerical feature so that it has mean equal to $0$ and standard deviation equal to $1$. As expected, the application of Standard Scaling to the datasets did not affect tree-based models. However, the impact on the rest of the models was noticeable. Figure~\ref{ss-before-after} illustrates the feature values corresponding to the areas of interest of frames captured during one of the render sequences, before and after Standard Scaling.
+A solution to the problems introduced by having features on different scales is bringing all features to a common scale. This eliminates disproportionate influence on the ouput, caused solely by a feature's magnitude. In this study, I used Scikit-learn's implementation of Z-score scaling, called Standard Scaling, to scale the data. Z-score scaling transforms each numerical feature so that it has mean equal to $0$ and standard deviation equal to $1$. As expected, the application of Standard Scaling to the datasets did not affect tree-based models, the impact on the rest of the models though was noticeable. Figure~\ref{ss-before-after} illustrates the feature values corresponding to the areas of interest of frames captured during one of the render sequences, before and after Standard Scaling.
 
 \begin{figure}[htb]
     \centering

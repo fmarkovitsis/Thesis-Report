@@ -1,4 +1,4 @@
-\chapter{Data Pre-Processing and Feature Engineering}
+\chapter{Data Preprocessing and Feature Engineering}
 \label{chap6}
 
 So far, the data collected are:
@@ -13,7 +13,7 @@ So far, the data collected are:
 
 Considering that, the algorithms selected to be trained for correcting the perceived GRVI values are mainly shallow Multi-Level Perceptrons and ensemble ML methods, this data should be structured in a way interpretable for them. The processed I followed for achieving that is described in this chapter.
 
-\section{Data Pre-Processing}
+\section{Data Preprocessing}
 \label{dp}
 
 Considering the nature of the ML models that were elected as ideal for this application, transforming the collected information into tabular data - data structured into rows and columns, much similar to a spreadsheet - seemed fairly intuitive. Ensemble methods in particular have historically performed strongly in classification and regression tasks with tabular data as inputs \cite{tabdata-gen}, while specially tuned NN architectures have begun to emerge for these applications \cite{tabnet, tabdata-nn}. 
@@ -31,7 +31,7 @@ In this study, each row corresponds to an area-of-interest extracted from the fr
     \item the target value (grviOut)
 \end{itemize}
 
-Other information that could be included in the inputs was the average red and green luminance of the area-of-interest, but I avoided it since, considering that the final objective is deployment on an edge device, redundancy would noticeably increase computational overhead. For the same reason, several of these features were removed later on. From the information mentioned in the introduction of this chapter, the SCC's location data were not included in order to avoid spoonfeeding the model, considering that it should perform while being agnostic to location. The light meters' location data were also not used as features since they did not provide meaningful information. However, both SCC's and light meters' coordinates were used during data pre-processing
+Other information that could be included in the inputs was the average red and green luminance of the area-of-interest, but I avoided it since, considering that the final objective is deployment on an edge device, redundancy would noticeably increase computational overhead. For the same reason, several of these features were removed later on. From the information mentioned in the introduction of this chapter, the SCC's location data were not included in order to avoid spoonfeeding the model, considering that it should perform while being agnostic to location. The light meters' location data were also not used as features since they did not provide meaningful information. However, both SCC's and light meters' coordinates were used during data preprocessing
 
 Most of the aforementioned features were directly available for being structured into the desired format. The data associated with the measured reflectance of the studied surfaces and, consequently, GRVI, though, had to be drawn out from the captured frames and calculated using other contributing metrics.
 
@@ -56,9 +56,24 @@ The second and third ways of measuring illuminance aimed to address the lack of 
 
 With the luminance of each area-of-interest represented as an array of pixel values and the corresponding illuminance measurements parsed, the next step was to calculate the red- and green-band reflectance of the depicted surfaces using Equation~\ref{lambertian1}. Both $\pi$ and the illuminance value were broadcast for multiplication and division with the luminance array. The red-band illuminance is used along with the red-band luminance, with the same process followed for the green-band measurements. The results are two arrays, each cell of which represents the reflectance of a tiny part of the captured surfaces in the respective bands. The average values of red- and green-band reflectance arrays were used as two of the features of the dataset.
 
-Finally, the script calculates GRVI for every frame's areas-of-interest. Again, there are two possible approaches for calculating the average GRVI value of each cropped part of the frame. The first uses the calculated means of the reflectance arrays to output a single GRVI value. This method provided stable values with limited outliers, making it ideal for calculating the reference GRVI values using the frames collected under diffuse lighting conditions. The second approach was calculating GRVI using directly the red and green reflectance arrays. This results in a GRVI array containing a value for every pixel of the given area-of-interest. The mean of the array is then calculated and used as an input feature. The values produced using this method were particularly unstable, with multiple outliers, including measurements with absolute values greater than $1$, which is abnormal for a normalized index such as GRVI, whose values are capped in the $\begin{bmatrix}
+Finally, the script calculates GRVI for every frame's areas-of-interest. Again, there are two possible approaches for calculating the average GRVI value of each cropped part of the frame. The first uses the calculated means of the reflectance arrays to output a single GRVI value (Equation~\ref{avgRefGrvi}). This method provided stable values with limited outliers, making it ideal for calculating the reference GRVI values using the frames collected under diffuse lighting conditions. The second approach was calculating GRVI using directly the red and green reflectance arrays (Equation~\ref{avgGRVI}). This results in a GRVI array containing a value for every pixel of the given area-of-interest. The mean of the array is then calculated and used as an input feature. The values produced using this method were particularly unstable, with multiple outliers, including measurements with absolute values greater than $1$, which is abnormal for a normalized index such as GRVI, whose values are capped in the $\begin{bmatrix}
     -1, & 1
 \end{bmatrix}$ space. 
+
+\noindent
+\begin{minipage}{0.48\textwidth}
+    \begin{equation}
+        GRVI = \frac{avg(\begin{bmatrix}RefG)\end{bmatrix} - avg(\begin{bmatrix}RefR\end{bmatrix})}{avg(\begin{bmatrix}RefG)\end{bmatrix} + avg(\begin{bmatrix}RefR\end{bmatrix})}
+        \label{avgRefGrvi}
+    \end{equation}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \begin{equation}
+        GRVI = avg(\begin{bmatrix}GRVImat\end{bmatrix}) = avg(\frac{\begin{bmatrix}RefG\end{bmatrix} - \begin{bmatrix}RefR\end{bmatrix}}{\begin{bmatrix}RefG\end{bmatrix} + \begin{bmatrix}RefR\end{bmatrix}})
+        \label{avgGRVI}
+    \end{equation}
+\end{minipage}
 
 Both GRVI calculation methods display advantages and disadvantages when their output is used as input feature. The first provides stable values, but since the mean reflectance values in the two bands are already provided to the models, GRVI calculated using them is expected to provide limited additional information. The second method on the other hand, despite producing inaccurate values, could complement the context provided by the rest of the features. When it comes to the output GRVI, only the first method was used. As for the inputs, I created datasets using both methods, exploring the impact of each of them to the models' performance. 
 
@@ -137,17 +152,15 @@ A common feature engineering practice is reducing dimensionality by dropping uni
 
 When it comes to low-variance features, several can be directly identified by a quick dataset inspection. Specifically, $sunRoll$ and $camRoll$ remain the same and equal to $180$ and $0$, respectively, throughout all the examples, therefore were found safe to be removed. $camPitch$ was also expected to remain set to $-20$, but throughout the examples, the value seems to have subtle fluctuations. Therefore, I considered it better to run feature importance tests and validate its insignificance before dropping it.
 
-Regarding correlated features, I found the Pearson Correlation Coefficient to be a fairly informative tool. I used it to construct correlation heatmaps for four of the previously mentioned versions of the dataset that combine scenes with and without trees:
+Regarding correlated features, I found the Pearson Correlation Coefficient to be a fairly informative tool for identifying linear relationships between the features. I used it to construct correlation heatmaps for several of the previously mentioned versions of the dataset. However, the results among all tested iterations were expectedly close. One of the produced correlation maps is presented in Figure~\ref{correlation-hm}. The features $sunRoll$ and $camRoll$ remain constant throughout the dataset and therefore no coefficients were calculated between them and the other features. $illumG$ and $illumR$ are used for the calculations of $meanRefG$ and $meanRefR$, respectively, and therefore it is natural that they are correlated. Furthermore, throughout the simulation, as illuminance for one band grew, it grew for the other band as well, explaining why there is a strong relationship between them. It can also be seen that the perceived reflectance of each band follows the trend of the other band, while none of them is strongly correlated to $grviIn$. This is the case because. Lastly, $grivOut$ does not appear to be linearly related to any other feature. In a vacuum, that could be concerning, since $grviOut$ is expected to behave similarly to $grviIn$. That said, due to the infulence of directional light and shadows, $grviIn$'s values are expected to be unstable.
 
-\begin{itemize}
-    \item GRVI calculated using the average reflectance values and illuminance measured directly at the area of interest,
-    \item GRVI calculated using the average reflectance values and illuminance measured near the camera and
-    \item the counterparts of the previous two, with GRVI calculated by using the reflectance matrices and eventually finding the average of the result.
-\end{itemize}
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/correlation_trees-dl-aoi.png}
+    \caption{Correlation heatmap presenting the Pearson Correlation Coefficient calculated between all the features of the dataset.}
+    \label{correlation-hm}
+\end{figure}
 
-the results are illustrated in Figure~\ref{placeholder!!!}.
-
-%%%% comments on that +++ the heatmaps
 
 Another way to identify which features could be safely dropped without major loss in predictive performance is by determining the importance of each feature. All of the frameworks used for their implementations of classical ML models provide tools for calculating feature importance, such as permutation importance, impurity-based importance, etc. For neural network architectures, the Captum framework \cite{captum} was used. The results of the execution of feature importance tools are discussed in the !!!!!!!!!!!!.
 
@@ -299,9 +312,24 @@ I later coded this sequence of operations into a Python script that, given a dat
 \subsection{Standard Scaling}
 
 
-As demonstrated in Section~\ref{diffuse-aff-grvi}, the perceived GRVI values calculated using luminance and illuminance information under diffuse lighting conditions tend to be concentrated within a particularly narrow range (!!!!!!!). While this characteristic is not inherently problematic, differences in the numerical scales of input features can disproportionately influence certain scale-sensitive ML algorithms, regardless of the features' actual predictive importance \cite{google_normalization}. Tree-based methods, which were the primary architecture I experimented with in this work, are insensitive to feature scaling \cite{sklearn_feature_scaling}. However, other algorithms, particularly those relying on distance calculations or gradient-based optimization, such as PCA and neural networks, can be significantly affected by such differences.
+As demonstrated in Section~\ref{diffuse-aff-grvi}, the perceived GRVI values calculated using luminance and illuminance information under diffuse lighting conditions tend to be concentrated within a particularly narrow range, even after removing the removal of soil, discussed in Section~\ref{placeholder!!!}. While this characteristic is not inherently problematic, differences in the numerical scales of input features can disproportionately influence certain scale-sensitive ML algorithms, regardless of the features' actual predictive importance \cite{google_normalization}. In our case, while the perceived GRVI values are within the range $\begin{bmatrix}0.059267, 0.184111\end{bmatrix}$, while the illuminance values range between $0.253$ and $1467.124$. Tree-based methods, which were the primary architecture I experimented with in this work, are insensitive to feature scaling \cite{sklearn_feature_scaling}. However, other algorithms, particularly those relying on distance calculations, regularization, or gradient-based optimization, such as ridge regression, lasso regression, support vector regression and neural networks, can be significantly affected by such differences.
 
-A solution to the problems introduced by having features on different scales is bringing all features to a common scale. This eliminates disproportionate influence on the ouput, caused solely by a feature's magnitude. In this study, I used Scikit-learn's implementation of Z-score scaling, called Standard Scaling, to scale the data. As expected, the application of Standard Scaling to the datasets did not affect tree-based models. However, the impact on NN-based models was noticeable. Figure~\ref{placeholder!!!} illustrates one of the datasets, before and after Standard Scaling was applied.
+A solution to the problems introduced by having features on different scales is bringing all features to a common scale. This eliminates disproportionate influence on the ouput, caused solely by a feature's magnitude. In this study, I used Scikit-learn's implementation of Z-score scaling, called Standard Scaling, to scale the data. Z-score scaling transforms each numerical feature so that it has mean equal to $0$ and standard deviation equal to $1$. As expected, the application of Standard Scaling to the datasets did not affect tree-based models. However, the impact on the rest of the models was noticeable. Figure~\ref{ss-before-after} illustrates the feature values corresponding to the areas of interest of frames captured during one of the render sequences, before and after Standard Scaling.
 
-%%% add plots of unscaled and scaled features
-
+\begin{figure}[htb]
+    \centering
+    
+    \begin{subfigure}{0.48\linewidth}
+        \includegraphics[width=\linewidth]{images/before_standard_scaling.png}
+        \caption{Feature values before Standard Scaling}
+        \label{ss-before}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\linewidth}
+        \includegraphics[width=\linewidth]{images/after_standard_scaling.png}
+        \caption{Feature values after Standard Scaling}
+        \label{ss-after}
+    \end{subfigure}
+    
+    \caption{Scatter plots of the feature values, acquired after a single render sequence. Plot~\ref{ss-before} presents the original feature values, while Plot~\ref{ss-after} shows their standardized counterparts.}
+    \label{ss-before-after}
+\end{figure}

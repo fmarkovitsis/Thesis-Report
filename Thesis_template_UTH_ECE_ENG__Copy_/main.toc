@@ -38,20 +38,20 @@
 \contentsline {subsection}{\numberline {4.2.1}Acquiring Illuminance}{30}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Acquiring Luminance}{31}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Data Collection}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Illumination Scenarios and Data Collection Preparation}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Illumination Scenarios and Data Collection Preparation}{34}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Data Collection}{35}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Camera Splines}{35}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Unreal Engine's Sequencer}{37}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Scene Capture Component}{38}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Light Meters' Position and Readings}{39}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Solar Zenith Angle and Camera Rotation}{41}{subsection.5.2.5}%
-\contentsline {section}{\numberline {5.3}Data Assessment}{41}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}SZA Effects on GRVI Values}{44}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}GRVI under Diffuse Lighting Conditions}{49}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}GRVI Affected by Shadows}{54}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Front - Back}{57}{subsection.5.3.4}%
-\contentsline {chapter}{\numberline {6}Data Pre-Processing and Feature Engineering}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Data Pre-Processing}{59}{section.6.1}%
+\contentsline {subsection}{\numberline {5.2.1}Camera Splines}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Unreal Engine's Sequencer}{38}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Scene Capture Component}{39}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Light Meters' Position and Readings}{40}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Solar Zenith Angle and Camera Rotation}{42}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Data Assessment}{42}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}SZA Effects on GRVI Values}{45}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}GRVI under Diffuse Lighting Conditions}{50}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}GRVI Affected by Shadows}{55}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Front - Back}{58}{subsection.5.3.4}%
+\contentsline {chapter}{\numberline {6}Data Preprocessing and Feature Engineering}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Data Preprocessing}{59}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Calculating Input Reflectance and GRVI}{61}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Create Datasets' Target Values}{63}{subsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.1.3}Dataset Creation}{64}{subsection.6.1.3}%
@@ -60,24 +60,24 @@
 \contentsline {section}{\numberline {6.2}Feature Engineering}{67}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Dimensionality Reduction}{67}{subsection.6.2.1}%
 \contentsline {subsubsection}{Feature Selection}{67}{section*.44}%
-\contentsline {subsubsection}{Principal Component Analysis (PCA)}{68}{section*.45}%
-\contentsline {subsection}{\numberline {6.2.2}Substituting Sun's and SCC's Roll, Pitch and Yaw with a Single Number}{69}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Standard Scaling}{71}{subsection.6.2.3}%
-\contentsline {chapter}{\numberline {7}Machine Learning Models Development}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Model Types Selection and Hyperparameter Tuning}{73}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Συμπεράσματα}{75}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Σύνοψη και συμπεράσματα}{75}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Μελλοντικές επεκτάσεις}{75}{section.8.2}%
-\contentsline {chapter}{Bibliography}{77}{chapter*.46}%
-\contentsline {chapter}{APPENDICES}{85}{section*.47}%
-\contentsline {chapter}{\numberline {A}Τίτλος Παραρτήματος }{87}{chapter.9}%
-\contentsline {section}{\numberline {A.1}Δυνατότητες του \LaTeX }{87}{section.9.1}%
-\contentsline {subsection}{\numberline {A.1.1}Πίνακες}{87}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Διαγράμματα - Γραφικές παραστάσεις}{88}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Σχήματα}{88}{subsection.9.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Μαθηματικές εκφράσεις}{89}{subsection.9.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Αλγόριθμοι}{89}{subsection.9.1.5}%
-\contentsline {subsection}{\numberline {A.1.6}Θεωρήματα, Πορίσματα, Ορισμοί, κλπ.}{90}{subsection.9.1.6}%
-\contentsline {subsection}{\numberline {A.1.7}Απαριθμήσεις}{90}{subsection.9.1.7}%
-\contentsline {subsection}{\numberline {A.1.8}Είδη πηγών στις αναφορές}{90}{subsection.9.1.8}%
-\contentsline {chapter}{\numberline {B}Τίτλος 2ου Παραρτήματος}{93}{chapter.10}%
+\contentsline {subsubsection}{Principal Component Analysis (PCA)}{68}{section*.46}%
+\contentsline {subsection}{\numberline {6.2.2}Substituting Sun's and SCC's Roll, Pitch and Yaw with a Single Number}{70}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Standard Scaling}{72}{subsection.6.2.3}%
+\contentsline {chapter}{\numberline {7}Machine Learning Models Development}{75}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Model Types Selection and Hyperparameter Tuning}{75}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Συμπεράσματα}{77}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Σύνοψη και συμπεράσματα}{77}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Μελλοντικές επεκτάσεις}{77}{section.8.2}%
+\contentsline {chapter}{Bibliography}{79}{chapter*.48}%
+\contentsline {chapter}{APPENDICES}{87}{section*.49}%
+\contentsline {chapter}{\numberline {A}Τίτλος Παραρτήματος }{89}{chapter.9}%
+\contentsline {section}{\numberline {A.1}Δυνατότητες του \LaTeX }{89}{section.9.1}%
+\contentsline {subsection}{\numberline {A.1.1}Πίνακες}{89}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Διαγράμματα - Γραφικές παραστάσεις}{90}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Σχήματα}{90}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Μαθηματικές εκφράσεις}{91}{subsection.9.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Αλγόριθμοι}{91}{subsection.9.1.5}%
+\contentsline {subsection}{\numberline {A.1.6}Θεωρήματα, Πορίσματα, Ορισμοί, κλπ.}{92}{subsection.9.1.6}%
+\contentsline {subsection}{\numberline {A.1.7}Απαριθμήσεις}{92}{subsection.9.1.7}%
+\contentsline {subsection}{\numberline {A.1.8}Είδη πηγών στις αναφορές}{92}{subsection.9.1.8}%
+\contentsline {chapter}{\numberline {B}Τίτλος 2ου Παραρτήματος}{95}{chapter.10}%

@@ -1,10 +1,98 @@
 \chapter{Machine Learning Models Development}
 \label{chap7}
 
-With enough instances of the examined phenomena captured and organized in datasets, the final step of this work was to develop a machine learning model that, given the selected set of features as input, would be able to output the ground truth GRVI value of an examined area. Essentially, the objective was to examine whether an ML solution could address the different sources of error, without us needing to identify and model them mathematically.
+With enough instances of the examined phenomena captured and organized in datasets, the final step of this work was to develop an algorithm that, given the selected set of features as input, estimates the GRVI of the studied surface. This process would normally require deep understanding of the underlying relationships between the input data and the desired output. I avoided this process by employing machine learning methods. The objective was to address all different sources of error affecting the sensors' readings, without needing to identify and model them mathematically.
 
-During this process, I tested various algorithms, most of which belong in the same model family. Comparing them in terms of accuracy and efficiency led to a single model proposed for embedded deployment. A total of five different model types were tested. Four of them belong in the tree-based ensemble learning methods family, one is a Multilayer Perceptron (MLP), and one is a mixture of experts that combines multiple architectures.
+During this process, I tested various algorithms, most of which belong in the same model family. Comparing them in terms of accuracy and efficiency led to several models or model combinations, each balancing differently these two factors. A total of five different model types were tested. Four of them belong in the tree-based ensemble learning methods family and one is a Multilayer Perceptron (MLP). Finally, a mixture of experts that combines multiple models' instances trained on different parts of the problem was tested, aiming to assess whether it is possible to achieve significantly greater performance for a moderate increase in predictive performance.
 
-\section{Model Types Selection and Hyperparameter Tuning}
+\section{Model Types Selection Using AutoGluon-Tabular}
 
-For starters, I had to select which basic model types were to be tested
+For starters, I had to select which basic model types were to be tested for the application. Since I had decided to format all the information I acquired into tabular data, the tool I selected for quickly assessing the performance of different models was AutoGluon-Tabular, implemented by the developers of AutoGluon. AutoGluon is an open-source, automated machine learning Python library developed by Amazon Web Services. AutoGluon-Tabular in particular is a framework which, given raw data structured in tabular format, it handles their preprocessing, the hyperparameter tuning of the models that will be tested, the training and evaluation of the models and the creation of weighted ensemble of trained models \cite{agtabular}. The complete list of models attempted to be fitted during the framework's training stage is presented in the AutoGluon-Tabular documentation \cite{autogluon_tabular_models_011}.
+
+As an output, AutoGluon provides a dataframe that reports how each individual algorithm that was succesfully trained performed. This was useful for both identifying which models types are suitable for my application and for having an early idea of how each of them performs. The framework was tested for the four basic datasets:
+
+\begin{itemize}
+    \item $notrees-dl.csv$,
+    \item $notrees-gt.csv$,
+    \item $trees-dl-aoi.csv$,
+    \item $trees-gt-aoi.csv$,
+\end{itemize}
+
+aiming to acquire a more complete idea of this preview. In Table~\ref{autogluon-perf-notrees-dl} the results for the notrees-dl dataset are presented. 
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Model} & \textbf{Relative RMSE (\%)}  & \textbf{CPU Prediction Time (Test Dataset) (s)} \\
+\hline
+WeightedEnsemble\_L2 & 4.26 &  72.414407 \\
+\hline
+LightGBMLarge        & 4.58 &  59.777057 \\
+\hline
+XGBoost              & 4.62 &   9.855415 \\
+\hline
+LightGBM             & 4.79 &  48.444144 \\
+\hline
+ExtraTreesMSE        & 5.11 &   2.762884 \\
+\hline
+LightGBMXT           & 6.21 &  66.255212 \\
+\hline
+NeuralNetTorch       & 6.60 &   0.346918 \\
+\hline
+RandomForestMSE      & 6.79 &   2.939242 \\
+\hline
+NeuralNetFastAI      & 7.22 &   0.451832 \\
+\hline
+\end{tabular}
+\caption{Test-set performance for \texttt{grviOut}.}
+\label{autogluon-perf-notrees-dl}
+\end{table}
+
+It can be seen that several notoriously well-performing model types in tabular data do appear, including boosting and ensemble methods, along with neural networks optimized for this kind of input. Apart from the widely recogniseable algorithms, such as XGBoost and Random Forests, $WeightedEnsemble\_L2$ is the ensemble of different models constructed by the framework, $NeuralNetTorch$ and $NeuralNetFastAI$ are two different tabular MLP implementations, $LightGBMLarge$ is an instance of LightGBM that allows higher number of leaves per tree, relatively to the $LightGBM$ model and, finally, $LightGBMXT$ is an instance of LightGBM with the hyperparameter $extra\_trees$ set to $True$, changing the way feature values are split. As expected, $WeightedEnsemble\_L2$ has both the best predictive performance and the worst overhead. XGBoost and Extra Trees appear to provide a balance between these two important aspects. Finally, Neural Network-based solutions are, as explained in~\ref{mlp-section}, among the least accurate solutions, providing though higher computational efficiency. The hyperparameters are not presented, as their tuning process is shown later on, through my own experimentation.
+
+The framework's models were also trained for the rest of the datasets. The final results are illustrated in Figure~\ref{autogluon-results-all}. Again, the Neural Network models consistenctly achieved the worst predictive performance across all scenarios, while also being the most computationally efficient. Almost all of the rest of the models present a similar behavior, having a fairly close accuracy when trained and tested to the $dl$ datasets, which drops when the $gt$ datasets are used. An exception to this trend is the $ExtraTreesMSE$ model, which perfroms generally better in the datasets which include the effects of shadows, possibly being responsible for the superior performance of $WeightedEnsemble\_L2$ in the $tree$ datasets too. Overall, Extra Trees seemed to be the better option for the $tree$ datasets, while XGBoost performed the best in the rest. Time complexity-wise, all models folloed roughly the same trend, where simpler implementations were used for the $notrees-dl$ dataset, while similarly tuned models were used for the rest, achieving relatively close times~\ref{autogl-time}.
+
+\begin{figure}[htb]
+    \centering
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/autogluon-model-acc.png}
+        \caption{First image caption}
+        \label{autogl-acc}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/autogluon-pred-time.png}
+        \caption{Second image caption}
+        \label{autogl-time}
+    \end{subfigure}
+
+    \caption{Tblah blah blah}
+    \label{autogluon-results-all}
+\end{figure} 
+
+The AutoGluon experiments showed that each of the five discreet model types was competitive in predictive accuracy, CPU inference time, or both. I therefore carried all five forward for further evaluation: MLP, Random Forest, Extremely Randomized Trees, XGBoost and LightGBM. For each model type, I selected a single hyperparameter configuration that performed well across all the constructed datasets. I then compared the resulting models on the corresponding test sets in terms of predictive accuracy and CPU inference time. I also recorded the number of parameters in each fitted model to characterize its size and whether its suitable for edge AI applications.
+
+\section{Models Training and Performance Evaluation}
+
+Having decided which model types are suitable for this application, the next step was identifying the best hyperparameter configuration for each of them, training them and evaluating them. The evaluation criteria were:
+
+\begin{itemize}
+    \item \textbf{predictive accuracy},
+    \item \textbf{computational performance} for single examples and the whole test set (and for each batch in the case of MLP),
+    \item and \textbf{model size} (in paramter count and RAM usage).
+\end{itemize}
+
+\subsection{Multilayer Perceptron (MLP)}
+\label{mlp-section}
+
+As already mentioned in~\ref{dp}, classification and regression tasks involving tabular data are dominating by tree- and gradient boosting-based methods. Despite DNNs' domination in any other data format, their performance leaves a lot to be desired in this one \cite{representationlearning, tabnet,welltunedsimplenets}. The challenges NNs face when handling information in such format mainly originate from data heterogeneity, lack of spatial or sequential relationships and noise, since these algorithms aim to learn these changes in the input data by approximating the output using weights and activations. These are factors that tree-based algorithms are able to eliminate by learning the differences by representing them with feature splits. That said, as shown in the example of AutoGluon, a small MLP could be fairly computationally efficient, comparatively to the other employed methods. 
+
+Several deep learning architectures have been proposed to improve predictive performance on tabular data. One example is TabNet, introduced in the work of Arik et. al \cite{tabnet}. At each decision step, TabNet uses attention to generate a feature mask for each input row. The mask assigns a nonnegative weight to each feature, and the weights sum to one. TabNet multiplies each feature value by its corresponding weight, suppressing features assigned a weight of zero and giving greater relative importance to those assigned larger weights. The purpose of this is to let the model focus only on the features that are useful for the current row. However, an attention-based architecture on top of the actual regressor would overly increase the overhead, especially during inference on an edge device.
+
+Another solution to the MLP models' poor performance on 

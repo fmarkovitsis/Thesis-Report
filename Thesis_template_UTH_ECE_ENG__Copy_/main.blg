@@ -38,45 +38,45 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: appB.aux
 Database file #1: references.bib
 Warning--empty booktitle in MacQueen1967SomeMF
-You've used 77 entries,
+You've used 89 entries,
             1791 wiz_defined-function locations,
-            885 strings with 18797 characters,
-and the built_in function-call counts, 15814 in all, are:
-= -- 1273
-> -- 892
-< -- 5
-+ -- 332
-- -- 255
-* -- 1031
-:= -- 2634
-add.period$ -- 242
-call.type$ -- 77
-change.case$ -- 75
+            936 strings with 20927 characters,
+and the built_in function-call counts, 18613 in all, are:
+= -- 1470
+> -- 1113
+< -- 10
++ -- 408
+- -- 319
+* -- 1217
+:= -- 3115
+add.period$ -- 281
+call.type$ -- 89
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 78
-duplicate$ -- 624
-empty$ -- 1559
-format.name$ -- 255
-if$ -- 3497
+cite$ -- 90
+duplicate$ -- 745
+empty$ -- 1809
+format.name$ -- 319
+if$ -- 4112
 int.to.chr$ -- 0
-int.to.str$ -- 77
-missing$ -- 50
-newline$ -- 396
-num.names$ -- 78
-pop$ -- 256
+int.to.str$ -- 89
+missing$ -- 60
+newline$ -- 455
+num.names$ -- 96
+pop$ -- 306
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 276
+skip$ -- 335
 stack$ -- 0
-substring$ -- 704
-swap$ -- 111
-text.length$ -- 5
+substring$ -- 744
+swap$ -- 143
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 112
-width$ -- 79
-write$ -- 839
+while$ -- 130
+width$ -- 91
+write$ -- 968
 (There was 1 warning)

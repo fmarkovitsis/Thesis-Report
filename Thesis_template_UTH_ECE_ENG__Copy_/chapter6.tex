@@ -305,7 +305,7 @@ Therefore, using the forward component as \(x\) and the right component as \(y\)
 I later coded this sequence of operations into a Python script that, given a dataset including the sun's and SCC's RPY as input features, replaces the six rotation columns with a single relative azimuth angle column. The predictive and computational performance impacts of this change are discussed in !!!!!!!!!.
 
 \subsection{Standard Scaling}
-
+\label{standscale}
 
 As demonstrated in Section~\ref{diffuse-aff-grvi}, the perceived GRVI values calculated using luminance and illuminance information under diffuse lighting conditions tend to be concentrated within a particularly narrow range, even after removing the removal of soil. While this characteristic is not inherently problematic, differences in the numerical scales of input features can disproportionately influence certain scale-sensitive ML algorithms, regardless of the features' actual predictive importance \cite{google_normalization}. In our case, while the average perceived GRVI values are within the range $\begin{bmatrix}0.059267, 0.184111\end{bmatrix}$, the illuminance values range between $0.253$ and $1467.124$. Tree-based methods, which were the primary architecture I experimented with in this work, are insensitive to feature scaling \cite{sklearn_feature_scaling}. However, other algorithms, particularly those relying on distance calculations, regularization, or gradient-based optimization, such as Ridge Regression, Lasso Regression, Support Vector Regression and Neural Networks, can be significantly affected by such differences.
 

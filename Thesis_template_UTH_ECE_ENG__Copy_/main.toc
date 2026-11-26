@@ -64,20 +64,44 @@
 \contentsline {subsection}{\numberline {6.2.2}Substituting Sun's and SCC's Roll, Pitch and Yaw with a Single Number}{70}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Standard Scaling}{72}{subsection.6.2.3}%
 \contentsline {chapter}{\numberline {7}Machine Learning Models Development}{75}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Model Types Selection and Hyperparameter Tuning}{75}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Συμπεράσματα}{77}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Σύνοψη και συμπεράσματα}{77}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Μελλοντικές επεκτάσεις}{77}{section.8.2}%
-\contentsline {chapter}{Bibliography}{79}{chapter*.48}%
-\contentsline {chapter}{APPENDICES}{87}{section*.49}%
-\contentsline {chapter}{\numberline {A}Τίτλος Παραρτήματος }{89}{chapter.9}%
-\contentsline {section}{\numberline {A.1}Δυνατότητες του \LaTeX }{89}{section.9.1}%
-\contentsline {subsection}{\numberline {A.1.1}Πίνακες}{89}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Διαγράμματα - Γραφικές παραστάσεις}{90}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {A.1.3}Σχήματα}{90}{subsection.9.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Μαθηματικές εκφράσεις}{91}{subsection.9.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Αλγόριθμοι}{91}{subsection.9.1.5}%
-\contentsline {subsection}{\numberline {A.1.6}Θεωρήματα, Πορίσματα, Ορισμοί, κλπ.}{92}{subsection.9.1.6}%
-\contentsline {subsection}{\numberline {A.1.7}Απαριθμήσεις}{92}{subsection.9.1.7}%
-\contentsline {subsection}{\numberline {A.1.8}Είδη πηγών στις αναφορές}{92}{subsection.9.1.8}%
-\contentsline {chapter}{\numberline {B}Τίτλος 2ου Παραρτήματος}{95}{chapter.10}%
+\contentsline {section}{\numberline {7.1}Model Types Selection Using AutoGluon-Tabular}{75}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Models Training and Performance Evaluation}{78}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Multilayer Perceptron (MLP)}{81}{subsection.7.2.1}%
+\contentsline {subsubsection}{Base Model}{82}{section*.50}%
+\contentsline {subsubsection}{AdamW and Weight Decay}{83}{section*.52}%
+\contentsline {subsubsection}{Batch Normalization}{84}{section*.53}%
+\contentsline {subsubsection}{Standard Scaling}{85}{section*.54}%
+\contentsline {subsubsection}{Tested But Non-Effective Optimization Methods}{86}{section*.56}%
+\contentsline {subsubsection}{Computational Performance and Efficiency}{86}{section*.57}%
+\contentsline {subsection}{\numberline {7.2.2}Random Forest}{87}{subsection.7.2.2}%
+\contentsline {subsubsection}{Hyperparameter Tuning}{89}{section*.60}%
+\contentsline {subsubsection}{Predictive Performance}{91}{section*.62}%
+\contentsline {subsubsection}{Computational Performance and Efficiency}{91}{section*.63}%
+\contentsline {subsection}{\numberline {7.2.3}Extra Random Trees}{92}{subsection.7.2.3}%
+\contentsline {subsubsection}{Hyperparameters}{92}{section*.65}%
+\contentsline {subsubsection}{Predictive Performance}{93}{section*.66}%
+\contentsline {subsubsection}{Computational Performance and Efficiency}{93}{section*.67}%
+\contentsline {subsection}{\numberline {7.2.4}XGBoost}{94}{subsection.7.2.4}%
+\contentsline {subsubsection}{Hyperparameter}{94}{section*.69}%
+\contentsline {subsubsection}{Predictive Performance}{94}{section*.70}%
+\contentsline {subsubsection}{Computational Performance and Efficiency}{94}{section*.71}%
+\contentsline {subsection}{\numberline {7.2.5}LightGBM}{94}{subsection.7.2.5}%
+\contentsline {subsubsection}{Hyperparameter Tuning}{95}{section*.73}%
+\contentsline {subsubsection}{Predictive Performance}{95}{section*.74}%
+\contentsline {subsubsection}{Computational Performance and Efficiency}{95}{section*.75}%
+\contentsline {chapter}{\numberline {8}Συμπεράσματα}{97}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Σύνοψη και συμπεράσματα}{97}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Μελλοντικές επεκτάσεις}{97}{section.8.2}%
+\contentsline {chapter}{Bibliography}{99}{chapter*.77}%
+\contentsline {chapter}{APPENDICES}{109}{section*.78}%
+\contentsline {chapter}{\numberline {A}Τίτλος Παραρτήματος }{111}{chapter.9}%
+\contentsline {section}{\numberline {A.1}Δυνατότητες του \LaTeX }{111}{section.9.1}%
+\contentsline {subsection}{\numberline {A.1.1}Πίνακες}{111}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Διαγράμματα - Γραφικές παραστάσεις}{112}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Σχήματα}{112}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Μαθηματικές εκφράσεις}{113}{subsection.9.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Αλγόριθμοι}{113}{subsection.9.1.5}%
+\contentsline {subsection}{\numberline {A.1.6}Θεωρήματα, Πορίσματα, Ορισμοί, κλπ.}{114}{subsection.9.1.6}%
+\contentsline {subsection}{\numberline {A.1.7}Απαριθμήσεις}{114}{subsection.9.1.7}%
+\contentsline {subsection}{\numberline {A.1.8}Είδη πηγών στις αναφορές}{114}{subsection.9.1.8}%
+\contentsline {chapter}{\numberline {B}Τίτλος 2ου Παραρτήματος}{117}{chapter.10}%

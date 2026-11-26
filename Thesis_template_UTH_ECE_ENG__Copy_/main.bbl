@@ -412,6 +412,79 @@ Elissa Ledoux.
   \url{https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html}.
 \newblock scikit-learn documentation. Accessed: 2026-11-02.
 
+\bibitem{agtabular}
+Nick Erickson, Jonas Mueller, Alexander Shirkov, Hang Zhang, Pedro Larroy,
+  Mu~Li, and Alexander Smola.
+\newblock Autogluon-tabular: Robust and accurate automl for structured data.
+\newblock {\em arXiv preprint arXiv:2003.06505}, 2020.
+
+\bibitem{autogluon_tabular_models_011}
+{AutoGluon}.
+\newblock {autogluon.tabular.models}.
+\newblock AutoGluon Documentation, version 0.1.1. Accessed November 20, 2026.
+
+\bibitem{representationlearning}
+Jun-Peng Jiang, Si-Yang Liu, Hao-Run Cai, Qile Zhou, and Han-Jia Ye.
+\newblock Representation learning for tabular data: A comprehensive survey,
+  2025.
+
+\bibitem{NAS}
+Petro Liashchynskyi and Pavlo Liashchynskyi.
+\newblock Grid search, random search, genetic algorithm: {A} big comparison for
+  {NAS}.
+\newblock {\em CoRR}, abs/1912.06059, 2019.
+
+\bibitem{wdecay}
+Anders Krogh and John Hertz.
+\newblock A simple weight decay can improve generalization.
+\newblock In J.~Moody, S.~Hanson, and R.P. Lippmann, editors, {\em Advances in
+  Neural Information Processing Systems}, volume~4. Morgan-Kaufmann, 1991.
+
+\bibitem{adamw}
+Ilya Loshchilov and Frank Hutter.
+\newblock Fixing weight decay regularization in adam.
+\newblock {\em CoRR}, abs/1711.05101, 2017.
+
+\bibitem{howdoesbnwork}
+Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, and Aleksander Madry.
+\newblock How does batch normalization help optimization?
+\newblock In S.~Bengio, H.~Wallach, H.~Larochelle, K.~Grauman, N.~Cesa-Bianchi,
+  and R.~Garnett, editors, {\em Advances in Neural Information Processing
+  Systems}, volume~31. Curran Associates, Inc., 2018.
+
+\bibitem{understandingbn}
+Nils Bjorck, Carla Gomes, Bart Selman, and Kilian Weinberger.
+\newblock Understanding batch normalization.
+\newblock In S.~Bengio, H.~Wallach, H.~Larochelle, K.~Grauman, N.~Cesa-Bianchi,
+  and R.~Garnett, editors, {\em Advances in Neural Information Processing
+  Systems}, volume~31. Curran Associates, Inc., 2018.
+
+\bibitem{understandingnoisybn}
+Atli Kosson, Dongyang Fan, and Martin Jaggi.
+\newblock Understanding the role of noisy statistics in the regularization
+  effect of batch normalization.
+\newblock In {\em NeurIPS 2023 Workshop on Mathematics of Modern Machine
+  Learning}, 2023.
+
+\bibitem{skipcon}
+Guoping Xu, Xiaxia Wang, Xinglong Wu, Xuesong Leng, and Yongchao Xu.
+\newblock Development of skip connection in deep neural networks for computer
+  vision and medical image analysis: A survey.
+\newblock {\em arXiv preprint arXiv:2405.01725}, 2024.
+
+\bibitem{snapens}
+Gao Huang, Yixuan Li, Geoff Pleiss, Zhuang Liu, John~E. Hopcroft, and Kilian~Q.
+  Weinberger.
+\newblock Snapshot ensembles: Train 1, get {M} for free.
+\newblock {\em CoRR}, abs/1704.00109, 2017.
+
+\bibitem{lightgbm}
+Guolin Ke, Qi~Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+  Ye, and Tie-Yan Liu.
+\newblock {LightGBM}: A highly efficient gradient boosting decision tree.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~30, pages 3146--3154. Curran Associates, Inc., 2017.
+
 \bibitem{goossens93}
 M.~Goossens, F.~Mittelbach, and A.~Samarin.
 \newblock {\em The LaTeX Companion}.

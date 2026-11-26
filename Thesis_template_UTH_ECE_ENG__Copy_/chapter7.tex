@@ -56,16 +56,14 @@ The framework's models were also trained for the rest of the datasets. The final
 \begin{figure}[htb]
     \centering
 
-    \begin{subfigure}{1\textwidth}
+    \begin{subfigure}{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/autogluon-model-acc.png}
         \caption{First image caption}
         \label{autogl-acc}
     \end{subfigure}
-
-    \vspace{0.5cm}
-
-    \begin{subfigure}{1\textwidth}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/autogluon-pred-time.png}
         \caption{Second image caption}
@@ -74,7 +72,7 @@ The framework's models were also trained for the rest of the datasets. The final
 
     \caption{Tblah blah blah}
     \label{autogluon-results-all}
-\end{figure} 
+\end{figure}
 
 The AutoGluon experiments showed that each of the five discreet model types was competitive in predictive accuracy, CPU inference time, or both. I therefore carried all five forward for further evaluation: MLP, Random Forest, Extremely Randomized Trees, XGBoost and LightGBM. For each model type, I selected a single hyperparameter configuration that performed well across all the constructed datasets. I then compared the resulting models on the corresponding test sets in terms of predictive accuracy and CPU inference time. I also recorded the number of parameters in each fitted model to characterize its size and whether its suitable for edge AI applications.
 
@@ -88,11 +86,512 @@ Having decided which model types are suitable for this application, the next ste
     \item and \textbf{model size} (in paramter count and RAM usage).
 \end{itemize}
 
+The metrics used for evaluating the models' performance in the test split after their training were relative root mean squared error ($RelativeRMSE$) defined as:
+
+\begin{equation}
+    RelativeRMSE = \frac{RMSE}{max(grviOut)-min(grviOut)},
+\end{equation}
+
+and $R^2$.
+
+For the hyperparameter tuning of all the model families I used only the $notrees-dl$ dataset. For the computational performance monitoring, I performed inference on two separate processing units:
+
+\begin{itemize}
+    \item a \textbf{AMD Ryzen 5 3600} CPU (Zen 2 Matisse architecture) + 16GB DDR4, and
+    \item a \textbf{NVIDIA GeForce RTX 2060 (6GB GDDR6)} GPU (NVIDIA Turing architecture).
+\end{itemize}
+
+Each of the individual tests was performed $100$ times while monitoring the execution time. The results provided are the mean execution time and standard deviation of the measurements.
+
+Time measurements depended on both the model type and whether the indeference is performed on CPU or GPU. For the CPU inference speed the process was more straight forward. Specifically in the case of neural networks, time started right before the Pytorch Dataloader fetches a batch (in the single example case, no dataloader is needed, therefore this overhead is $0$) and ended right after the model provided a prediction (or the last prediction, when working with the test dataset). The analytical calculations can be seen at Equation~\ref{cpu_timing_nn}.
+
+\begin{subequations}\label{cpu_timing_nn}
+\renewcommand{\theequation}{\theparentequation.\arabic{equation}}
+\begin{align}
+&T_{\text{CPU, single}} =
+T_{\text{ForwardPass}}(1) +
+T_{\text{TorchOverhead}}(1)
+\label{eq:cpu_single}\\[8pt]
+&T_{\text{CPU, batch}} =
+T_{\text{Loader}}(B) +
+T_{\text{ForwardPass}}(B) +
+T_{\text{TorchOverhead}}(B)
+\label{eq:cpu_batch}\\[8pt]
+&T_{\text{CPU, testDS}} =
+\sum_{i=1}^{N_{\text{Batches}}}
+\Big[
+T_{\text{Loader}}(B_i) +
+T_{\text{ForwardPass}}(B_i)
+\notag\\
+&\qquad\qquad\qquad+
+T_{\text{TorchOverhead}}(B_i)
+\Big]
+\label{eq:cpu_testDS}
+\end{align}
+\end{subequations}
+
+For GPU inference, it was important that the memory transfers from CPU to GPU (for inputs) and vise versa (for ouputs) were also included, as these are expected to be the most expensive part of the process. Before each performance monitoring experiment, the GPU had to run $20$ instances of the input format, whether that was single sample, batch or dataset. Since CUDA kernel launches are asynchronous, the device had to be synchronized before the measurement occured. This process can be seen in Listing~\ref{gpu_timing_code}.
+
+\begin{lstlisting}[
+    language=Python,
+    caption={GPU execution time measurement using CUDA synchronization.},
+    label={gpu_timing_code},
+    numbers=left,
+    basicstyle=\ttfamily\small,
+    frame=single
+]
+torch.cuda.synchronize()
+start_time = time.time()
+
+# Execution logic
+
+torch.cuda.synchronize()
+end_time = time.time()
+\end{lstlisting}
+
+The timing claculations for GPU inference of NN models can be seen at Equation~\ref{gpu_timing_nn}.
+
+\begin{subequations}\label{gpu_timing_nn}
+\renewcommand{\theequation}{\theparentequation.\arabic{equation}}
+\begin{align}
+&T_{\text{GPU, single}} =
+T_{\text{CPU}\rightarrow\text{GPU}}(1) +
+T_{\text{ForwardPass}}(1)
+\notag\\
+&\qquad+
+T_{\text{GPU}\rightarrow\text{CPU}}(1) +
+T_{\text{Sync}} +
+T_{\text{TorchOverhead}}(1)
+\label{eq:gpu_single}\\[8pt]
+&T_{\text{GPU, batch}} =
+T_{\text{Loader}}(B) +
+T_{\text{CPU}\rightarrow\text{GPU}}(B) +
+T_{\text{ForwardPass}}(B)
+\notag\\
+&\qquad+
+T_{\text{GPU}\rightarrow\text{CPU}}(B) +
+T_{\text{Sync}} +
+T_{\text{TorchOverhead}}(B)
+\label{eq:gpu_batch}\\[8pt]
+&T_{\text{GPU, testDS}} =
+\sum_{i=1}^{N_{\text{Batches}}}
+\Big[
+T_{\text{Loader}}(B_i) +
+T_{\text{CPU}\rightarrow\text{GPU}}(B_i)
+\notag\\
+&\qquad\qquad+
+T_{\text{ForwardPass}}(B_i) +
+T_{\text{GPU}\rightarrow\text{CPU}}(B_i)
+\notag\\
+&\qquad\qquad+
+T_{\text{TorchOverhead}}(B_i)
+\Big] + T_{\text{Sync}}
+\label{eq:gpu_test}
+\end{align}
+\end{subequations}
+
+The process was similar for measuring time for ensemble methods. What changes is that this time there is no Dataloader, meaning that, firstly, there is no Dataloader overhead, and secondly, the whole dataset is copied directly to the GPU memory, in the case of the test split experiment. While working with on the cuML framework, I also elected to use the respective device synchronization function, which can be seen in Listing~\ref{cupy_timing_code}.
+
+\begin{lstlisting}[
+    language=Python,
+    caption={GPU execution time measurement using CuPy synchronization.},
+    label={cupy_timing_code},
+    numbers=left,
+    basicstyle=\ttfamily\small,
+    frame=single
+]
+cp.cuda.Device().synchronize()
+start_time = time.time()
+
+# Execution logic
+
+cp.cuda.Device().synchronize()
+end_time = time.time()
+\end{lstlisting}
+
+As for the time calculations, the calculations regarding CPU inference are described in Equation~\ref{cpu_timing_ml}, while for the GPU in Equation~\ref{gpu_timing_ml}
+
+\begin{subequations}\label{cpu_timing_ml}
+\renewcommand{\theequation}{\theparentequation.\arabic{equation}}
+\begin{align}
+&T_{\text{CPU, single}} =
+T_{\text{Prediction}}(1) +
+T_{\text{FrameworkOverhead}}(1)
+\label{eq:cpu_ml_single}\\[8pt]
+&T_{\text{CPU, testDS}} =
+T_{\text{Prediction}}(N_{\text{test}}) +
+T_{\text{FrameworkOverhead}}(N_{\text{test}})
+\label{eq:cpu_ml_test}
+\end{align}
+\end{subequations}
+
+\begin{subequations}\label{gpu_timing_ml}
+\renewcommand{\theequation}{\theparentequation.\arabic{equation}}
+\begin{align}
+&T_{\text{GPU, single}} =
+T_{\text{CPU}\rightarrow\text{GPU}}(1) +
+T_{\text{Prediction}}(1) +
+T_{\text{GPU}\rightarrow\text{CPU}}(1)
+\notag\\
+&\qquad +
+T_{\text{Sync}} +
+T_{\text{FrameworkOverhead}}(1)
+\label{eq:gpu_ml_single}\\[8pt]
+&T_{\text{GPU, testDS}} =
+T_{\text{CPU}\rightarrow\text{GPU}}(N_{\text{test}}) +
+T_{\text{Prediction}}(N_{\text{test}})
+\notag\\
+&\qquad +
+T_{\text{GPU}\rightarrow\text{CPU}}(N_{\text{test}}) +
+T_{\text{Sync}} +
+T_{\text{FrameworkOverhead}}(N_{\text{test}})
+\label{eq:gpu_ml_test}
+\end{align}
+\end{subequations}
+
 \subsection{Multilayer Perceptron (MLP)}
 \label{mlp-section}
 
-As already mentioned in~\ref{dp}, classification and regression tasks involving tabular data are dominating by tree- and gradient boosting-based methods. Despite DNNs' domination in any other data format, their performance leaves a lot to be desired in this one \cite{representationlearning, tabnet,welltunedsimplenets}. The challenges NNs face when handling information in such format mainly originate from data heterogeneity, lack of spatial or sequential relationships and noise, since these algorithms aim to learn these changes in the input data by approximating the output using weights and activations. These are factors that tree-based algorithms are able to eliminate by learning the differences by representing them with feature splits. That said, as shown in the example of AutoGluon, a small MLP could be fairly computationally efficient, comparatively to the other employed methods. 
+As already mentioned in~\ref{dp}, classification and regression tasks involving tabular data are dominating by tree- and gradient boosting-based methods. Despite DNNs' domination in any other data format, their performance leaves a lot to be desired in this one \cite{representationlearning, tabnet,tabdata-nn}. The challenges NNs face when handling information in such format mainly originate from data heterogeneity, lack of spatial or sequential relationships and noise, since these algorithms aim to learn these changes in the input data by approximating the output using weights and activations. These are factors that tree-based algorithms are able to eliminate by learning the differences by representing them with feature splits. That said, as shown in the example of AutoGluon, a small MLP could be fairly computationally efficient comparatively to the other employed methods, making the experimentation worth it.
 
 Several deep learning architectures have been proposed to improve predictive performance on tabular data. One example is TabNet, introduced in the work of Arik et. al \cite{tabnet}. At each decision step, TabNet uses attention to generate a feature mask for each input row. The mask assigns a nonnegative weight to each feature, and the weights sum to one. TabNet multiplies each feature value by its corresponding weight, suppressing features assigned a weight of zero and giving greater relative importance to those assigned larger weights. The purpose of this is to let the model focus only on the features that are useful for the current row. However, an attention-based architecture on top of the actual regressor would overly increase the overhead, especially during inference on an edge device.
 
-Another solution to the MLP models' poor performance on 
+Another solution to the MLP models' poor predictive performance on tabural data is proposed in the study of Kadra et. al \cite{tabdata-nn}. In this paper, researchers examine the impact of the generalization of a model to its accuracy. Eventually, it is confirmed that the simultaneous application of various regularization methods does imrove the quality of the predictions. This approach fits much better the criteria of the target application, as it does not greately increase the total parameters and arithmetic operations the model has to perform before providing an output. Naturally, it is pointed out within the paper that different regularization method "cocktails" worked better for different datasets, with the different techniques being tested using an automated workflow. I decided to test myself several of the presented techniques, retaining only the ones which cause a drop in loss.
+
+\subsubsection{Base Model}
+
+First, I had to define the base architecture of the neural network. Since the data were structured as numbers formated in rows and columns, the most suitable NN architecture according to relevant literature was MLP. The initial configuration included two hidden layers and one output neuron with linear activation function, since it is a regression task. In both of the hidden layers i used $ReLU$ as the activation function. The first layer included $128$ perceptrons, while the second $64$. The architecture is illustrated in detail in Figure~\ref{mlp-original}. Later on I tested different hyperparameter configurations using an algorithm similar to Grid Search \cite{NAS}, but smaller architectures did not manage to match the already achieved performance, while larger either provided no further accuracy boost, or overfitted. Changing the architecture shape from funnel to reverse funnel or rectangular also failed to improve accuracy, while changing it to narrow-wide-narrow resulted in a non-noticeable improvement, accompanied by an evident overhead increase.
+
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/mlp_original.png}
+    \caption{words}
+    \label{mlp-original}
+\end{figure}
+
+For the implementation and training of the model I used the PyTorch framework. I developed a simple preprocessor that, given a .csv file path, it opens it in Pandas DataFrame format and transforms it into a numeric matrix. The matrix' rows are then suffled and randomly relocated into three new matrices, one containing the training samples ($80\%$ of the total samples), validation samples ($10\%$ of the total samples) and test samples ($10\%$ of the total samples). Three separate PyTorch Dataloaders, one for each of the three dataset splits, are responsible for batching and forwarding the data to the model. I set the batch size to $512$ to balance training speed and reasonable rate of optimizer updates. I used mean squared error ($MSE$) as the loss function and Adam as the optimizer, with an initial learning rate of $10^{-3}$. The training was performed in $160$ epochs.
+
+After training to the $notrees-dl$ dataset, the vanilla MLP model achieved:
+
+\begin{itemize}
+    \item $RelativeRMSE = 15.164\%$,
+    \item $R^2 = 0.145$.
+\end{itemize}
+
+The performance was expectedly low, something made apparent especially after comparing it with the predictive performance of the ensemble methods. The next step was applying the various generalization techniques and additional training parameters, aiming to see whether this way the performance of the MLP can be boosted.
+
+\subsubsection{AdamW and Weight Decay}
+
+Weight decay is used for regularizing a network by limiting the growth of its weights. This way, the weights are not growing too large unless it is necessary, making the model less susceptible to overfitting the training data and improving its generalization ability.
+
+Weight decay is closely related to L2 regularization, which penalizes large weights by introducing an additional term into the loss function:
+
+\begin{equation}
+    E(w) = E_0(w) + \frac{1}{2}\lambda \sum_i w_i^2
+    \label{eq:weight_decay}
+\end{equation}
+
+where $E_0(w)$ represents the original error function (loss function), $w_i$ denotes an individual network weight, and $\lambda$ controls the strength of regularization. As the magnitude of the weights increases, the penalty becomes larger, encouraging the model to favor smaller weights unless larger values are necessary to minimize the error \cite{wdecay}.
+
+Although L2 regularization and weight decay are mathematically equivalent when using standard stochastic gradient descent (SGD), this equivalence does not apply for adaptive optimizers such as Adam, which was the optimizer used for the vanilla MLP model. Adam adjusts the learning rate of each weight individually based on the history of its gradients. When L2 regularization is applied, the additional penalty is included in these adaptive calculations, resulting in a non-uniform weight decay effect.
+
+This issue is addressed in the work of Loshchilov et. al \cite{adamw}, where the AdamW optimizer is introduced. AdamW decouples weight decay from the gradient-based updates, allowing the weights to be reduced proportionally to their magnitude, independently of Adam's adaptive learning rates. This preserves the benefits of Adam's adaptive optimization while providing a more consistent weight decay mechanism.
+
+The ocnstructed datasets contain a large amount of noisy samples, both in the side of the inputs and even outputs, in the case of the $dl$ datasets. Weight decay was expected to assist the model to not overly adapt to these noisy samples and to encourage more stable predictions. For this application, I set the weight decay hyperparameter of the optimizer to a fixed $0.01$.
+
+After training the MLP model with AdamW as the optimizer and weight decay applied, the metrics on the test split were:
+
+\begin{itemize}
+    \item $RelativeRMSE = 11.925\%$
+    \item $R^2 = 0.471$ 
+\end{itemize}
+
+Apart from the $3.24$-percentage-point decline in $RelativeRMSE$, the increase in $R^2$ indicates a significant improvement in the model's ability to predict differences in GRVI values across unseen samples. That said, there is still a large room for improvement, since there is still a $52.9\%$ squared prediction error.
+
+\subsubsection{Batch Normalization}
+
+Unlike weight decay, batch normalizations primary focus is not generalization. Its main purpose is to make training more stable for high learning rates by normalizing mini-batches of avtivations before being passed to an intermediate layer. Because of the variations of each sample included in the mini-batch that gets normalized, a degree of randomness is introduced during the training. Additionally, more stable training can lead to better solutions, improving overall accuract \cite{howdoesbnwork, understandingbn, understandingnoisybn}. 
+
+Considering these advantages of batch normalization, it was considered an ambitious addition to the MLP model. Despite its addition, the learning rate remained unchanged, since the current $10^{-1}$ provided the best results. Post training, the evaluation metrics after training were:
+
+\begin{itemize}
+    \item $RelativeRMSE = 11.3\%$
+    \item $R^2 = 0.525$
+\end{itemize}
+
+\subsubsection{Standard Scaling}
+
+A deeper explaination of standard scaling and its benefits on NN-based solution is provided on Subsection~\ref{standscale}. Up until this stage, I was using the data in their raw format, something generally harmful for the perceived importance of each feature by the model. By normalizing the data, this effect is mitigated, while the elimnation of steep changes in the features' magnitude helps with generalization. 
+
+Overall, standard scaling was the last attempt of improving the predictive performance of the MLP architecture. Post training, the model achieved:
+
+\begin{itemize}
+    \item $RelativeRMSE = 7.152\%$
+    \item $R^2 = 0.81$
+\end{itemize}
+
+Comparatively to the AutoGluon models, the proposed implementation achieved a nearly identical performance to the $NeuralNetFastAI$ model and barely worse performance than the $NeuralNetTorch$ model in the $notrees-dl$ dataset. Its accuracy still falls short in comparison to the best performing single model from the AutoGluon-Tabular library, being the XGBoost, with a $RelativeRMSE$ of around $4.5\%$, yet it is expected to be fairly more computationally efficient. In terms of $R^2$, a score of $0.81$ indicates that the model's predictions account for $81\%$ of the variation in the target GRVI values, implying that the model has learned meaningful relationships between the input features and the ground truth.
+
+The overall performance improvement, attributed to the different applied methods, is presented in Figure~\ref{mlp-opts}.
+
+
+\begin{figure}[htb]
+    \centering
+
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mlp_optimization_relative_rmse.png}
+        \caption{First image caption}
+        \label{mlp-opt-rmse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mlp_optimization_r2.png}
+        \caption{Second image caption}
+        \label{mlp-opt-r2}
+    \end{subfigure}
+
+    \caption{Tblah blah blah}
+    \label{mlp-opts}
+\end{figure}
+
+\subsubsection{Tested But Non-Effective Optimization Methods}
+
+Apart from the three techniques I ended up incorporating to the final model, several others were explored, drawing both on knowledge acquired through coursework or practices that exhibited satisfactory performance in \cite{tabdata-nn}. The application of none of these methods resulted in an accuracy and, therefore, were not included in the final implementation. These methods were:
+
+\begin{itemize}
+    \item \textbf{dropout} of different shapes and rates,
+    \item \textbf{skip connections} (direct connections that allow information to bypass intermediate layers \cite{skipcon}), 
+    \item \textbf{snapshot ensembles} (ensembles of model checkpoints saved at different training stages \cite{snapens}) and 
+    \item \textbf{data augmentation} (expanding training data through transformations of existing samples).
+\end{itemize}
+
+
+\subsubsection{Computational Performance and Efficiency}
+
+Despite MLPs scorring the lowest relative $MSE$, MLP solutions displayed satisfactory inference speed during their trial within the AutoGluon framework. It was important to observe whether this performance carries out to the custom implementation too, where a different architecture is applied. Along with it, I also kept track of the model size, both in terms of parameters count and size in RAM, aiming to evaulate the model's efficiency.
+
+For the inference speed evaluation I performed three tests, based on the amount of samples processed in each case: \textbf{single sample}, \textbf{batch of} $\mathbf{512}$ \textbf{samples}, and \textbf{whole test split} ($32962$ samples, in batches of $512$). The recorded CPU and GPU inference times, both overall and analyzed in componenets, are presented in Figure~\ref{cgpu-inference-times} and are the mean of $100$ iterations of the same experiment.
+
+There are several observations according to the recorded times. For starters, the inference times achieved for the test split were overall less than half compared to the times reported by the AutoGluon MLPs ($NeuralNetTorch$: $434.747ms$, $NeuralNetFastAI$: $818.981ms$, custom implementation: $157.656ms$). Secondly, the model performed in all three tested cases better when deployed on the CPU and not GPU. This is mainly attributed to the model's size since, when deployed to the GPU, there are "costly" CUDA kernel launches for minimal computational workload. Finally, it can be seen in the performance analysis of the scenarios which include batched inputs ($Batch$ and $Test\text{ }Dataset$), that most of the recorded time is allocated to fetching data using the DataLoader. This issue will not be present in a real-time application, as the samples will be processed one-by-one by the model, eliminating the need for a DataLoader. 
+
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/inference-times-cpu-gpu-nn.png}
+    \caption{words}
+    \label{cgpu-inference-times}
+\end{figure}
+
+Efficiency wise, the model has $10369$ parameters, and its total memory footprint is $42.0195 KiB$.
+
+\subsection{Random Forest}
+
+Random forest (RF) was the overall least accurate tree-based method tested within the AutoGluon framework. Yet, it was the fastest ensemble method and outperformed the best MLP implementations by $26\%$.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/gridSeachRF1st.png}
+        \caption{First image caption}
+        \label{gs-rf-overview}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/gridSeachRF1st-sepcs.png}
+        \caption{Second image caption}
+        \label{gs-rf-sensitivity}
+    \end{subfigure}
+
+    \caption{Tblah blah blah}
+    \label{gs-rf}
+\end{figure} 
+
+\subsubsection{Hyperparameter Tuning}
+
+In order to identify the optimal hyperparameter configuration for the model, I developed a custom implementation of grid search. I focused on four of the most impactful options offered by cuML's library for its RF implementation: $\mathbf{n\_estimators}$: number of decision trees in the forest, $\mathbf{max\_depth}$: maximum allowed depth of each decision tree, $\mathbf{n\_bins}$: maximum number of bins for quantile-based split determination and $\mathbf{max\_features}$: proportion of features considered at each split. The remaining hyperparameters remained on their default values. A represion of grid search implementation is shown in Listing~\ref{gridsearchpseudo}, showing the ordering with which each hyperparameter was changed.
+
+\begin{lstlisting}[
+    language=Python,
+    caption={Custom grid search for Random Forest hyperparameter optimization.},
+    label={gridsearchpseudo},
+    numbers=left,
+    basicstyle=\ttfamily\small,
+    frame=single
+]
+for ne from ne_start to ne_end:
+    for md from md_start to md_end:
+        for nb from nb_start to nb_end:
+            for mf from mf_start to mf_end:
+
+                model = RandomForest(
+                    n_estimators=ne,
+                    max_depth=md,
+                    n_bins=nb,
+                    max_features=mf
+                )
+
+                model.fit(train_inputs, train_labels)
+
+                # Model evaluation
+\end{lstlisting}
+
+There was an initial small sweep for all four hyperparameters, aiming to see how each of them affects the predictive ability of the model. Specifically:
+
+\begin{itemize}
+    \item $n\_estimators$: from $50$ to $100$, step: $50$
+    \item $max\_depth$: from $10$ to $15$, step: $1$
+    \item $n\_bins$: from $16$ to $64$, multiplied by $2$ on each step
+    \item $max_features$: from $0.7$ to $1.0$, step $0.1$  
+\end{itemize}
+
+ \begin{figure}[H]
+    \centering
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/gridSeachRF2nd.png}
+        \caption{First image caption}
+        \label{gs-rf-only2-overview}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/gridSeachRF2nd-sepcs.png}
+        \caption{Second image caption}
+        \label{gs-rf-only2-sensitivity}
+    \end{subfigure}
+
+    \caption{Tblah blah blah}
+    \label{gs-rf-only2}
+\end{figure} 
+
+An overview of the results can be seen in Figure~\ref{gs-rf-overview}, while a more in-detail analysis about how each hyperparameter affects the predictive performance can be seen in Figure~\ref{gs-rf-sensitivity}. According to the results, the number of estimators did not improve predictive performance, something that I confirmed later on by extending the tested bound to $250$ and not changing the rest of the hyperparameters. Therefore, $n\_estimators$ remained at $50$. For $max\_features$, $1.0$ is the highest value it can get, and by setting it to $1.0$, the model achieved the lowest $RMSE$. Consequently, I kept $max\_features$ at $1.0$.
+
+ For the rest two hyperparameters, it was clear that there is still room for improvement, since in their respective plots, the rate with $RMSE$ declines each time the one of them increments. I set $n\_estimators$ and $max\_features$ to the fixed values discussed before and I performed grid search, shifting $max\_depth$ from $15$ to $24$, incrementing by one in each iteration, and $n\_bins$ from $64$ to $256$, doubling during each iteration. The results are illustrated in Figure~\ref{gs-rf-only2}. Despite the graphs still indicating the ability to further improve accuracy by experimenting with higher values, I decided not to do so, since the performance improvement's rate significantly drops with each increase. The currently selected hyperparameters' values already imply a farily heavy model. Further increases would lead to minimal enhancements in predictive performance and noticeable downgrades in efficiency.
+
+
+\subsubsection{Predictive Performance}
+
+The hyperparameter configuration I ended up on for RF was: $n\_estimators = 50$, $max\_depth = 24$, $n\_bins=256$, and $max\_features=1.0$. For this configuration, the model achieved:
+
+\begin{itemize}
+    \item $RelativeRMSE = 6.911\%$ and
+    \item $R^2 = 0.822$,
+\end{itemize}
+
+closely matching the performance of the AutoGluon implementation and surpassing the performance of the best-tuned MLP model.
+
+\subsubsection{Computational Performance and Efficiency}
+
+Since classical ML algorithms do not rely on batched data, I performed only two experiments to evaluate the RF implementation's indeference speed: inference on a single example and on the entire test dataset. I evaluated inference on both CPU and GPU. The results are presented in Figure~\ref{cgpu-inference-times-rf}. This time GPU inference performed far better, with execution time being $0.4ms$, almost half on GPU relatively to CPU on single examples, and $60$ times smaller on the entire dataset. In parallel, for single examples, mean inference time on GPU was nearly three times larger than the time recorded for MLP's inference on CPU, yet still under $1ms$
+
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/random_forest_log.png}
+    \caption{words}
+    \label{cgpu-inference-times-rf}
+\end{figure}
+
+The RF model contains a total of $11832772$ nodes, resulting in a memory footprint of $812.506MiB$, explaining why this time GPU inference was substancually faster on GPU rather than CPU. Naturally, this model size is hardly justifiable for inference in an edge device. Only in case where RF vastly outperforms other algorithms could it be considered as one of the proposed solutions.
+
+\subsection{Extra Random Trees}
+
+Extra Random Trees (ET) exhibited impressive performance on the $trees$ datasets when tested within the AutoGluon workflow, while remaining competitive in the rest. It also closely matched RF as one of the fastest ensemble methods tested. 
+
+\subsubsection{Hyperparameters}
+
+For hyperparameter tuning, I adjusted the grid search algorithm I developed for RF's tuning. The hyperparameters I elected to experiment with were: $\mathbf{n\_estimators}$: number of decision trees in the forest, $\mathbf{max\_depth}$: maximum allowed depth of each decision tree, $\mathbf{min\_samples\_leaf}$: minimum number of samples required in each leaf node and $\mathbf{max\_features}$: proportion of features considered at each split. Again, the remaining hyperparameters exposed by the library were left on their default values. 
+
+The best perfoming hyperparameter configuration was: $n\_estimators = 50$, $max\_depth = 21$, $min\_samples\_leaf = 4$, and $max\_features = 1.0$.
+
+\subsubsection{Predictive Performance}
+
+When trained to $notrees-dl$ with the aforementioned hyperparameter values, ET achieved in the test split:
+
+\begin{itemize}
+    \item $RelativeRMSE = 5.359\%$ and
+    \item $R^2 = 0.893$.
+\end{itemize}
+
+\subsubsection{Computational Performance and Efficiency}
+
+The GPU and CPU inference times for ET are presented in Figure~\ref{cgpu-inference-times-et}. Again, the model's inference on GPU far outperformed the CPU inference. Importanly, ET's GPU inference was only $0.0239ms$ slower than RF's on single examples, achieving a $22.46\%$ smaller $RelativeRMSE$ and $R^2$ fairly closer to $1.0$.
+
+
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/extra_trees_log.png}
+    \caption{words}
+    \label{cgpu-inference-times-et}
+\end{figure}
+
+The final ET model has $2326758$ nodes (5.1 times less than RF) and its RAM size is $159.78\%$, again, far smaller than RF and yet far larger than the MLP.
+
+\subsection{XGBoost}
+
+XGBoost (XGB) is one of the most widely used model across the literature for regression tasks managed by classical ML algorithms. It was also the the overall most accurate individual model type tested, having a fairly low inference time.
+
+\subsubsection{Hyperparameter}
+
+Using grid searched, I experimented with three of XGB's hyperparameters: $\mathbf{n\_estimators}$: number of boosting rounds, $\mathbf{max\_depth}$: maximum allowed depth of each decision tree and $\mathbf{min\_child\_weight}$: minimum sum of Hessians required in a child node. The best performing values configuration was: $n\_estimators = 500$, $max\_depth = 15$, and $min\_child\_weight = 3$.
+
+\subsubsection{Predictive Performance}
+
+After being trained to the $notrees-dl$ dataset, the XGB model's accuracy metrics were:
+
+\begin{itemize}
+    \item $RelativeRMSE = 4.892\%$ and
+    \item $R^2 = 0.911$.
+\end{itemize}
+
+\subsubsection{Computational Performance and Efficiency}
+
+The XGB model's inference times are illustrated in Figure~\ref{cgpu-inference-times-xgb}. Overall, it provides a nearly $0.5$-percentage-point decrease in $RelativeRMSE$, compared to ET (the previously best performing model), for nearly double the inference time, which is still under $1ms$ for single examples.
+
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/xgb_log.png}
+    \caption{words}
+    \label{cgpu-inference-times-xgb}
+\end{figure}
+
+The selected XGB configuration contains $4335436$ nodes and takes around $140.894MiB$ of memory, around $19MiB$ less than ET.
+
+\subsection{LightGBM}
+
+LightGBM's (LGBM) performance during the experimentation within the AutoGluon-Tabular framework was underwealming, considering that LGBM is supposed to be a lightweight and fast, yet accurate model type. However, since it performed moderately well in the automated test, I decided to tune a LGBM model myself, aiming to identify a better solution.
+
+\subsubsection{Hyperparameter Tuning}
+
+The hyperparameters I tuned with grid search for LGBM were: $\mathbf{n\_estimators}$: number of boosting rounds, $\mathbf{min\_child\_samples}$: minimum number of samples required in each leaf node, $\mathbf{num\_leaves}$: maximum number of leaves per decision tree and $\mathbf{colsample_bytree}$: proportion of features randomly sampled for each tree. The best performing configuration values were: $n\_estimators = 450$, $min\_child\_samples = 15$, $num\_leaves = 255$, and $colsample\_bytree = 0.7$
+
+\subsubsection{Predictive Performance}
+
+The performance metrics for LGBM for the test split were:
+
+\begin{itemize}
+    \item $RelativeRMSE = 5.04\%$ and
+    \item $R^2 = 0.905$.
+\end{itemize}
+
+\subsubsection{Computational Performance and Efficiency}
+
+The LGBM model's inference times are illustrated in Figure~\ref{cgpu-inference-times-lgbm}. LGBM was the only ensemble model having a CPU inference time lower than the GPU counterpart. This is an expected outcome, since, as seen later on, LGBM models are engineered to have significantly a less parameter count and overall memory footprint \cite{lightgbm}. That said, for the whole test dataset, GPU inference needed a fraction of the time CPU inference needed for providing predictions. Overall, the LGBM model had for single examples the third smallest inference time for single examples and second best predictive performance, barely surpassed by XGB.
+
+
+\begin{figure} [htb]
+    \centering
+    \includegraphics[width=1\linewidth]{images/lgbm_log.png}
+    \caption{words}
+    \label{cgpu-inference-times-lgbm}
+\end{figure}
+
+The final LGBM configuration had a total of $229050$ nodes, being by far the smallest model tested. Compared to ET - the previously smallest model testesd - LGBM has less than one tenth of its parameters. Its total memory footprint is $10.666MiB$, reflecting the low node count.

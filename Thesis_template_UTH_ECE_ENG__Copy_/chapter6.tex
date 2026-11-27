@@ -130,6 +130,7 @@ Arguably, the addition of shadow-presence-indicating labels and training of ML m
 The result was the four original datasets which include data derived from shaded scenes, with an extra binary indicator. This indicator signifies whether the respective area of interest depicts a part of the scene that is occluded.
 
 \section{Feature Engineering}
+\label{feature-eng}
 
 The initially created datasets aimed to provide a first idea of what is the predictive performance of the proposed ML models for this particular task. The next step was achieving a satisfying balance between predictive performance and computational efficiency. This task can be achieved with feature engineering. By performing feature engineering, it was possible to both reduce the dimensions of the original dataset and make the provided information more easily interpretable to the models.
 
@@ -142,12 +143,13 @@ This section aims to present the possible different feature engineering methods 
 
 
 \subsubsection{Feature Selection}
+\label{feature-sel}
 
 A common feature engineering practice is reducing dimensionality by dropping unimportant input attributes. An instance of such is low-variance features, being features that hardly change throughout the dataset. Another example is features that are strongly correlated with others. Finally, it is possible that one of the inputs simply does not provide any noticeable impact on the output's estimation.
 
 When it comes to low-variance features, several can be directly identified by a quick dataset inspection. Specifically, $sunRoll$ and $camRoll$ remain the same and equal to $180$ and $0$, respectively, throughout all the examples, therefore were found safe to be removed. $camPitch$ was also expected to remain set to $-20$, but throughout the examples, the value seems to have subtle fluctuations. Therefore, I considered it better to run feature importance tests and validate its insignificance before dropping it.
 
-Regarding correlated features, I found the Pearson Correlation Coefficient to be a fairly informative tool for identifying linear relationships between the features. I used it to construct correlation heatmaps for several of the previously mentioned versions of the dataset. However, the results among all tested iterations were expectedly close. One of the produced correlation maps is presented in Figure~\ref{correlation-hm}. The features $sunRoll$ and $camRoll$ remain constant throughout the dataset and therefore no coefficients were calculated between them and the other features. $illumG$ and $illumR$ are used for the calculations of $meanRefG$ and $meanRefR$, respectively, and therefore it is natural that they are correlated. Furthermore, throughout the simulation, as illuminance for one band grew, it grew for the other band as well, explaining why there is a strong relationship between them. It can also be seen that the perceived reflectance of each band follows the trend of the other band, while none of them is strongly correlated to $grviIn$. This is the case because. Lastly, $grivOut$ does not appear to be linearly related to any other feature. In a vacuum, that could be concerning, since $grviOut$ is expected to behave similarly to $grviIn$. That said, due to the infulence of directional light and shadows, $grviIn$'s values are expected to be unstable.
+Regarding correlated features, I found the Pearson Correlation Coefficient to be a fairly informative tool for identifying linear relationships between the features. I used it to construct correlation heatmaps for several of the previously mentioned versions of the dataset. However, the results among all tested iterations were expectedly close. One of the produced correlation maps is presented in Figure~\ref{correlation-hm}. The features $sunRoll$ and $camRoll$ remain constant throughout the dataset and therefore no coefficients were calculated between them and the other features. $illumG$ and $illumR$ are used for the calculations of $meanRefG$ and $meanRefR$, respectively, and therefore it is natural that they are correlated. Furthermore, throughout the simulation, as illuminance for one band grew, it grew for the other band as well, explaining why there is a strong relationship between them. It can also be seen that the perceived reflectance of each band follows the trend of the other band, while none of them is strongly correlated to $grviIn$. This is the case because. Lastly, $grivOut$ does not appear to be linearly related to any other feature. In a vacuum, that could be concerning, since $grviOut$ is expected to behave similarly to $grviIn$. That said, due to the infulence of directional light and shadows, $grviIn$'s values are expected to be unstable. Overall, it is seen later on that the models are able to learn the relationship between input features and the target values, implying the existence of non-linear relationships between them.
 
 \begin{figure} [htb]
     \centering
@@ -157,7 +159,7 @@ Regarding correlated features, I found the Pearson Correlation Coefficient to be
 \end{figure}
 
 
-Another way to identify which features could be safely dropped without major loss in predictive performance is by determining the importance of each feature. All of the frameworks used for their implementations of classical ML models provide tools for calculating feature importance, such as permutation importance, impurity-based importance, etc. For neural network architectures, the Captum framework \cite{captum} was used. The results of the execution of feature importance tools are discussed in the !!!!!!!!!!!!.
+Another way to identify which features could be safely dropped without major loss in predictive performance is by determining the importance of each feature. All of the frameworks used for their implementations of classical ML models provide tools for calculating feature importance, such as permutation feature importance, impurity-based importance, etc. Since these methods are model-dependent, they are discussed later on, after the models' implementations, in Section~\ref{pract-feature-eng}.
 
 \subsubsection{Principal Component Analysis (PCA)}
 
@@ -165,7 +167,7 @@ Principal component analysis (PCA) aims to reduce the complexity of a given data
 
 I experimented with PCA, aiming to determine weather it achieves dimensionality reduction more efficiently than the rest of the methods tested throughout this study. This included testing different amounts of principal components, seeking for a sweet-spot between low count of principal components and high predictive accuracy. The results are discussed in !!!!!!!!!.
 
-\subsection{Substituting Sun's and SCC's Roll, Pitch and Yaw with a Single Number}
+\subsubsection{Substituting Sun's and SCC's Roll, Pitch and Yaw with a Single Number}
 
 Among the attributes that were originally planned to be included in the datasets, there were a total of six regarding the sun-SCC geometry: the sun's and SCC's roll, pitch and yaw (RPY). Although some of them could be easily removed during the feature selection, it is possible to reduce all of them to a single feature, by replacing them with the relative azimuth angle between the sun and the SCC. 
 

@@ -94,7 +94,7 @@ The metrics used for evaluating the models' performance in the test split after 
 
 and $R^2$.
 
-For the hyperparameter tuning of all the model families I used only the $notrees-dl$ dataset. For the computational performance monitoring, I performed inference on two separate processing units:
+For the hyperparameter tuning of all the model families I used only the $notrees-dl$ dataset, as it represents a subset of data where fewer challnges are present - the measured illuminance and luminance are not affected by shadows and the ground truth is the perceived GRVI values for the studied part of the field under ideal lighting conditions instead of the actual GRVI values, meaning that the model does not have to account for planting density, measurement errors, etc. For the computational performance monitoring, I performed inference on two separate processing units:
 
 \begin{itemize}
     \item a \textbf{AMD Ryzen 5 3600} CPU (Zen 2 Matisse architecture) + 16GB DDR4, and
@@ -103,7 +103,7 @@ For the hyperparameter tuning of all the model families I used only the $notrees
 
 Each of the individual tests was performed $100$ times while monitoring the execution time. The results provided are the mean execution time and standard deviation of the measurements.
 
-Time measurements depended on both the model type and whether the indeference is performed on CPU or GPU. For the CPU inference speed the process was more straight forward. Specifically in the case of neural networks, time started right before the Pytorch Dataloader fetches a batch (in the single example case, no dataloader is needed, therefore this overhead is $0$) and ended right after the model provided a prediction (or the last prediction, when working with the test dataset). The analytical calculations can be seen at Equation~\ref{cpu_timing_nn}.
+Time measurements depended on both the model type and whether the inference is performed on CPU or GPU. For the CPU inference speed the process was more straight forward. Specifically in the case of neural networks, time started right before the Pytorch Dataloader fetches a batch (in the single example case, no dataloader is needed, therefore this overhead is $0$) and ended right after the model provided a prediction (or the last prediction, when working with the test dataset). The analytical calculations can be seen at Equation~\ref{cpu_timing_nn}.
 
 \begin{subequations}\label{cpu_timing_nn}
 \renewcommand{\theequation}{\theparentequation.\arabic{equation}}
@@ -320,6 +320,7 @@ Considering these advantages of batch normalization, it was considered an ambiti
 \end{itemize}
 
 \subsubsection{Standard Scaling}
+\label{mlp-standard-sc}
 
 A deeper explaination of standard scaling and its benefits on NN-based solution is provided on Subsection~\ref{standscale}. Up until this stage, I was using the data in their raw format, something generally harmful for the perceived importance of each feature by the model. By normalizing the data, this effect is mitigated, while the elimnation of steep changes in the features' magnitude helps with generalization. 
 
@@ -595,3 +596,298 @@ The LGBM model's inference times are illustrated in Figure~\ref{cgpu-inference-t
 \end{figure}
 
 The final LGBM configuration had a total of $229050$ nodes, being by far the smallest model tested. Compared to ET - the previously smallest model testesd - LGBM has less than one tenth of its parameters. Its total memory footprint is $10.666MiB$, reflecting the low node count.
+
+\subsection{Tuned Models Comparison and Selection for Further Stages}
+
+With all the models being tuned to an accuracy - efficiency balance, I compared their performance on the four different core datasets. Among them, $notrees-dl$ was used as the baseline for the tuning. The performance metrics of the models for this dataset's test split have already been presented in the previous subsections. A summary of the all the models' performance and efficiency metrics is presented in Figure~\ref{perf-on-notrees-dl}
+
+
+\begin{figure}[htb]
+    \centering
+    
+    \begin{minipage}{1\textwidth}
+    
+        \begin{subfigure}{0.48\linewidth}
+            \includegraphics[width=\linewidth]{images/model_inference_time.png}
+            \caption{}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}{0.48\linewidth}
+            \includegraphics[width=\linewidth]{images/model_size.png}
+            \caption{}
+        \end{subfigure}
+        
+        \vspace{1em}
+        
+        \begin{subfigure}{\linewidth}
+            \includegraphics[width=\linewidth]{images/model_relative_rmse.png}
+            \caption{}
+        \end{subfigure}
+        
+        \caption{}
+        \label{perf-on-notrees-dl}
+        
+    \end{minipage}
+    
+\end{figure}
+
+Among the tested models, the best performing accuracy wise was the XGB, with a $RelativeRMSE$ of $4.892\%$ and $R^2$ of $0.911$. XGB had a relatively high inference time, comparitively to the other models. Nevertheless, it still remained within reasonable bounds. The model's memory footprint was also among the lowest tested, making the model a suitable candidate for hardware constrained environments. An even better balanced model was the LGBM, which for a slightly worse accuracy ($RelativeRMSE = 5.04\%$, $R^2 = 0.905$) required less than one thirteenth of the memory XGB required and had noticeably lower inference time. ET also performed well, with a slightly worse accuracy than the two best performing models, reasonable memory usage and a barely less inference time than LGBM. NN and RF were the worst performing models. NN was the fasters and smallest model, making it a considerable choise, depending on its performance on the rest of the datasets. RF was the fastest ensemble method, but its disproportionally large size makes it a non-viable option for this application.
+
+Despite the performance analysis on the $notrees-dl$ dataset, I also evaluated the models on three more datasets: $trees-dl$, $notrees-gt$ and $trees-gt$. Naturally, since the hyperparameter configurations and input size remained unchanged, the differences in the inference time and model sizes were minimal. The recorded $RelativeRMSE$ and $R^2$ on the test splits, after training on the respective training splits, are presented in Figure~\ref{perf-on-the-rest}.
+
+\begin{figure}[htb]
+    \centering
+
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/custom_model_accuracy_by_dataset.png}
+        \caption{First image caption}
+        \label{perf-on-the-rest-rmse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/custom_model_predictive_performance_by_dataset.png}
+        \caption{Second image caption}
+        \label{perf-on-the-rest-r2}
+    \end{subfigure}
+
+    \caption{Tblah blah blah}
+    \label{perf-on-the-rest}
+\end{figure}
+
+Here, the lack of competence of the MLP and the RF model is made apparent, with both models falling behind the other three models in all four datasets. Other than that, the reamining models follow a similar pattern to the one observed in the $notrees-dl$ dataset, with XGB being the overall best perfoming model (with the exception of the $threes-gt-aoi$ dataset, where ET achieved the lowest $RelativeRMSE$ and highest $R^2$), closely followed by LGBM. ET performes exceptionally in the $trees-gt-aoi$ dataset, and falls slightly behind LGBM in the rest. 
+
+With the conclusion of the previously mentioned evaluation, the three best performing models, XGB, LGBM and ET, were selected for further experimentation.
+
+\section{Practical Application of Feature Engineering}
+\label{pract-feature-eng}
+
+In Section~\ref{feature-eng}, there is an analytical discussion of the feature engineering considered for application in this work. I have already emplyed several of the proposed techniques, including removing features with low variance (Subsubsection~\ref{feature-sel}), and standard scaling (Subsubsection~\ref{mlp-standard-sc}). The rest of the mentioned techniques require having an already well-performing baseline, in order to evaluate their impact on the models' performance. 
+
+\subsection{Feature Selection}
+
+In Subsubsection~\ref{feature-sel}, I discussed the possibility of removing features that are redundant or irrelevant to the target variable. As a first step, I evaluated the correlation between each feature and the target variable, using the Pearson correlation coefficient, as a model agnostic method. Despite the fact that several features exhibited high correlation with others, I figured that it would be more beneficial to evaluate the impact of removing the correlated features on the models' performance, rather than removing them based on correlation alone. This way, I could ensure that the end result of dimensionality reduction is reduction to model complexity without a significant loss in predictive performance. 
+
+The primary criterion for feature selection was the importance of each feature during the prediction process. The tool I employed for this purpose was permutation feature importance. Permutation feature importance is a model-agnostic method that aims to measure the contribution of each feature to a model's predictive performance. The way it works is by randomly suffling the values of a single feature across the dataset while keeping the other features unchanged. The greater the decrease in accuracy, relative to the original, the more important the feature is considered to be \cite{sklearn_permutation_importance}.
+
+I decided to first attempt feature selection for the two $dl$ datasets, since they were the least challenging for the models, and, depending on the results, I would then apply the same process for the $gt$ datasets. The feature importance evaluation for the two datasets, performed on the three selected models, is presented in Table~\ref{permutation-importance-rankings}. For most of the models, the most important features were $meanRefG$, $meanRefR$ and surprisingly $camPitch$, which is one of the features I considered removing in \ref{feature-sel}. In parallel, the least important were $illumG$ and $illumR$, presumably due to their high correlation with $meanRefG$ and $meanRefR$, and $sunYaw$. The ET model exhibits a noticeably different feature importance distribution for the $trees-dl-aoi$ dataset, relying primarily on camera orientation and the area-of-interest index rather than the reflectance measurements.
+
+With a rough idea of the contribution of each feature to the models' performance, I performed an ablation study, progressively removing the least important features, based on the permutation importance rankings for each model. The results of this study are presented in Figure~\ref{feature-selection-ablation-dl}. 
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|l||r|r|r||r|r|r|}
+\hline
+& \multicolumn{3}{c||}{\textbf{notrees-dl}}
+& \multicolumn{3}{c|}{\textbf{trees-dl-aoi}} \\
+\cline{2-7}
+\textbf{Feature} & \textbf{ET} & \textbf{XGB} & \textbf{LGBM}
+                 & \textbf{ET} & \textbf{XGB} & \textbf{LGBM} \\
+\hline\hline
+meanRefG & 1  & 1  & 1  & 5  & 1  & 1  \\
+\hline
+meanRefR & 2  & 2  & 2  & 6  & 2  & 2  \\
+\hline
+camPitch & 3  & 4  & 4  & 1  & 3  & 3  \\
+\hline
+grviIn   & 5  & 3  & 3  & 4  & 4  & 4  \\
+\hline
+camYaw   & 4  & 5  & 5  & 2  & 6  & 5  \\
+\hline
+blockIdx & 6  & 7  & 6  & 3  & 7  & 6  \\
+\hline
+sunPitch & 7  & 6  & 7  & 9  & 8  & 9  \\
+\hline
+illumR   & 10 & 8  & 8  & 10 & 5  & 8  \\
+\hline
+illumG   & 8  & 10 & 10 & 8  & 9  & 7  \\
+\hline
+sunYaw   & 9  & 9  & 9  & 7  & 10 & 10 \\
+\hline
+\end{tabular}
+\caption{Feature rankings based on permutation importance for the three
+selected models across the two examined datasets. Rank 1 corresponds
+to the highest feature importance.}
+\label{permutation-importance-rankings}
+\end{table}
+
+
+\begin{figure}[htb]
+    \centering
+
+    % First row: notrees-dl
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-dl_relative_rmse.png}
+        \caption{Relative RMSE}
+        \label{ablation-notrees-dl-rmse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-dl_r2.png}
+        \caption{$R^2$}
+        \label{ablation-notrees-dl-r2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-dl_inference_time.png}
+        \caption{Inference time}
+        \label{ablation-notrees-dl-time}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-dl_size.png}
+        \caption{Model size}
+        \label{ablation-notrees-dl-size}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    % Second row: trees-dl-aoi
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-dl-aoi_relative_rmse.png}
+        \caption{Relative RMSE}
+        \label{ablation-trees-dl-aoi-rmse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-dl-aoi_r2.png}
+        \caption{$R^2$}
+        \label{ablation-trees-dl-aoi-r2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-dl-aoi_inference_time.png}
+        \caption{Inference time}
+        \label{ablation-trees-dl-aoi-time}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-dl-aoi_size.png}
+        \caption{Model size}
+        \label{ablation-trees-dl-aoi-size}
+    \end{subfigure}
+
+    \caption{}
+    \label{feature-selection-ablation-dl}
+\end{figure}
+
+It can be seen that for the $notrees-dl$ dataset, LGBM actually became the best perfoming model in terms of accuracy, surpassing even vanilla XGB. Inference time and model size were also moderately reduced, making the model more efficient. The other two models also experienced visible changes, with ET's accuracy improving after $illumR$ was removed, but its computational speed declined vastly, whereas XGB's accuracy remained nearly unchanged, but its inference time was reduced.
+
+For the $trees-dl-aoi$ dataset, the results were even less predictable. For starters, LGBM's accuracy slightly dropped after the removal of $sunYaw$, but its inference time dropped by more than $1ms$, making it the fastest model overall. XGB also experienced the same changes. ET's accuracy on the other hand began to decline after the removal of the second least important feature, but by the removal of the fourth it started increasing, becoming almost equal to the the XGB's accuracy and clearly surpassing the LGBM's accuracy, before any feature was dropped. Its inderence time increased by nearly $0.7ms$, but its size dropped from nearly $130MiB$ to just over $70MiB$ 
+
+As the results were promossing for the $dl$ datasets, I decided to apply the same feature selection process to the $gt$ datasets. The permutation importance rankings for the three models on these datasets are presented in Table~\ref{permutation-importance-rankings-gt}. The results were fairly similar to the ones for the $dl$ datasets.
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|l||r|r|r||r|r|r|}
+\hline
+& \multicolumn{3}{c||}{\textbf{notrees-gt}}
+& \multicolumn{3}{c|}{\textbf{trees-gt-aoi}} \\
+\cline{2-7}
+\textbf{Feature} & \textbf{ET} & \textbf{XGB} & \textbf{LGBM}
+                 & \textbf{ET} & \textbf{XGB} & \textbf{LGBM} \\
+\hline\hline
+meanRefG & 1  & 1  & 1  & 5  & 1  & 1  \\
+\hline
+meanRefR & 2  & 2  & 2  & 6  & 2  & 2  \\
+\hline
+camPitch & 3  & 3  & 3  & 1  & 3  & 3  \\
+\hline
+grviIn   & 5  & 4  & 4  & 4  & 4  & 4  \\
+\hline
+camYaw   & 4  & 5  & 5  & 2  & 5  & 5  \\
+\hline
+blockIdx & 6  & 6  & 6  & 3  & 7  & 6  \\
+\hline
+sunPitch & 7  & 7  & 7  & 9  & 8  & 8  \\
+\hline
+illumR   & 10 & 8  & 8  & 10 & 6  & 7  \\
+\hline
+illumG   & 9  & 10 & 10 & 8  & 9  & 9  \\
+\hline
+sunYaw   & 8  & 9  & 9  & 7  & 10 & 10 \\
+\hline
+\end{tabular}
+\caption{Feature rankings based on permutation importance for the three
+selected models across the two datasets. Rank 1 corresponds to the
+highest feature importance.}
+\label{permutation-importance-rankings-gt}
+\end{table}
+
+On Figure~\ref{feature-selection-ablation-gt}, the results of the ablation study for the $gt$ datasets are presented. The most accurate model for the $notrees-gt$ dataset was ET, barely outperforming XGB. ET also exhibited superior inference time, relatively to the rest of the models, while also achieving a model size of nearly $80MiB$, being almost $100MiB$ smaller than XGB. For the $trees-gt-aoi$ dataset, ET was again the most accurate model. Inderestingly, its $RelativeRMSE$ remained sub-$6\%$, even after the removal of six of its input features, although its fastest inference was for three removed features. Its $R^2$ also fluctuated around $0.925$. Naturally, the model's size kept decreasing with each feature removal, reaching a size of around $70MiB$ after the removal of six features.
+
+\begin{figure}[htb]
+    \centering
+
+    % First row: notrees-dl
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-gt_relative_rmse.png}
+        \caption{Relative RMSE}
+        \label{ablation-notrees-gt-rmse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-gt_r2.png}
+        \caption{$R^2$}
+        \label{ablation-notrees-gt-r2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-gt_inference_time.png}
+        \caption{Inference time}
+        \label{ablation-notrees-gt-time}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/notrees-gt_size.png}
+        \caption{Model size}
+        \label{ablation-notrees-gt-size}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    % Second row: trees-dl-aoi
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-gt-aoi_relative_rmse.png}
+        \caption{Relative RMSE}
+        \label{ablation-trees-gt-aoi-rmse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-gt-aoi_r2.png}
+        \caption{$R^2$}
+        \label{ablation-trees-gt-aoi-r2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-dl-aoi_inference_time.png}
+        \caption{Inference time}
+        \label{ablation-trees-gt-aoi-time}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.245\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/trees-dl-aoi_size.png}
+        \caption{Model size}
+        \label{ablation-trees-gt-aoi-size}
+    \end{subfigure}
+
+    \caption{}
+    \label{feature-selection-ablation-gt}
+\end{figure}

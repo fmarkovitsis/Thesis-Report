@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.9.17)  26 NOV 2026 11:53
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.9.17)  28 NOV 2026 00:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1203,13 +1203,7 @@ t line 11.
 ]
 (main.toc [15
 
-] [16]
-Overfull \hbox (0.73271pt too wide) in paragraph at lines 64--64
- [][] [][]\TU/TimesNewRoman(0)/m/n/12 Substituting Sun’s and SCC’s Roll, Pitch 
-and Yaw with a Single Num- 
- []
-
-[17])
+] [16] [17])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1235,7 +1229,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout6 = `main.lof'.
 
 
-[22] (main.lot)
+[22] (main.lot
+Overfull \hbox (0.38158pt too wide) in paragraph at lines 14--14
+ [][] [][]\TU/TimesNewRoman(0)/m/n/12 Feature rankings based on permutation imp
+ortance for the three selected mod- 
+ []
+
+
+Overfull \hbox (0.38158pt too wide) in paragraph at lines 15--15
+ [][] [][]\TU/TimesNewRoman(0)/m/n/12 Feature rankings based on permutation imp
+ortance for the three selected mod- 
+ []
+
+)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
@@ -1757,20 +1763,20 @@ File: images/correlation_trees-dl-aoi.png Graphic file (type bmp)
 [68] [69] [70] [71] [72]
 File: images/before_standard_scaling.png Graphic file (type bmp)
 <images/before_standard_scaling.png>
-LaTeX Info: Redefining \anw@print on input line 319.
-LaTeX Info: Redefining \anw@print on input line 319.
-LaTeX Info: Redefining \anw@print on input line 319.
-LaTeX Info: Redefining \anw@print on input line 319.
+LaTeX Info: Redefining \anw@print on input line 321.
+LaTeX Info: Redefining \anw@print on input line 321.
+LaTeX Info: Redefining \anw@print on input line 321.
+LaTeX Info: Redefining \anw@print on input line 321.
 File: images/after_standard_scaling.png Graphic file (type bmp)
 <images/after_standard_scaling.png>
-LaTeX Info: Redefining \anw@print on input line 324.
-LaTeX Info: Redefining \anw@print on input line 324.
-LaTeX Info: Redefining \anw@print on input line 324.
-LaTeX Info: Redefining \anw@print on input line 324.
-LaTeX Info: Redefining \anw@print on input line 328.
-LaTeX Info: Redefining \anw@print on input line 328.
-LaTeX Info: Redefining \anw@print on input line 328.
-LaTeX Info: Redefining \anw@print on input line 328.
+LaTeX Info: Redefining \anw@print on input line 326.
+LaTeX Info: Redefining \anw@print on input line 326.
+LaTeX Info: Redefining \anw@print on input line 326.
+LaTeX Info: Redefining \anw@print on input line 326.
+LaTeX Info: Redefining \anw@print on input line 330.
+LaTeX Info: Redefining \anw@print on input line 330.
+LaTeX Info: Redefining \anw@print on input line 330.
+LaTeX Info: Redefining \anw@print on input line 330.
 ) [73]
 \openout2 = `chapter7.aux'.
 
@@ -1817,18 +1823,18 @@ File: images/mlp_original.png Graphic file (type bmp)
  [82] [83] [84]
 File: images/mlp_optimization_relative_rmse.png Graphic file (type bmp)
 <images/mlp_optimization_relative_rmse.png>
-LaTeX Info: Redefining \anw@print on input line 344.
-LaTeX Info: Redefining \anw@print on input line 344.
-LaTeX Info: Redefining \anw@print on input line 344.
-LaTeX Info: Redefining \anw@print on input line 344.
+LaTeX Info: Redefining \anw@print on input line 345.
+LaTeX Info: Redefining \anw@print on input line 345.
+LaTeX Info: Redefining \anw@print on input line 345.
+LaTeX Info: Redefining \anw@print on input line 345.
 File: images/mlp_optimization_r2.png Graphic file (type bmp)
 <images/mlp_optimization_r2.png>
-LaTeX Info: Redefining \anw@print on input line 351.
-LaTeX Info: Redefining \anw@print on input line 351.
-LaTeX Info: Redefining \anw@print on input line 351.
-LaTeX Info: Redefining \anw@print on input line 351.
+LaTeX Info: Redefining \anw@print on input line 352.
+LaTeX Info: Redefining \anw@print on input line 352.
+LaTeX Info: Redefining \anw@print on input line 352.
+LaTeX Info: Redefining \anw@print on input line 352.
  [85]
-Overfull \hbox (1.34947pt too wide) in paragraph at lines 366--367
+Overfull \hbox (1.34947pt too wide) in paragraph at lines 367--368
 []\TU/TimesNewRoman(0)/b/n/12 snapshot ensembles \TU/TimesNewRoman(0)/m/n/12 (e
 nsembles of model checkpoints saved at different training stages
  []
@@ -1837,7 +1843,7 @@ nsembles of model checkpoints saved at different training stages
 File: images/inference-times-cpu-gpu-nn.png Graphic file (type bmp)
 <images/inference-times-cpu-gpu-nn.png>
 
-Overfull \hbox (29.28265pt too wide) in paragraph at lines 386--387
+Overfull \hbox (29.28265pt too wide) in paragraph at lines 387--388
 []\TU/TimesNewRoman(0)/m/n/12 Efficiency wise, the model has $\OT1/cmr/m/n/12 1
 0369$ \TU/TimesNewRoman(0)/m/n/12 parameters, and its total memory footprint is
  $\OT1/cmr/m/n/12 42\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 0195\OML/cmm/m/it/12 KiB$
@@ -1846,61 +1852,61 @@ Overfull \hbox (29.28265pt too wide) in paragraph at lines 386--387
 
 File: images/gridSeachRF1st.png Graphic file (type bmp)
 <images/gridSeachRF1st.png>
-LaTeX Info: Redefining \anw@print on input line 398.
-LaTeX Info: Redefining \anw@print on input line 398.
-LaTeX Info: Redefining \anw@print on input line 398.
-LaTeX Info: Redefining \anw@print on input line 398.
+LaTeX Info: Redefining \anw@print on input line 399.
+LaTeX Info: Redefining \anw@print on input line 399.
+LaTeX Info: Redefining \anw@print on input line 399.
+LaTeX Info: Redefining \anw@print on input line 399.
 File: images/gridSeachRF1st-sepcs.png Graphic file (type bmp)
 <images/gridSeachRF1st-sepcs.png>
-LaTeX Info: Redefining \anw@print on input line 407.
-LaTeX Info: Redefining \anw@print on input line 407.
-LaTeX Info: Redefining \anw@print on input line 407.
-LaTeX Info: Redefining \anw@print on input line 407.
+LaTeX Info: Redefining \anw@print on input line 408.
+LaTeX Info: Redefining \anw@print on input line 408.
+LaTeX Info: Redefining \anw@print on input line 408.
+LaTeX Info: Redefining \anw@print on input line 408.
 [87]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [88]
 File: images/gridSeachRF2nd.png Graphic file (type bmp)
 <images/gridSeachRF2nd.png>
-LaTeX Info: Redefining \anw@print on input line 459.
-LaTeX Info: Redefining \anw@print on input line 459.
-LaTeX Info: Redefining \anw@print on input line 459.
-LaTeX Info: Redefining \anw@print on input line 459.
+LaTeX Info: Redefining \anw@print on input line 460.
+LaTeX Info: Redefining \anw@print on input line 460.
+LaTeX Info: Redefining \anw@print on input line 460.
+LaTeX Info: Redefining \anw@print on input line 460.
 File: images/gridSeachRF2nd-sepcs.png Graphic file (type bmp)
 <images/gridSeachRF2nd-sepcs.png>
-LaTeX Info: Redefining \anw@print on input line 468.
-LaTeX Info: Redefining \anw@print on input line 468.
-LaTeX Info: Redefining \anw@print on input line 468.
-LaTeX Info: Redefining \anw@print on input line 468.
+LaTeX Info: Redefining \anw@print on input line 469.
+LaTeX Info: Redefining \anw@print on input line 469.
+LaTeX Info: Redefining \anw@print on input line 469.
+LaTeX Info: Redefining \anw@print on input line 469.
 
 [89]
-LaTeX Info: Redefining \anw@print on input line 476.
-LaTeX Info: Redefining \anw@print on input line 476.
+LaTeX Info: Redefining \anw@print on input line 477.
+LaTeX Info: Redefining \anw@print on input line 477.
  [90]
 File: images/random_forest_log.png Graphic file (type bmp)
 <images/random_forest_log.png>
  [91]
-Overfull \hbox (29.29042pt too wide) in paragraph at lines 511--512
+Overfull \hbox (29.29042pt too wide) in paragraph at lines 512--513
 []$\TU/TimesNewRoman(0)/m/n/12 : minimum number of samples required in each lea
 f node and $[]$:
  []
 
 
-Overfull \hbox (11.22896pt too wide) in paragraph at lines 513--514
+Overfull \hbox (11.22896pt too wide) in paragraph at lines 514--515
 []\TU/TimesNewRoman(0)/m/n/12 The best perfoming hyperparameter configuration w
 as: $\OML/cmm/m/it/12 n[]estimators \OT1/cmr/m/n/12 = 50$\TU/TimesNewRoman(0)/m
 /n/12 , $\OML/cmm/m/it/12 max[]depth \OT1/cmr/m/n/12 =
  []
 
 [92]
-Overfull \hbox (3.97499pt too wide) in paragraph at lines 517--518
+Overfull \hbox (3.97499pt too wide) in paragraph at lines 518--519
 []\TU/TimesNewRoman(0)/m/n/12 When trained to $\OML/cmm/m/it/12 notrees \OMS/cm
 sy/m/n/12 ^^@ \OML/cmm/m/it/12 dl$ \TU/TimesNewRoman(0)/m/n/12 with the aforeme
 ntioned hyperparameter values, ET achieved
  []
 
 
-Overfull \hbox (24.14723pt too wide) in paragraph at lines 526--527
+Overfull \hbox (24.14723pt too wide) in paragraph at lines 527--528
 \TU/TimesNewRoman(0)/m/n/12 only $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m
 /n/12 0239\OML/cmm/m/it/12 ms$ \TU/TimesNewRoman(0)/m/n/12 slower than RF’s on 
 single examples, achieving a $\OT1/cmr/m/n/12 22\OML/cmm/m/it/12 :\OT1/cmr/m/n/
@@ -1910,13 +1916,13 @@ single examples, achieving a $\OT1/cmr/m/n/12 22\OML/cmm/m/it/12 :\OT1/cmr/m/n/
 File: images/extra_trees_log.png Graphic file (type bmp)
 <images/extra_trees_log.png>
 [93]
-Overfull \hbox (9.1643pt too wide) in paragraph at lines 544--545
+Overfull \hbox (9.1643pt too wide) in paragraph at lines 545--546
 []\TU/TimesNewRoman(0)/m/n/12 Using grid searched, I experimented with three of
  XGB’s hyperparameters: $[]$:
  []
 
 
-Overfull \hbox (23.95416pt too wide) in paragraph at lines 544--545
+Overfull \hbox (23.95416pt too wide) in paragraph at lines 545--546
 \TU/TimesNewRoman(0)/m/n/12 ing values configuration was: $\OML/cmm/m/it/12 n[]
 estimators \OT1/cmr/m/n/12 = 500$\TU/TimesNewRoman(0)/m/n/12 , $\OML/cmm/m/it/1
 2 max[]depth \OT1/cmr/m/n/12 = 15$\TU/TimesNewRoman(0)/m/n/12 , and $\OML/cmm/m
@@ -1926,13 +1932,13 @@ estimators \OT1/cmr/m/n/12 = 500$\TU/TimesNewRoman(0)/m/n/12 , $\OML/cmm/m/it/1
 File: images/xgb_log.png Graphic file (type bmp)
 <images/xgb_log.png>
 
-Overfull \hbox (10.36996pt too wide) in paragraph at lines 570--571
+Overfull \hbox (10.36996pt too wide) in paragraph at lines 571--572
 \TU/TimesNewRoman(0)/m/n/12 Tabular framework was underwealming, considering th
 at LGBM is supposed to be a lightweight
  []
 
 
-Overfull \hbox (7.2838pt too wide) in paragraph at lines 574--575
+Overfull \hbox (7.2838pt too wide) in paragraph at lines 575--576
 \TU/TimesNewRoman(0)/m/n/12 leaf node, $[]$: maximum number of leaves per decis
 ion tree and $[]$:
  []
@@ -1940,21 +1946,167 @@ ion tree and $[]$:
 [94] [95]
 File: images/lgbm_log.png Graphic file (type bmp)
 <images/lgbm_log.png>
-) [96]
+File: images/model_inference_time.png Graphic file (type bmp)
+<images/model_inference_time.png>
+LaTeX Info: Redefining \anw@print on input line 612.
+LaTeX Info: Redefining \anw@print on input line 612.
+LaTeX Info: Redefining \anw@print on input line 612.
+LaTeX Info: Redefining \anw@print on input line 612.
+File: images/model_size.png Graphic file (type bmp)
+<images/model_size.png>
+LaTeX Info: Redefining \anw@print on input line 617.
+LaTeX Info: Redefining \anw@print on input line 617.
+LaTeX Info: Redefining \anw@print on input line 617.
+LaTeX Info: Redefining \anw@print on input line 617.
+File: images/model_relative_rmse.png Graphic file (type bmp)
+<images/model_relative_rmse.png>
+LaTeX Info: Redefining \anw@print on input line 624.
+LaTeX Info: Redefining \anw@print on input line 624.
+LaTeX Info: Redefining \anw@print on input line 624.
+LaTeX Info: Redefining \anw@print on input line 624.
+
+Overfull \hbox (45.42827pt too wide) in paragraph at lines 634--635
+[]\TU/TimesNewRoman(0)/m/n/12 Among the tested models, the best performing accu
+racy wise was the XGB, with a $\OML/cmm/m/it/12 RelativeRMSE$
+ []
+
+[96]
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+ [97]
+File: images/custom_model_accuracy_by_dataset.png Graphic file (type bmp)
+<images/custom_model_accuracy_by_dataset.png>
+LaTeX Info: Redefining \anw@print on input line 644.
+LaTeX Info: Redefining \anw@print on input line 644.
+LaTeX Info: Redefining \anw@print on input line 644.
+LaTeX Info: Redefining \anw@print on input line 644.
+File: images/custom_model_predictive_performance_by_dataset.png Graphic file (t
+ype bmp)
+<images/custom_model_predictive_performance_by_dataset.png>
+LaTeX Info: Redefining \anw@print on input line 651.
+LaTeX Info: Redefining \anw@print on input line 651.
+LaTeX Info: Redefining \anw@print on input line 651.
+LaTeX Info: Redefining \anw@print on input line 651.
+
+Underfull \vbox (badness 7814) has occurred while \output is active []
+
+ [98]
+
+LaTeX Warning: Citation `sklearn_permutation_importance' on page 99 undefined o
+n input line 672.
+
+File: images/notrees-dl_relative_rmse.png Graphic file (type bmp)
+<images/notrees-dl_relative_rmse.png>
+LaTeX Info: Redefining \anw@print on input line 723.
+LaTeX Info: Redefining \anw@print on input line 723.
+LaTeX Info: Redefining \anw@print on input line 723.
+LaTeX Info: Redefining \anw@print on input line 723.
+File: images/notrees-dl_r2.png Graphic file (type bmp)
+<images/notrees-dl_r2.png>
+LaTeX Info: Redefining \anw@print on input line 730.
+LaTeX Info: Redefining \anw@print on input line 730.
+LaTeX Info: Redefining \anw@print on input line 730.
+LaTeX Info: Redefining \anw@print on input line 730.
+File: images/notrees-dl_inference_time.png Graphic file (type bmp)
+<images/notrees-dl_inference_time.png>
+LaTeX Info: Redefining \anw@print on input line 737.
+LaTeX Info: Redefining \anw@print on input line 737.
+LaTeX Info: Redefining \anw@print on input line 737.
+LaTeX Info: Redefining \anw@print on input line 737.
+File: images/notrees-dl_size.png Graphic file (type bmp)
+<images/notrees-dl_size.png>
+LaTeX Info: Redefining \anw@print on input line 744.
+LaTeX Info: Redefining \anw@print on input line 744.
+LaTeX Info: Redefining \anw@print on input line 744.
+LaTeX Info: Redefining \anw@print on input line 744.
+File: images/trees-dl-aoi_relative_rmse.png Graphic file (type bmp)
+<images/trees-dl-aoi_relative_rmse.png>
+LaTeX Info: Redefining \anw@print on input line 754.
+LaTeX Info: Redefining \anw@print on input line 754.
+LaTeX Info: Redefining \anw@print on input line 754.
+LaTeX Info: Redefining \anw@print on input line 754.
+File: images/trees-dl-aoi_r2.png Graphic file (type bmp)
+<images/trees-dl-aoi_r2.png>
+LaTeX Info: Redefining \anw@print on input line 761.
+LaTeX Info: Redefining \anw@print on input line 761.
+LaTeX Info: Redefining \anw@print on input line 761.
+LaTeX Info: Redefining \anw@print on input line 761.
+File: images/trees-dl-aoi_inference_time.png Graphic file (type bmp)
+<images/trees-dl-aoi_inference_time.png>
+LaTeX Info: Redefining \anw@print on input line 768.
+LaTeX Info: Redefining \anw@print on input line 768.
+LaTeX Info: Redefining \anw@print on input line 768.
+LaTeX Info: Redefining \anw@print on input line 768.
+File: images/trees-dl-aoi_size.png Graphic file (type bmp)
+<images/trees-dl-aoi_size.png>
+LaTeX Info: Redefining \anw@print on input line 775.
+LaTeX Info: Redefining \anw@print on input line 775.
+LaTeX Info: Redefining \anw@print on input line 775.
+LaTeX Info: Redefining \anw@print on input line 775.
+[99] [100]
+File: images/notrees-gt_relative_rmse.png Graphic file (type bmp)
+<images/notrees-gt_relative_rmse.png>
+LaTeX Info: Redefining \anw@print on input line 835.
+LaTeX Info: Redefining \anw@print on input line 835.
+LaTeX Info: Redefining \anw@print on input line 835.
+LaTeX Info: Redefining \anw@print on input line 835.
+File: images/notrees-gt_r2.png Graphic file (type bmp)
+<images/notrees-gt_r2.png>
+LaTeX Info: Redefining \anw@print on input line 842.
+LaTeX Info: Redefining \anw@print on input line 842.
+LaTeX Info: Redefining \anw@print on input line 842.
+LaTeX Info: Redefining \anw@print on input line 842.
+File: images/notrees-gt_inference_time.png Graphic file (type bmp)
+<images/notrees-gt_inference_time.png>
+LaTeX Info: Redefining \anw@print on input line 849.
+LaTeX Info: Redefining \anw@print on input line 849.
+LaTeX Info: Redefining \anw@print on input line 849.
+LaTeX Info: Redefining \anw@print on input line 849.
+File: images/notrees-gt_size.png Graphic file (type bmp)
+<images/notrees-gt_size.png>
+LaTeX Info: Redefining \anw@print on input line 856.
+LaTeX Info: Redefining \anw@print on input line 856.
+LaTeX Info: Redefining \anw@print on input line 856.
+LaTeX Info: Redefining \anw@print on input line 856.
+File: images/trees-gt-aoi_relative_rmse.png Graphic file (type bmp)
+<images/trees-gt-aoi_relative_rmse.png>
+LaTeX Info: Redefining \anw@print on input line 866.
+LaTeX Info: Redefining \anw@print on input line 866.
+LaTeX Info: Redefining \anw@print on input line 866.
+LaTeX Info: Redefining \anw@print on input line 866.
+File: images/trees-gt-aoi_r2.png Graphic file (type bmp)
+<images/trees-gt-aoi_r2.png>
+LaTeX Info: Redefining \anw@print on input line 873.
+LaTeX Info: Redefining \anw@print on input line 873.
+LaTeX Info: Redefining \anw@print on input line 873.
+LaTeX Info: Redefining \anw@print on input line 873.
+File: images/trees-dl-aoi_inference_time.png Graphic file (type bmp)
+<images/trees-dl-aoi_inference_time.png>
+LaTeX Info: Redefining \anw@print on input line 880.
+LaTeX Info: Redefining \anw@print on input line 880.
+LaTeX Info: Redefining \anw@print on input line 880.
+LaTeX Info: Redefining \anw@print on input line 880.
+File: images/trees-dl-aoi_size.png Graphic file (type bmp)
+<images/trees-dl-aoi_size.png>
+LaTeX Info: Redefining \anw@print on input line 887.
+LaTeX Info: Redefining \anw@print on input line 887.
+LaTeX Info: Redefining \anw@print on input line 887.
+LaTeX Info: Redefining \anw@print on input line 887.
+) [101] [102]
 \openout2 = `chapter_last.aux'.
 
  (chapter_last.tex
 Chapter 8.
-) [97
+) [103
 
 
 
 
-] (main.bbl [98
+] (main.bbl [104
 
 
 
-] [99] [100] [101] [102]
+] [105] [106] [107] [108]
 Underfull \hbox (badness 4144) in paragraph at lines 257--263
 []\TU/TimesNewRoman(0)/m/n/12 Dante Gama Dessavre and William Hicks.  Superchar
 ge Tree-Based Model
@@ -1985,7 +2137,7 @@ Underfull \hbox (badness 7064) in paragraph at lines 287--292
  [] [][][] [] [][][] [] [][][] [] [][][][][][][][] []
  []
 
-[103]
+[109]
 Underfull \hbox (badness 3354) in paragraph at lines 294--299
 []\TU/TimesNewRoman(0)/m/n/12 Quixel Megascans.  Lawn Grass.  []$[][][][][] [] 
 [] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] []
@@ -2063,40 +2215,40 @@ Underfull \hbox (badness 4108) in paragraph at lines 352--356
  [] [] [][][][][][] [] [][][] [] [][][][][][][][] []
  []
 
-[104]
-Underfull \hbox (badness 6380) in paragraph at lines 402--407
+[110]
+Underfull \hbox (badness 6380) in paragraph at lines 396--401
 []\TU/TimesNewRoman(0)/m/n/12 Google.  Machine learning crash course: Numerical
  data – normalization.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--407
+Underfull \hbox (badness 10000) in paragraph at lines 396--401
 []$[][][][][] [] [] [] [][][][][][][][][][] [] [][][][][][] [] [][][] [] [][][]
 [][][][] [][] [][][][][][][][] [] [][][][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--414
+Underfull \hbox (badness 10000) in paragraph at lines 403--408
 [][][][][] [] [][][] [] [][][][][][] [] [][][][] [] [][][][][][][][] [] [][][][
 ][][][][][][][][][] [] [][][][] []
  []
 
 
-Underfull \hbox (badness 2253) in paragraph at lines 409--414
+Underfull \hbox (badness 2253) in paragraph at lines 403--408
 [][][][][][][] [] [][][][][][][][][][] [] [][][][]$[]\TU/TimesNewRoman(0)/m/n/1
 2 .  scikit-learn documentation. Accessed: 2026-
  []
 
-[105] [106] [107]) [108]
+[111] [112]) [113]
 \openout2 = `appendices.aux'.
 
- (appendices.tex) [109
+ (appendices.tex [114
 
 
-]
+]) [115]
 \openout2 = `appA.aux'.
 
- (appA.tex [110
+ (appA.tex [116
 
 
 
@@ -2106,28 +2258,28 @@ Appendix A.
 LaTeX Info: Redefining \anw@print on input line 33.
 File: figures/grid_granularity.eps Graphic file (type eps)
 <figures/grid_granularity.eps>
-[111]
+[117]
 
-LaTeX Warning: Reference `dataconnection' on page 112 undefined on input line 4
+LaTeX Warning: Reference `dataconnection' on page 118 undefined on input line 4
 1.
 
 File: figures/quadtree.pdf Graphic file (type pdf)
 <use figures/quadtree.pdf>
 LaTeX Info: Redefining \anw@print on input line 50.
-[112]
+[118]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 83.
- [113] [114]) [115]
+ [119] [120]) [121]
 \openout2 = `appB.aux'.
 
- (appB.tex [116
+ (appB.tex [122
 
 
 
 
 ]
 Appendix B.
-) [117] (main.aux (acknowledgements.aux) (declaration_eng.aux)
+) [123] (main.aux (acknowledgements.aux) (declaration_eng.aux)
 (abstract_eng.aux) (abstract.aux) (abbreviations.aux) (chapter1.aux)
 (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux)
 (chapter7.aux) (chapter_last.aux) (appendices.aux) (appA.aux) (appB.aux))
@@ -2139,16 +2291,19 @@ L3 programming layer <2026-03-20>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C8536724BC8B552818AE186B7F0BF868;14417.
+(rerunfilecheck)             Checksum: CD33A15E124CCD6CB0BA94279D6AB64C;14777.
  ) 
 Here is how much of TeX's memory you used:
- 30222 strings out of 402807
- 595510 string characters out of 5445135
- 1254795 words of memory out of 5000000
- 58426 multiletter control sequences out of 15000+600000
+ 30439 strings out of 402807
+ 603077 string characters out of 5445135
+ 1258374 words of memory out of 5000000
+ 58624 multiletter control sequences out of 15000+600000
  639890 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,13n,117p,1609b,1255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,13n,117p,1697b,1255s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (143 pages).
+Output written on main.pdf (149 pages).

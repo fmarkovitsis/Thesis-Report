@@ -10,8 +10,10 @@
 \contentsline {table}{\numberline {5.4}{\ignorespaces Calculated mean GRVI and standard deviation for different inherent GRVI values for frames depicting shaded scenes. SZA was set to $\pm 85^\circ $.}}{56}{table.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Test-set performance for \texttt {grviOut}.}}{76}{table.caption.48}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Test-set performance for \texttt {grviOut}.}}{76}{table.caption.49}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Feature rankings based on permutation importance for the three selected models across the two examined datasets. Rank 1 corresponds to the highest feature importance.}}{100}{table.caption.80}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Feature rankings based on permutation importance for the three selected models across the two datasets. Rank 1 corresponds to the highest feature importance.}}{102}{table.caption.82}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Παράμετροι πειραμάτων}}{112}{table.caption.79}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Παράμετροι πειραμάτων}}{118}{table.caption.86}%
 \addvspace {10\p@ }

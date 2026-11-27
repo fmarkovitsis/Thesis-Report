@@ -368,12 +368,6 @@ Sercan~O. Arik and Tomas Pfister.
 Arlind Kadra, Marius Lindauer, Frank Hutter, and Josif Grabocka.
 \newblock Well-tuned simple nets excel on tabular datasets, 2021.
 
-\bibitem{captum}
-{Captum Team}.
-\newblock Captum: Model interpretability for pytorch.
-\newblock \url{https://captum.ai/}.
-\newblock Accessed: 2026-11-01.
-
 \bibitem{shlens2005pca}
 Jonathon Shlens.
 \newblock A tutorial on principal component analysis, December 2005.
